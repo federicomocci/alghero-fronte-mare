@@ -591,8 +591,17 @@
             </div>
         </section>
 
+        <!-- DISPONIBILITÀ -->
+        <section class="content-section section--alt">
+            <div class="container container--narrow">
+                <h2>Disponibilità</h2>
+                <p>Il calendario si aggiorna automaticamente. Le date in verde sono libere.</p>
+                <div id="calendario-disponibilita" data-appartamento="lido-113-loft" style="margin-top: 1.5rem;"></div>
+            </div>
+        </section>
+
         <!-- GALLERIA FOTO -->
-        <section class="gallery section--alt">
+        <section class="gallery">
             <div class="container">
                 <h2>Le foto</h2>
                 <div class="gallery__grid">
@@ -688,7 +697,7 @@
             <p class="site-footer__text">Alghero Fronte Mare — Case fronte mare gestite da Federico</p>
             <p class="site-footer__text">CIN: IT090003B4000F3434</p>
             <p class="site-footer__text">
-                <a href="mailto:federicomocci12@gmail.com">federicomocci12@gmail.com</a> · 
+                <a href="/cdn-cgi/l/email-protection#94f2f1f0f1e6fdf7fbf9fbf7f7fda5a6d4f3f9f5fdf8baf7fbf9"><span class="__cf_email__" data-cfemail="d5b3b0b1b0a7bcb6bab8bab6b6bce4e795b2b8b4bcb9fbb6bab8">[email&#160;protected]</span></a> · 
                 <a href="https://wa.me/393293370792">+39 329 337 0792</a>
             </p>
             <p class="site-footer__legal">
@@ -697,6 +706,40 @@
             </p>
         </div>
     </footer>
+
+    <!-- Calendario Disponibilità -->
+    <style>
+        .cal-wrapper{background:#fff;border:1px solid #d9d2c7;border-radius:8px;padding:1.5rem;max-width:400px}
+        .cal-header{display:flex;justify-content:space-between;align-items:center;margin-bottom:1rem}
+        .cal-title{font-weight:700;font-size:1.125rem;color:#1a3a4a}
+        .cal-nav{background:none;border:1px solid #d9d2c7;border-radius:4px;width:36px;height:36px;cursor:pointer;font-size:1rem;color:#2d5a6b;transition:all .2s ease}
+        .cal-nav:hover{background:#e8f1f3;border-color:#2d5a6b}
+        .cal-grid{display:grid;grid-template-columns:repeat(7,1fr);gap:4px}
+        .cal-giorno{text-align:center;font-size:.75rem;font-weight:700;color:#5a5a5a;padding:.5rem 0;text-transform:uppercase}
+        .cal-cella{aspect-ratio:1;display:flex;align-items:center;justify-content:center;font-size:.875rem;border-radius:4px;transition:all .15s ease}
+        .cal-cella--vuota{background:transparent}
+        .cal-cella--passato{color:#ccc;background:#fafafa}
+        .cal-cella--libero{background:#e8f5e9;color:#2e7d32;font-weight:500}
+        .cal-cella--occupato{background:#ffebee;color:#c62828;font-weight:500}
+        .cal-cella--oggi{box-shadow:inset 0 0 0 2px #1a3a4a}
+        .cal-legenda{display:flex;gap:1.5rem;margin-top:1rem;padding-top:1rem;border-top:1px solid #eee}
+        .cal-legenda-item{display:flex;align-items:center;gap:.5rem;font-size:.8125rem;color:#5a5a5a}
+        .cal-dot{width:12px;height:12px;border-radius:2px}
+        .cal-dot--libero{background:#e8f5e9;border:1px solid #a5d6a7}
+        .cal-dot--occupato{background:#ffebee;border:1px solid #ef9a9a}
+        .cal-loading{text-align:center;padding:2rem;color:#5a5a5a}
+        @media(max-width:480px){.cal-wrapper{padding:1rem}.cal-cella{font-size:.75rem}.cal-giorno{font-size:.625rem}}
+    </style>
+
+    <script>
+    const SUPABASE_URL='https://shnwkepqoivdiwtuncna.supabase.co';
+    const SUPABASE_ANON_KEY='eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InNobndrZXBxb2l2ZGl3dHVuY25hIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NjY3NTQwOTUsImV4cCI6MjA4MjMzMDA5NX0.ImH1ozQaNXHQozvCchI9shfr7FINYfT33Jm6jznBJqg';
+    const APPARTAMENTI={'lido-113-fronte-mare':'2fc80ddd-3898-444f-bf98-40a7eb641cee','lido-113-loft':'79d5e98c-4f22-4686-a43b-53300ab75271','orti-36-sea-suite':'82ab5050-54f1-4821-a80f-7b1ec0a61682','orti-36-sky-suite':'1950c5b5-ec4d-4b1d-b13b-1eff93ce0511','attico-vista-mare':'c33fd913-c8bd-4ea5-95bc-2ff7d1c71404'};
+    const MESI_IT=['Gennaio','Febbraio','Marzo','Aprile','Maggio','Giugno','Luglio','Agosto','Settembre','Ottobre','Novembre','Dicembre'];
+    const GIORNI_IT=['Lun','Mar','Mer','Gio','Ven','Sab','Dom'];
+    class CalendarioDisponibilita{constructor(e,t){this.container=document.getElementById(e),this.appartamentoId=APPARTAMENTI[t],this.oggi=new Date,this.meseCorrente=new Date(this.oggi.getFullYear(),this.oggi.getMonth(),1),this.prenotazioni=[],this.container&&this.appartamentoId&&this.init()}async init(){this.renderLoading(),await this.fetchPrenotazioni(),this.render()}async fetchPrenotazioni(){try{const e=await fetch(`${SUPABASE_URL}/rest/v1/disponibilita_pubblica?appartamento_id=eq.${this.appartamentoId}&select=data_checkin,data_checkout`,{headers:{apikey:SUPABASE_ANON_KEY,Authorization:`Bearer ${SUPABASE_ANON_KEY}`}});if(!e.ok)throw new Error("Errore");this.prenotazioni=await e.json()}catch(e){console.error(e),this.prenotazioni=[]}}isDateOccupata(e){const t=this.formatDate(e);return this.prenotazioni.some(e=>t>=e.data_checkin&&t<e.data_checkout)}formatDate(e){return e.toISOString().split("T")[0]}renderLoading(){this.container.innerHTML='<div class="cal-loading"><p>Caricamento disponibilità...</p></div>'}render(){this.container.innerHTML=`<div class="cal-wrapper"><div class="cal-header"><button class="cal-nav cal-prev" aria-label="Mese precedente">←</button><span class="cal-title">${MESI_IT[this.meseCorrente.getMonth()]} ${this.meseCorrente.getFullYear()}</span><button class="cal-nav cal-next" aria-label="Mese successivo">→</button></div><div class="cal-grid">${this.renderGiorni()}${this.renderDate()}</div><div class="cal-legenda"><span class="cal-legenda-item"><span class="cal-dot cal-dot--libero"></span> Libero</span><span class="cal-legenda-item"><span class="cal-dot cal-dot--occupato"></span> Occupato</span></div></div>`,this.attachEvents()}renderGiorni(){return GIORNI_IT.map(e=>`<div class="cal-giorno">${e}</div>`).join("")}renderDate(){const e=this.meseCorrente.getFullYear(),t=this.meseCorrente.getMonth(),a=new Date(e,t,1),n=new Date(e,t+1,0);let i=a.getDay()-1;i<0&&(i=6);let o="";for(let e=0;e<i;e++)o+='<div class="cal-cella cal-cella--vuota"></div>';for(let a=1;a<=n.getDate();a++){const n=new Date(e,t,a),i=n<new Date(this.oggi.getFullYear(),this.oggi.getMonth(),this.oggi.getDate()),s=this.isDateOccupata(n),r=this.formatDate(n)===this.formatDate(this.oggi);let l="cal-cella";i?l+=" cal-cella--passato":s?l+=" cal-cella--occupato":l+=" cal-cella--libero",r&&(l+=" cal-cella--oggi"),o+=`<div class="${l}">${a}</div>`}return o}attachEvents(){this.container.querySelector(".cal-prev").addEventListener("click",()=>{this.meseCorrente.setMonth(this.meseCorrente.getMonth()-1),this.render()}),this.container.querySelector(".cal-next").addEventListener("click",()=>{this.meseCorrente.setMonth(this.meseCorrente.getMonth()+1),this.render()})}}
+    document.addEventListener("DOMContentLoaded",()=>{const e=document.getElementById("calendario-disponibilita");if(e){const t=e.dataset.appartamento;t&&new CalendarioDisponibilita("calendario-disponibilita",t)}});
+    </script>
 
 </body>
 </html>
