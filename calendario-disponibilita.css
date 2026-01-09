@@ -1,0 +1,142 @@
+/* Calendario Disponibilità - Stili */
+
+.cal-wrapper {
+    background: #fff;
+    border: 1px solid #d9d2c7;
+    border-radius: 8px;
+    padding: 1.5rem;
+    max-width: 400px;
+}
+
+.cal-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+
+.cal-title {
+    font-weight: 700;
+    font-size: 1.125rem;
+    color: #1a3a4a;
+}
+
+.cal-nav {
+    background: none;
+    border: 1px solid #d9d2c7;
+    border-radius: 4px;
+    width: 36px;
+    height: 36px;
+    cursor: pointer;
+    font-size: 1rem;
+    color: #2d5a6b;
+    transition: all 0.2s ease;
+}
+
+.cal-nav:hover {
+    background: #e8f1f3;
+    border-color: #2d5a6b;
+}
+
+.cal-grid {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 4px;
+}
+
+.cal-giorno {
+    text-align: center;
+    font-size: 0.75rem;
+    font-weight: 700;
+    color: #5a5a5a;
+    padding: 0.5rem 0;
+    text-transform: uppercase;
+}
+
+.cal-cella {
+    aspect-ratio: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.875rem;
+    border-radius: 4px;
+    transition: all 0.15s ease;
+}
+
+.cal-cella--vuota {
+    background: transparent;
+}
+
+.cal-cella--passato {
+    color: #ccc;
+    background: #fafafa;
+}
+
+.cal-cella--libero {
+    background: #e8f5e9;
+    color: #2e7d32;
+    font-weight: 500;
+}
+
+.cal-cella--occupato {
+    background: #ffebee;
+    color: #c62828;
+    font-weight: 500;
+}
+
+.cal-cella--oggi {
+    box-shadow: inset 0 0 0 2px #1a3a4a;
+}
+
+.cal-legenda {
+    display: flex;
+    gap: 1.5rem;
+    margin-top: 1rem;
+    padding-top: 1rem;
+    border-top: 1px solid #eee;
+}
+
+.cal-legenda-item {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 0.8125rem;
+    color: #5a5a5a;
+}
+
+.cal-dot {
+    width: 12px;
+    height: 12px;
+    border-radius: 2px;
+}
+
+.cal-dot--libero {
+    background: #e8f5e9;
+    border: 1px solid #a5d6a7;
+}
+
+.cal-dot--occupato {
+    background: #ffebee;
+    border: 1px solid #ef9a9a;
+}
+
+.cal-loading {
+    text-align: center;
+    padding: 2rem;
+    color: #5a5a5a;
+}
+
+/* Responsive */
+@media (max-width: 480px) {
+    .cal-wrapper {
+        padding: 1rem;
+    }
+    
+    .cal-cella {
+        font-size: 0.75rem;
+    }
+    
+    .cal-giorno {
+        font-size: 0.625rem;
+    }
+}
