@@ -249,6 +249,16 @@
             border: 1px solid var(--color-sand-dark);
         }
 
+        /* Map */
+        .map-container {
+            margin-top: var(--space-lg);
+        }
+
+        .map-link {
+            margin-top: var(--space-sm);
+            font-size: 0.9375rem;
+        }
+
         /* CTA Final */
         .cta-final {
             padding: var(--space-xl) 0;
@@ -321,7 +331,7 @@
         <div class="container site-header__inner">
             <a href="/" class="site-logo">Alghero Fronte Mare</a>
             <nav class="site-nav">
-                <a href="/" class="site-nav__link">Le case</a>
+                <a href="/case-vacanze-alghero" class="site-nav__link">Le case</a>
                 <a href="/chi-sono" class="site-nav__link">Chi sono</a>
             </nav>
         </div>
@@ -452,6 +462,20 @@
             <div class="container container--narrow">
                 <h2>La posizione</h2>
                 <p>L'appartamento si trova in Via degli Orti, a pochi passi dal mare e dal centro storico di Alghero. Una posizione comoda per vivere la città e godersi la spiaggia.</p>
+                
+                <div class="map-container">
+                    <iframe 
+                        src="https://www.google.com/maps?q=Via+degli+Orti+36,+Alghero,+Sardegna,+Italy&output=embed" 
+                        width="100%" 
+                        height="300" 
+                        style="border:0; border-radius: 8px;" 
+                        allowfullscreen="" 
+                        loading="lazy"
+                        referrerpolicy="no-referrer-when-downgrade"
+                        title="Mappa Via degli Orti 36, Alghero">
+                    </iframe>
+                    <p class="map-link"><a href="https://www.google.com/maps/search/?api=1&query=Via+degli+Orti+36,+Alghero,+Italy" target="_blank" rel="noopener">Apri in Google Maps →</a></p>
+                </div>
             </div>
         </section>
 
@@ -464,7 +488,7 @@
                 <div class="other-apartment">
                     <h3>Orti 36 · Sea Suite</h3>
                     <p>Al terzo piano, stesso edificio. Stesse caratteristiche, stesso standard.</p>
-                    <p><a href="/orti-36-sea-suite">Scopri la Sea Suite →</a></p>
+                    <p><a href="/orti-36-sea-suite">Scopri Orti 36 · Sea Suite →</a></p>
                 </div>
             </div>
         </section>

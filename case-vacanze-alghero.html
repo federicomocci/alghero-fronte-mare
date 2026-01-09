@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- SEO Meta Tags -->
+    <title>Case Vacanze Alghero Vista Mare | 5 Appartamenti Selezionati</title>
+    <meta name="description" content="Case vacanze ad Alghero con vista mare. 5 appartamenti selezionati: 2 in gestione diretta, 3 consigliati. Prenota direttamente via WhatsApp, nessun intermediario.">
+    <meta name="keywords" content="case vacanze Alghero, appartamenti vista mare Alghero, affitto Alghero mare, vacanze Sardegna Alghero">
+    
+    <!-- Open Graph -->
+    <meta property="og:title" content="Case Vacanze Alghero Vista Mare">
+    <meta property="og:description" content="5 appartamenti vista mare ad Alghero. Prenotazione diretta via WhatsApp.">
+    <meta property="og:type" content="website">
+    <meta property="og:locale" content="it_IT">
+    <meta property="og:url" content="https://www.algherofrontemare.it/case-vacanze-alghero">
+    <meta property="og:site_name" content="Alghero Fronte Mare">
+    
+    <!-- Canonical -->
+    <link rel="canonical" href="https://www.algherofrontemare.it/case-vacanze-alghero">
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+
+    <style>
+        :root {
+            --color-sea-deep: #1a3a4a;
+            --color-sea-medium: #2d5a6b;
+            --color-sea-light: #e8f1f3;
+            --color-sand: #f5f1eb;
+            --color-sand-dark: #d9d2c7;
+            --color-text: #2c2c2c;
+            --color-text-light: #5a5a5a;
+            --color-white: #ffffff;
+            --color-accent: #c4956a;
+            
+            --font-main: 'Lato', Helvetica, Arial, sans-serif;
+            
+            --space-xs: 0.5rem;
+            --space-sm: 1rem;
+            --space-md: 1.5rem;
+            --space-lg: 2.5rem;
+            --space-xl: 4rem;
+            --space-xxl: 6rem;
+            
+            --max-width: 1200px;
+            --content-width: 800px;
+        }
+
+        *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+        html { font-size: 16px; scroll-behavior: smooth; }
+
+        body {
+            font-family: var(--font-main);
+            font-size: 1.0625rem;
+            line-height: 1.7;
+            color: var(--color-text);
+            background-color: var(--color-white);
+        }
+
+        h1, h2, h3 {
+            font-weight: 700;
+            line-height: 1.3;
+            color: var(--color-sea-deep);
+        }
+
+        h1 { font-size: clamp(1.875rem, 5vw, 2.75rem); margin-bottom: var(--space-md); }
+        h2 { font-size: clamp(1.375rem, 4vw, 1.875rem); margin-bottom: var(--space-md); }
+        h3 { font-size: 1.25rem; margin-bottom: var(--space-sm); color: var(--color-sea-medium); }
+
+        p { margin-bottom: var(--space-sm); }
+        p:last-child { margin-bottom: 0; }
+
+        a { color: var(--color-sea-medium); text-decoration: underline; text-underline-offset: 3px; }
+        a:hover { color: var(--color-sea-deep); }
+
+        .container { width: 100%; max-width: var(--max-width); margin: 0 auto; padding: 0 var(--space-md); }
+
+        /* Header */
+        .site-header {
+            padding: var(--space-md) 0;
+            background-color: var(--color-white);
+            border-bottom: 1px solid var(--color-sand-dark);
+        }
+        .site-header__inner { display: flex; justify-content: space-between; align-items: center; }
+        .site-logo { font-size: 1.125rem; font-weight: 700; color: var(--color-sea-deep); text-decoration: none; }
+        .site-nav { display: flex; gap: var(--space-md); }
+        .site-nav__link { font-size: 0.9375rem; color: var(--color-text-light); text-decoration: none; }
+        .site-nav__link:hover { color: var(--color-sea-deep); }
+
+        /* Hero */
+        .hero {
+            padding: var(--space-xl) 0;
+            background-color: var(--color-sand);
+        }
+        .hero__content { max-width: var(--content-width); }
+        .hero__subtitle { font-size: 1.1875rem; color: var(--color-text-light); }
+
+        /* Section */
+        .section { padding: var(--space-xl) 0; }
+        .section--alt { background-color: var(--color-sand); }
+        .section__intro { font-size: 1.0625rem; color: var(--color-text-light); max-width: var(--content-width); margin-bottom: var(--space-lg); }
+
+        /* Casa Card */
+        .case-list { display: flex; flex-direction: column; gap: var(--space-lg); }
+
+        .casa-card {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: var(--space-md);
+            background: var(--color-white);
+            border: 1px solid var(--color-sand-dark);
+            border-radius: 8px;
+            overflow: hidden;
+        }
+
+        .casa-card__image {
+            width: 100%;
+            height: 220px;
+            overflow: hidden;
+        }
+
+        .casa-card__image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .casa-card__content {
+            padding: var(--space-md);
+        }
+
+        .casa-card__label {
+            display: inline-block;
+            font-size: 0.75rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            margin-bottom: var(--space-xs);
+        }
+
+        .casa-card__label--diretta { color: var(--color-accent); }
+        .casa-card__label--consigliata { color: var(--color-sea-medium); }
+
+        .casa-card__features {
+            display: flex;
+            flex-wrap: wrap;
+            gap: var(--space-sm);
+            margin: var(--space-sm) 0;
+            font-size: 0.9375rem;
+            color: var(--color-text-light);
+        }
+
+        .casa-card__feature {
+            display: flex;
+            align-items: center;
+            gap: 0.25rem;
+        }
+
+        .casa-card__link {
+            display: inline-block;
+            margin-top: var(--space-sm);
+            font-weight: 700;
+        }
+
+        /* CTA */
+        .cta {
+            padding: var(--space-xl) 0;
+            background-color: var(--color-sea-deep);
+            color: var(--color-white);
+            text-align: center;
+        }
+        .cta h2 { color: var(--color-white); }
+        .cta p { color: var(--color-sea-light); max-width: 500px; margin: 0 auto var(--space-md); }
+
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            gap: var(--space-xs);
+            font-family: var(--font-main);
+            font-size: 1rem;
+            font-weight: 400;
+            text-decoration: none;
+            padding: 0.875rem 1.75rem;
+            border-radius: 4px;
+            transition: all 0.25s ease;
+        }
+
+        .btn--primary {
+            background-color: #25D366;
+            color: var(--color-white);
+        }
+        .btn--primary:hover {
+            background-color: #1fb855;
+            color: var(--color-white);
+            transform: translateY(-2px);
+        }
+        .btn--primary::before {
+            content: '';
+            display: inline-block;
+            width: 20px;
+            height: 20px;
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='white'%3E%3Cpath d='M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z'/%3E%3C/svg%3E");
+            background-size: contain;
+        }
+
+        /* Footer */
+        .site-footer {
+            padding: var(--space-lg) 0;
+            background-color: var(--color-sand);
+            text-align: center;
+            font-size: 0.875rem;
+            color: var(--color-text-light);
+        }
+        .site-footer a { color: var(--color-text-light); }
+        .site-footer__legal { font-size: 0.8125rem; margin-top: var(--space-sm); }
+
+        /* Responsive */
+        @media (min-width: 768px) {
+            .casa-card {
+                grid-template-columns: 300px 1fr;
+            }
+            .casa-card__image {
+                height: 100%;
+                min-height: 220px;
+            }
+            .casa-card__content {
+                padding: var(--space-lg);
+            }
+        }
+
+        @media (min-width: 1024px) {
+            .section { padding: var(--space-xxl) 0; }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- HEADER -->
+    <header class="site-header">
+        <div class="container site-header__inner">
+            <a href="/" class="site-logo">Alghero Fronte Mare</a>
+            <nav class="site-nav">
+                <a href="/" class="site-nav__link">Home</a>
+                <a href="/chi-sono" class="site-nav__link">Chi sono</a>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <!-- HERO -->
+        <section class="hero">
+            <div class="container">
+                <div class="hero__content">
+                    <h1>Case Vacanze ad Alghero con Vista Mare</h1>
+                    <p class="hero__subtitle">5 appartamenti selezionati sulla costa di Alghero. Due li gestisco direttamente, tre li consiglio perché li conosco. Tutti con vista mare, tutti prenotabili senza intermediari.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- CASE IN GESTIONE DIRETTA -->
+        <section class="section">
+            <div class="container">
+                <h2>Le mie case — Gestione diretta</h2>
+                <p class="section__intro">Questi due appartamenti sono di mia proprietà. Li gestisco io, direttamente. Sono il tuo unico riferimento: dalla prenotazione al check-out.</p>
+
+                <div class="case-list">
+                    <!-- Fronte Mare -->
+                    <article class="casa-card">
+                        <div class="casa-card__image">
+                            <img src="/images/fronte-mare/hero-terrazza.webp" alt="Terrazza fronte mare Lido 113 Alghero">
+                        </div>
+                        <div class="casa-card__content">
+                            <span class="casa-card__label casa-card__label--diretta">Gestione diretta</span>
+                            <h3>Lido 113 · Fronte Mare</h3>
+                            <p>Secondo piano, prima linea sul mare. La terrazza affaccia direttamente sull'acqua, senza nessun edificio in mezzo. Ideale per coppie o famiglie con bambini.</p>
+                            <div class="casa-card__features">
+                                <span class="casa-card__feature">👥 4 posti letto</span>
+                                <span class="casa-card__feature">🚿 1 bagno</span>
+                                <span class="casa-card__feature">🌊 Fronte mare</span>
+                                <span class="casa-card__feature">📍 Via Lido 113</span>
+                            </div>
+                            <a href="/lido-113-fronte-mare" class="casa-card__link">Scopri Lido 113 · Fronte Mare →</a>
+                        </div>
+                    </article>
+
+                    <!-- Loft -->
+                    <article class="casa-card">
+                        <div class="casa-card__image">
+                            <img src="/images/loft/hero-soggiorno.webp" alt="Soggiorno Loft fronte mare Alghero">
+                        </div>
+                        <div class="casa-card__content">
+                            <span class="casa-card__label casa-card__label--diretta">Gestione diretta</span>
+                            <h3>Lido 113 · Loft Fronte Mare</h3>
+                            <p>Terzo piano mansardato, stesso edificio del Fronte Mare. Vista più alta sul mare, soffitti che seguono il tetto. Spazi luminosi e carattere unico.</p>
+                            <div class="casa-card__features">
+                                <span class="casa-card__feature">👥 4 posti letto</span>
+                                <span class="casa-card__feature">🚿 1 bagno</span>
+                                <span class="casa-card__feature">🌊 Fronte mare</span>
+                                <span class="casa-card__feature">📍 Via Lido 113</span>
+                            </div>
+                            <a href="/lido-113-loft" class="casa-card__link">Scopri Lido 113 · Loft Fronte Mare →</a>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- CASE CONSIGLIATE -->
+        <section class="section section--alt">
+            <div class="container">
+                <h2>Case che consiglio</h2>
+                <p class="section__intro">Questi appartamenti non li gestisco, ma li conosco bene. Li ho visitati, conosco i proprietari. Se le mie case non sono disponibili, ti metto in contatto diretto con loro.</p>
+
+                <div class="case-list">
+                    <!-- Sky Suite -->
+                    <article class="casa-card">
+                        <div class="casa-card__image">
+                            <img src="/images/sky-suite/hero-terrazza.webp" alt="Terrazza Sky Suite Alghero">
+                        </div>
+                        <div class="casa-card__content">
+                            <span class="casa-card__label casa-card__label--consigliata">Casa consigliata</span>
+                            <h3>Orti 36 · Sky Suite</h3>
+                            <p>Quarto piano con terrazza vista mare. Design moderno, cucina attrezzata, perfetto per una coppia. Luminoso e curato nei dettagli.</p>
+                            <div class="casa-card__features">
+                                <span class="casa-card__feature">👥 2 posti letto</span>
+                                <span class="casa-card__feature">🚿 1 bagno</span>
+                                <span class="casa-card__feature">🌊 Vista mare</span>
+                                <span class="casa-card__feature">📍 Via degli Orti 36</span>
+                            </div>
+                            <a href="/orti-36-sky-suite" class="casa-card__link">Scopri Orti 36 · Sky Suite →</a>
+                        </div>
+                    </article>
+
+                    <!-- Sea Suite -->
+                    <article class="casa-card">
+                        <div class="casa-card__content">
+                            <span class="casa-card__label casa-card__label--consigliata">Casa consigliata</span>
+                            <h3>Orti 36 · Sea Suite</h3>
+                            <p>Terzo piano, stesso edificio della Sky Suite. Stesse caratteristiche, stesso standard. Terrazza con vista mare, ideale per coppie.</p>
+                            <div class="casa-card__features">
+                                <span class="casa-card__feature">👥 2 posti letto</span>
+                                <span class="casa-card__feature">🚿 1 bagno</span>
+                                <span class="casa-card__feature">🌊 Vista mare</span>
+                                <span class="casa-card__feature">📍 Via degli Orti 36</span>
+                            </div>
+                            <a href="/orti-36-sea-suite" class="casa-card__link">Scopri Orti 36 · Sea Suite →</a>
+                        </div>
+                    </article>
+
+                    <!-- Attico -->
+                    <article class="casa-card">
+                        <div class="casa-card__image">
+                            <img src="/images/attico/hero-terrazza.webp" alt="Terrazza Attico Vista Mare Alghero">
+                        </div>
+                        <div class="casa-card__content">
+                            <span class="casa-card__label casa-card__label--consigliata">Casa consigliata</span>
+                            <h3>Attico Vista Mare</h3>
+                            <p>Sesto piano con terrazza di 100 metri quadrati. L'appartamento più grande: tre camere, due bagni. Perfetto per famiglie numerose o gruppi di amici.</p>
+                            <div class="casa-card__features">
+                                <span class="casa-card__feature">👥 6 posti letto</span>
+                                <span class="casa-card__feature">🚿 2 bagni</span>
+                                <span class="casa-card__feature">🌊 Terrazza 100mq</span>
+                                <span class="casa-card__feature">📍 Via Kennedy 76</span>
+                            </div>
+                            <a href="/attico-vista-mare" class="casa-card__link">Scopri l'Attico Vista Mare →</a>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA -->
+        <section class="cta">
+            <h2>Non sai quale scegliere?</h2>
+            <p>Scrivimi su WhatsApp con le tue date e il numero di persone. Ti consiglio la casa più adatta.</p>
+            <a href="https://wa.me/393293370792" class="btn btn--primary">Scrivimi su WhatsApp</a>
+        </section>
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="site-footer">
+        <div class="container">
+            <p>Alghero Fronte Mare — Case vista mare ad Alghero</p>
+            <p>
+                <a href="mailto:federicomocci12@gmail.com">federicomocci12@gmail.com</a> · 
+                <a href="https://wa.me/393293370792">+39 329 337 0792</a>
+            </p>
+            <p class="site-footer__legal">
+                <a href="/privacy-policy">Privacy Policy</a> · 
+                <a href="/cookie-policy">Cookie Policy</a>
+            </p>
+        </div>
+    </footer>
+</body>
+</html>

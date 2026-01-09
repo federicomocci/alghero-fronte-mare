@@ -240,6 +240,16 @@
             font-weight: 700;
         }
 
+        /* Map */
+        .map-container {
+            margin-top: var(--space-lg);
+        }
+
+        .map-link {
+            margin-top: var(--space-sm);
+            font-size: 0.9375rem;
+        }
+
         /* CTA Final */
         .cta-final {
             padding: var(--space-xl) 0;
@@ -312,7 +322,7 @@
         <div class="container site-header__inner">
             <a href="/" class="site-logo">Alghero Fronte Mare</a>
             <nav class="site-nav">
-                <a href="/" class="site-nav__link">Le case</a>
+                <a href="/case-vacanze-alghero" class="site-nav__link">Le case</a>
                 <a href="/chi-sono" class="site-nav__link">Chi sono</a>
             </nav>
         </div>
@@ -456,6 +466,20 @@
             <div class="container container--narrow">
                 <h2>La posizione</h2>
                 <p>L'attico si trova ad Alghero, in una posizione comoda per raggiungere il mare e il centro storico. Dal sesto piano la vista spazia sul mare e sui tetti della città.</p>
+                
+                <div class="map-container">
+                    <iframe 
+                        src="https://www.google.com/maps?q=Via+Kennedy+76,+Alghero,+Sardegna,+Italy&output=embed" 
+                        width="100%" 
+                        height="300" 
+                        style="border:0; border-radius: 8px;" 
+                        allowfullscreen="" 
+                        loading="lazy"
+                        referrerpolicy="no-referrer-when-downgrade"
+                        title="Mappa Via Kennedy 76, Alghero">
+                    </iframe>
+                    <p class="map-link"><a href="https://www.google.com/maps/search/?api=1&query=Via+Kennedy+76,+Alghero,+Italy" target="_blank" rel="noopener">Apri in Google Maps →</a></p>
+                </div>
             </div>
         </section>
 
