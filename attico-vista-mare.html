@@ -250,6 +250,45 @@
             font-size: 0.9375rem;
         }
 
+        /* FAQ */
+        .faq {
+            margin-top: var(--space-md);
+        }
+
+        .faq__item {
+            border-bottom: 1px solid var(--color-sand-dark);
+            padding: var(--space-sm) 0;
+        }
+
+        .faq__question {
+            cursor: pointer;
+            font-weight: 700;
+            color: var(--color-sea-deep);
+            list-style: none;
+        }
+
+        .faq__question::-webkit-details-marker {
+            display: none;
+        }
+
+        .faq__question::before {
+            content: '+';
+            display: inline-block;
+            width: 1.5rem;
+            font-weight: 400;
+            color: var(--color-sea-medium);
+        }
+
+        details[open] .faq__question::before {
+            content: '−';
+        }
+
+        .faq__answer {
+            margin-top: var(--space-sm);
+            padding-left: 1.5rem;
+            color: var(--color-text-light);
+        }
+
         /* CTA Final */
         .cta-final {
             padding: var(--space-xl) 0;
@@ -344,6 +383,62 @@
       ],
       "telephone": "+393293370792",
       "email": "federicomocci12@gmail.com"
+    }
+    </script>
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "A che ora posso fare il check-in e il check-out?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Check-in dalle 15:00, check-out entro le 10:00. Se hai esigenze diverse, scrivimi e vediamo di organizzarci."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "C'è il parcheggio?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Sì, c'è parcheggio gratuito nelle vie limitrofe."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "L'appartamento ha l'aria condizionata?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Sì, c'è l'aria condizionata in tutti gli ambienti."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Posso portare animali?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Sì, gli animali domestici sono benvenuti. Fammelo sapere al momento della prenotazione."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Quante persone può ospitare?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "L'attico può ospitare fino a 6 persone, con 3 camere da letto e 2 bagni. Ideale per famiglie numerose o gruppi di amici."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "C'è il Wi-Fi?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Sì, Wi-Fi veloce e gratuito incluso."
+          }
+        }
+      ]
     }
     </script>
 </head>
@@ -513,6 +608,45 @@
                         title="Mappa Via Kennedy 76, Alghero">
                     </iframe>
                     <p class="map-link"><a href="https://www.google.com/maps/search/?api=1&query=Via+Kennedy+76,+Alghero,+Italy" target="_blank" rel="noopener">Apri in Google Maps →</a></p>
+                </div>
+            </div>
+        </section>
+
+        <!-- FAQ -->
+        <section class="content-section">
+            <div class="container container--narrow">
+                <h2>Domande frequenti</h2>
+                
+                <div class="faq">
+                    <details class="faq__item">
+                        <summary class="faq__question">A che ora posso fare il check-in e il check-out?</summary>
+                        <p class="faq__answer">Check-in dalle 15:00, check-out entro le 10:00. Se hai esigenze diverse, scrivimi e vediamo di organizzarci.</p>
+                    </details>
+                    
+                    <details class="faq__item">
+                        <summary class="faq__question">C'è il parcheggio?</summary>
+                        <p class="faq__answer">Sì, c'è parcheggio gratuito nelle vie limitrofe.</p>
+                    </details>
+                    
+                    <details class="faq__item">
+                        <summary class="faq__question">L'appartamento ha l'aria condizionata?</summary>
+                        <p class="faq__answer">Sì, c'è l'aria condizionata in tutti gli ambienti.</p>
+                    </details>
+                    
+                    <details class="faq__item">
+                        <summary class="faq__question">Posso portare animali?</summary>
+                        <p class="faq__answer">Sì, gli animali domestici sono benvenuti. Fammelo sapere al momento della prenotazione.</p>
+                    </details>
+                    
+                    <details class="faq__item">
+                        <summary class="faq__question">Quante persone può ospitare?</summary>
+                        <p class="faq__answer">L'attico può ospitare fino a 6 persone, con 3 camere da letto e 2 bagni. Ideale per famiglie numerose o gruppi di amici.</p>
+                    </details>
+                    
+                    <details class="faq__item">
+                        <summary class="faq__question">C'è il Wi-Fi?</summary>
+                        <p class="faq__answer">Sì, Wi-Fi veloce e gratuito incluso.</p>
+                    </details>
                 </div>
             </div>
         </section>
