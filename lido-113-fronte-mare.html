@@ -447,6 +447,69 @@
         .skip-link:focus {
             top: 0;
         }
+
+        /* Hero Image */
+        .hero-image {
+            width: 100%;
+            height: 60vh;
+            min-height: 400px;
+            max-height: 600px;
+            overflow: hidden;
+            padding: 0;
+        }
+
+        .hero-image__img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        /* Gallery */
+        .gallery {
+            padding: var(--space-xl) 0;
+        }
+
+        .gallery__grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: var(--space-sm);
+            margin-top: var(--space-lg);
+        }
+
+        .gallery__item {
+            aspect-ratio: 4/3;
+            overflow: hidden;
+            border-radius: 8px;
+        }
+
+        .gallery__item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.3s ease;
+        }
+
+        .gallery__item:hover img {
+            transform: scale(1.03);
+        }
+
+        @media (min-width: 640px) {
+            .gallery__grid {
+                grid-template-columns: repeat(3, 1fr);
+            }
+        }
+
+        @media (min-width: 1024px) {
+            .gallery__grid {
+                grid-template-columns: repeat(4, 1fr);
+                gap: var(--space-md);
+            }
+
+            .hero-image {
+                height: 70vh;
+                max-height: 700px;
+            }
+        }
     </style>
 </head>
 
@@ -466,6 +529,11 @@
 
     <!-- MAIN -->
     <main id="main-content">
+
+        <!-- HERO IMAGE -->
+        <section class="hero-image">
+            <img src="/images/fronte-mare/hero-terrazza.webp" alt="Terrazza fronte mare con vista sul mare di Alghero" class="hero-image__img">
+        </section>
 
         <!-- HERO -->
         <section class="hero">
@@ -518,6 +586,48 @@
                         <div class="feature__text">
                             <span class="feature__label">Fronte mare</span>
                         </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- GALLERIA FOTO -->
+        <section class="gallery section--alt">
+            <div class="container">
+                <h2>Le foto</h2>
+                <div class="gallery__grid">
+                    <div class="gallery__item">
+                        <img src="/images/fronte-mare/soggiorno-vista-mare.webp" alt="Soggiorno con vista mare" loading="lazy">
+                    </div>
+                    <div class="gallery__item">
+                        <img src="/images/fronte-mare/soggiorno-cucina.webp" alt="Soggiorno e angolo cucina" loading="lazy">
+                    </div>
+                    <div class="gallery__item">
+                        <img src="/images/fronte-mare/cucina.webp" alt="Cucina attrezzata" loading="lazy">
+                    </div>
+                    <div class="gallery__item">
+                        <img src="/images/fronte-mare/dettaglio-specchio.webp" alt="Dettaglio specchio e soggiorno" loading="lazy">
+                    </div>
+                    <div class="gallery__item">
+                        <img src="/images/fronte-mare/camera-matrimoniale-1.webp" alt="Camera matrimoniale" loading="lazy">
+                    </div>
+                    <div class="gallery__item">
+                        <img src="/images/fronte-mare/camera-matrimoniale-2.webp" alt="Camera matrimoniale altra vista" loading="lazy">
+                    </div>
+                    <div class="gallery__item">
+                        <img src="/images/fronte-mare/bagno-1.webp" alt="Bagno" loading="lazy">
+                    </div>
+                    <div class="gallery__item">
+                        <img src="/images/fronte-mare/bagno-2.webp" alt="Bagno con finestra" loading="lazy">
+                    </div>
+                    <div class="gallery__item">
+                        <img src="/images/fronte-mare/cameretta-1.webp" alt="Cameretta con letti a castello" loading="lazy">
+                    </div>
+                    <div class="gallery__item">
+                        <img src="/images/fronte-mare/cameretta-2.webp" alt="Cameretta altra vista" loading="lazy">
+                    </div>
+                    <div class="gallery__item">
+                        <img src="/images/fronte-mare/vista-alghero.webp" alt="Vista su Alghero dalla terrazza" loading="lazy">
                     </div>
                 </div>
             </div>
