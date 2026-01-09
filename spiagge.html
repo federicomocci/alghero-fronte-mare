@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spiagge di Alghero | Le Bombarde, La Pelosa, Porto Ferro | Alghero Fronte Mare</title>
+    <meta name="description" content="Le spiagge più belle di Alghero e dintorni: Le Bombarde, Lazzaretto, Porto Ferro, Mugoni, Argentiera, La Pelosa. Guida completa con consigli locali.">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://www.algherofrontemare.it/spiagge">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Source+Sans+Pro:wght@300;400;600&display=swap" rel="stylesheet">
+    
+    <style>
+        :root {
+            --sand: #C4A77D;
+            --sand-light: #E8DCC8;
+            --sand-dark: #8B7355;
+            --sea: #2C5F7C;
+            --sea-light: #87CEEB;
+            --white: #FDFBF7;
+            --text: #2D2D2D;
+            --text-light: #5A5A5A;
+        }
+        
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        
+        body {
+            font-family: 'Source Sans Pro', sans-serif;
+            background: var(--white);
+            color: var(--text);
+            line-height: 1.7;
+            font-size: 17px;
+        }
+        
+        h1, h2, h3 { font-family: 'Cormorant Garamond', serif; font-weight: 500; line-height: 1.3; }
+        
+        .page-header {
+            background: linear-gradient(135deg, #E0F7FA 0%, var(--white) 100%);
+            padding: 40px 24px 60px;
+        }
+        
+        .back-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            color: var(--sand-dark);
+            text-decoration: none;
+            font-size: 0.95rem;
+            margin-bottom: 24px;
+        }
+        
+        .page-header h1 {
+            font-size: 2.5rem;
+            color: var(--sea);
+            margin-bottom: 12px;
+        }
+        
+        .page-header p {
+            color: var(--text-light);
+            font-size: 1.1rem;
+            max-width: 600px;
+        }
+        
+        .section {
+            padding: 48px 24px;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        .section h2 {
+            font-size: 1.8rem;
+            color: var(--sea);
+            margin-bottom: 8px;
+        }
+        
+        .section-intro {
+            color: var(--text-light);
+            margin-bottom: 32px;
+        }
+        
+        .place-card {
+            background: white;
+            border-radius: 16px;
+            padding: 24px;
+            margin-bottom: 20px;
+            border: 2px solid #B2EBF2;
+            transition: all 0.3s;
+        }
+        
+        .place-card:hover {
+            border-color: var(--sea);
+            box-shadow: 0 4px 20px rgba(44, 95, 124, 0.1);
+        }
+        
+        .place-card h3 {
+            font-size: 1.4rem;
+            color: var(--sea);
+            margin-bottom: 8px;
+        }
+        
+        .place-card p { color: var(--text-light); margin-bottom: 16px; }
+        
+        .tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            margin-bottom: 16px;
+        }
+        
+        .tag {
+            background: #E0F7FA;
+            color: var(--sea);
+            padding: 4px 12px;
+            border-radius: 12px;
+            font-size: 0.85rem;
+            font-weight: 600;
+        }
+        
+        .tag.favorite {
+            background: #FFF3E0;
+            color: #E65100;
+        }
+        
+        .tag.top {
+            background: #F3E5F5;
+            color: #7B1FA2;
+        }
+        
+        .tag.wild {
+            background: #E8F5E9;
+            color: #388E3C;
+        }
+        
+        .tip {
+            background: #E3F2FD;
+            padding: 12px 16px;
+            border-radius: 8px;
+            font-size: 0.95rem;
+            color: var(--sea);
+            margin-bottom: 16px;
+        }
+        
+        .tip strong { display: block; margin-bottom: 4px; }
+        
+        .warning {
+            background: #FFF3E0;
+            padding: 12px 16px;
+            border-radius: 8px;
+            font-size: 0.95rem;
+            color: #E65100;
+            margin-bottom: 16px;
+        }
+        
+        .links {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 16px;
+        }
+        
+        .map-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            color: var(--sea);
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 0.95rem;
+        }
+        
+        .map-link:hover { text-decoration: underline; }
+        
+        .book-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: var(--sea);
+            color: white;
+            padding: 8px 16px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 0.9rem;
+        }
+        
+        .divider {
+            height: 2px;
+            background: #B2EBF2;
+            margin: 48px 0;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        footer {
+            background: var(--text);
+            color: white;
+            padding: 32px 24px;
+            text-align: center;
+        }
+        
+        footer a { color: var(--sand-light); text-decoration: none; }
+        
+        @media (min-width: 640px) {
+            .page-header h1 { font-size: 3rem; }
+            .page-header { padding: 60px 24px 80px; }
+        }
+    </style>
+    
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "ItemList",
+        "name": "Spiagge di Alghero",
+        "description": "Le migliori spiagge di Alghero e dintorni secondo un residente locale",
+        "itemListElement": [
+            { "@type": "Beach", "position": 1, "name": "Le Bombarde", "address": "Alghero, Sardinia" },
+            { "@type": "Beach", "position": 2, "name": "Lazzaretto", "address": "Alghero, Sardinia" },
+            { "@type": "Beach", "position": 3, "name": "Porto Ferro", "address": "Alghero, Sardinia" },
+            { "@type": "Beach", "position": 4, "name": "Mugoni", "address": "Alghero, Sardinia" },
+            { "@type": "Beach", "position": 5, "name": "Argentiera", "address": "Sassari, Sardinia" },
+            { "@type": "Beach", "position": 6, "name": "La Pelosa", "address": "Stintino, Sardinia" }
+        ]
+    }
+    </script>
+</head>
+<body>
+    <header class="page-header">
+        <a href="guida-alghero.html" class="back-link">← Torna alla guida</a>
+        <h1>Spiagge</h1>
+        <p>Le spiagge più belle di Alghero e dintorni. Sabbia bianca, acqua cristallina, e qualche consiglio per evitare la ressa.</p>
+    </header>
+    
+    <main>
+        <!-- SPIAGGE PRINCIPALI -->
+        <section class="section">
+            <h2>🏖️ Spiagge Vicine</h2>
+            <p class="section-intro">Raggiungibili in pochi minuti dalla casa. Sono le più popolari, ma per buoni motivi.</p>
+            
+            <article class="place-card">
+                <h3>Le Bombarde</h3>
+                <div class="tags">
+                    <span class="tag">Sabbia bianca</span>
+                    <span class="tag">Acqua cristallina</span>
+                    <span class="tag">Affollata</span>
+                </div>
+                <p>Spiaggia molto popolare con sabbia bianca fine. L'acqua è incredibile e rimane fresca anche in pieno agosto. È piccola e si riempie presto, ma ne vale la pena.</p>
+                <div class="tip">
+                    <strong>💡 Consiglio locale</strong>
+                    Al chiosco J&B fanno le cozze con le patatine fritte migliori di Alghero. L'ho scoperto l'estate scorsa e ci torno sempre.
+                </div>
+                <a href="https://maps.google.com/?q=Spiaggia+Le+Bombarde+Alghero" target="_blank" class="map-link">
+                    📍 Vedi su Google Maps
+                </a>
+            </article>
+            
+            <article class="place-card">
+                <h3>Lazzaretto</h3>
+                <div class="tags">
+                    <span class="tag">Vicina a Le Bombarde</span>
+                    <span class="tag">Acqua incredibile</span>
+                </div>
+                <p>Vicinissima a Le Bombarde, molto simile. Anche qui l'acqua è spettacolare. Altrettanto affollata in estate.</p>
+                <a href="https://maps.google.com/?q=Spiaggia+Lazzaretto+Alghero" target="_blank" class="map-link">
+                    📍 Vedi su Google Maps
+                </a>
+            </article>
+            
+            <article class="place-card">
+                <h3>Mugoni</h3>
+                <div class="tags">
+                    <span class="tag">Grande</span>
+                    <span class="tag">Più spazio</span>
+                    <span class="tag favorite">🌅 Top tramonto</span>
+                </div>
+                <p>Spiaggia più grande rispetto a Le Bombarde e Lazzaretto. Si riempie anche questa, ma se cammini un po' verso nord trovi sempre posto. Al tramonto è magica.</p>
+                <div class="tip">
+                    <strong>💡 Consiglio</strong>
+                    Camminando verso la parte nord trovi sempre spazio, anche in piena estate.
+                </div>
+                <a href="https://maps.google.com/?q=Spiaggia+Mugoni+Alghero" target="_blank" class="map-link">
+                    📍 Vedi su Google Maps
+                </a>
+            </article>
+        </section>
+        
+        <div class="divider"></div>
+        
+        <!-- SPIAGGE SPECIALI -->
+        <section class="section">
+            <h2>🌊 Spiagge da Scoprire</h2>
+            <p class="section-intro">Un po' più lontane, ma con caratteristiche uniche.</p>
+            
+            <article class="place-card">
+                <h3>Porto Ferro</h3>
+                <div class="tags">
+                    <span class="tag favorite">⭐ La mia preferita</span>
+                    <span class="tag wild">🏄 Spiaggia surf</span>
+                    <span class="tag">Sabbia dorata</span>
+                </div>
+                <p>Grande spiaggia di sabbia dorata che mantiene un'atmosfera selvaggia. È una spiaggia da surf, spesso ventosa ma molto piacevole. L'ambiente è casual e rilassato.</p>
+                <div class="tip">
+                    <strong>💡 Perché è la mia preferita</strong>
+                    Qui trovi SEMPRE posto. Anche nel weekend di Ferragosto. È grande, selvaggia, e l'atmosfera è completamente diversa dalle altre.
+                </div>
+                <div class="links">
+                    <a href="https://maps.google.com/?q=Porto+Ferro+Alghero" target="_blank" class="map-link">📍 Vedi su Google Maps</a>
+                </div>
+            </article>
+            
+            <article class="place-card">
+                <h3>Argentiera</h3>
+                <div class="tags">
+                    <span class="tag top">✨ Spettacolare</span>
+                    <span class="tag">Acqua cristallina</span>
+                    <span class="tag">Chiosco ottimo</span>
+                </div>
+                <p>Che dire... fantastica. Acqua cristallina e fondali incredibili. C'è anche uno stabilimento e un chiosco bar che fa ottimi primi e secondi sia di carne che di pesce.</p>
+                <a href="https://maps.google.com/?q=Argentiera+Sardegna" target="_blank" class="map-link">
+                    📍 Vedi su Google Maps
+                </a>
+            </article>
+            
+            <article class="place-card">
+                <h3>La Pelosa</h3>
+                <div class="tags">
+                    <span class="tag top">🏆 La più bella</span>
+                    <span class="tag">Stintino</span>
+                    <span class="tag">Prenotazione obbligatoria</span>
+                </div>
+                <p>Non è ad Alghero ma a Stintino. Secondo me è la spiaggia più bella della Sardegna. Ha un numero limitato di posti e devi prenotare.</p>
+                <div class="warning">
+                    ⚠️ <strong>Importante:</strong> Devi prenotare sul sito ufficiale. I posti sono limitati.
+                </div>
+                <div class="links">
+                    <a href="https://maps.google.com/?q=La+Pelosa+Stintino" target="_blank" class="map-link">📍 Google Maps</a>
+                    <a href="https://www.lapelosastintino.it" target="_blank" class="book-link">🎫 Prenota sul sito</a>
+                </div>
+            </article>
+        </section>
+    </main>
+    
+    <footer>
+        <p><a href="guida-alghero.html">← Torna alla guida</a></p>
+        <p style="margin-top: 16px; opacity: 0.7; font-size: 0.9rem;">Alghero Fronte Mare • Case fronte mare in gestione diretta</p>
+    </footer>
+</body>
+</html>

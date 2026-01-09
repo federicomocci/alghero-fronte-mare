@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dove Mangiare ad Alghero | Ristoranti e Pizzerie Consigliati | Alghero Fronte Mare</title>
+    <meta name="description" content="I migliori ristoranti di Alghero: Trattoria Lo Romanì, Nautilus, Rafel e altri. Pizzerie, opzioni vegetariane. Consigli di un locale.">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://www.algherofrontemare.it/dove-mangiare">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Source+Sans+Pro:wght@300;400;600&display=swap" rel="stylesheet">
+    
+    <style>
+        :root {
+            --sand: #C4A77D;
+            --sand-light: #E8DCC8;
+            --sand-dark: #8B7355;
+            --sea: #2C5F7C;
+            --sea-light: #4A8DAB;
+            --white: #FDFBF7;
+            --text: #2D2D2D;
+            --text-light: #5A5A5A;
+            --green: #4A7C59;
+        }
+        
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        
+        body {
+            font-family: 'Source Sans Pro', sans-serif;
+            background: var(--white);
+            color: var(--text);
+            line-height: 1.7;
+            font-size: 17px;
+        }
+        
+        h1, h2, h3 { font-family: 'Cormorant Garamond', serif; font-weight: 500; line-height: 1.3; }
+        
+        /* Header */
+        .page-header {
+            background: linear-gradient(135deg, var(--sand-light) 0%, var(--white) 100%);
+            padding: 40px 24px 60px;
+        }
+        
+        .back-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            color: var(--sand-dark);
+            text-decoration: none;
+            font-size: 0.95rem;
+            margin-bottom: 24px;
+        }
+        
+        .back-link:hover { text-decoration: underline; }
+        
+        .page-header h1 {
+            font-size: 2.5rem;
+            color: var(--sand-dark);
+            margin-bottom: 12px;
+        }
+        
+        .page-header p {
+            color: var(--text-light);
+            font-size: 1.1rem;
+            max-width: 600px;
+        }
+        
+        /* Section */
+        .section {
+            padding: 48px 24px;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        .section h2 {
+            font-size: 1.8rem;
+            color: var(--sand-dark);
+            margin-bottom: 8px;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+        
+        .section-intro {
+            color: var(--text-light);
+            margin-bottom: 32px;
+        }
+        
+        /* Place Card */
+        .place-card {
+            background: white;
+            border-radius: 16px;
+            padding: 24px;
+            margin-bottom: 20px;
+            border: 2px solid var(--sand-light);
+            transition: border-color 0.3s;
+        }
+        
+        .place-card:hover {
+            border-color: var(--sand);
+        }
+        
+        .place-card h3 {
+            font-size: 1.4rem;
+            color: var(--sand-dark);
+            margin-bottom: 8px;
+        }
+        
+        .place-card p {
+            color: var(--text-light);
+            margin-bottom: 16px;
+        }
+        
+        .place-card .tip {
+            background: var(--sand-light);
+            padding: 12px 16px;
+            border-radius: 8px;
+            font-size: 0.95rem;
+            color: var(--sand-dark);
+            margin-bottom: 16px;
+        }
+        
+        .place-card .tip strong {
+            display: block;
+            margin-bottom: 4px;
+        }
+        
+        .map-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            color: var(--sea);
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 0.95rem;
+        }
+        
+        .map-link:hover { text-decoration: underline; }
+        
+        /* Tags */
+        .tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            margin-bottom: 16px;
+        }
+        
+        .tag {
+            background: var(--sand-light);
+            color: var(--sand-dark);
+            padding: 4px 12px;
+            border-radius: 12px;
+            font-size: 0.85rem;
+            font-weight: 600;
+        }
+        
+        .tag.veg {
+            background: #E8F5E9;
+            color: var(--green);
+        }
+        
+        .tag.favorite {
+            background: #FFF3E0;
+            color: #E65100;
+        }
+        
+        /* Divider */
+        .divider {
+            height: 2px;
+            background: var(--sand-light);
+            margin: 48px 0;
+        }
+        
+        /* Footer */
+        footer {
+            background: var(--text);
+            color: white;
+            padding: 32px 24px;
+            text-align: center;
+        }
+        
+        footer a { color: var(--sand-light); text-decoration: none; }
+        
+        @media (min-width: 640px) {
+            .page-header h1 { font-size: 3rem; }
+            .page-header { padding: 60px 24px 80px; }
+        }
+    </style>
+    
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "ItemList",
+        "name": "Ristoranti consigliati ad Alghero",
+        "description": "Lista dei migliori ristoranti di Alghero consigliati da un residente locale",
+        "itemListElement": [
+            {
+                "@type": "Restaurant",
+                "position": 1,
+                "name": "Trattoria Lo Romanì",
+                "servesCuisine": "Sardinian",
+                "address": { "@type": "PostalAddress", "addressLocality": "Alghero" }
+            },
+            {
+                "@type": "Restaurant",
+                "position": 2,
+                "name": "Nautilus",
+                "servesCuisine": "Seafood",
+                "address": { "@type": "PostalAddress", "addressLocality": "Alghero" }
+            },
+            {
+                "@type": "Restaurant",
+                "position": 3,
+                "name": "Rafel",
+                "servesCuisine": "Mediterranean",
+                "address": { "@type": "PostalAddress", "addressLocality": "Alghero" }
+            }
+        ]
+    }
+    </script>
+</head>
+<body>
+    <header class="page-header">
+        <a href="guida-alghero.html" class="back-link">← Torna alla guida</a>
+        <h1>Dove Mangiare</h1>
+        <p>Ristoranti, pizzerie e opzioni vegetariane. I posti dove vado io quando non cucino a casa.</p>
+    </header>
+    
+    <main>
+        <!-- RISTORANTI -->
+        <section class="section">
+            <h2>🍽️ Ristoranti</h2>
+            <p class="section-intro">Questi sono i ristoranti che consiglio di più. Meglio prenotare, soprattutto in alta stagione.</p>
+            
+            <article class="place-card">
+                <h3>Trattoria Lo Romanì</h3>
+                <div class="tags">
+                    <span class="tag favorite">⭐ Il mio preferito</span>
+                    <span class="tag">Centro storico</span>
+                </div>
+                <p>Nel centro storico, è la mia trattoria preferita. Porzioni abbondanti e cucina sarda autentica. La qualità è costante, il servizio familiare.</p>
+                <div class="tip">
+                    <strong>💡 Consiglio</strong>
+                    Meglio prenotare anche con qualche giorno di anticipo, soprattutto d'estate.
+                </div>
+                <a href="https://maps.google.com/?q=Trattoria+Lo+Romani+Alghero" target="_blank" class="map-link">
+                    📍 Vedi su Google Maps
+                </a>
+            </article>
+            
+            <article class="place-card">
+                <h3>Nautilus</h3>
+                <div class="tags">
+                    <span class="tag">Centro storico</span>
+                    <span class="tag">Vista porto</span>
+                </div>
+                <p>Ristorante nel centro storico con una bella vista sul porto turistico. Ottimo per una cena romantica o per godersi il tramonto mentre mangi.</p>
+                <a href="https://maps.google.com/?q=Nautilus+Alghero" target="_blank" class="map-link">
+                    📍 Vedi su Google Maps
+                </a>
+            </article>
+            
+            <article class="place-card">
+                <h3>Rafel</h3>
+                <div class="tags">
+                    <span class="tag">Sul mare</span>
+                    <span class="tag">Cucina raffinata</span>
+                </div>
+                <p>Ristorante elegante direttamente sulla spiaggia. Servono piatti raffinati in un ambiente curato. Perfetto per un'occasione speciale.</p>
+                <a href="https://maps.google.com/?q=Rafel+Restaurant+Alghero" target="_blank" class="map-link">
+                    📍 Vedi su Google Maps
+                </a>
+            </article>
+        </section>
+        
+        <div class="divider" style="max-width: 800px; margin: 0 auto;"></div>
+        
+        <!-- PIZZERIE -->
+        <section class="section">
+            <h2>🍕 Pizzerie</h2>
+            <p class="section-intro">Pizza buona ad Alghero ce n'è, basta sapere dove andare.</p>
+            
+            <article class="place-card">
+                <h3>Alguer Mia</h3>
+                <div class="tags">
+                    <span class="tag">Zona Lido</span>
+                </div>
+                <p>Si trova nella zona del Lido. Buona sia per la pizza che per altri piatti. La location non è il massimo secondo me, ma il cibo è molto buono.</p>
+                <a href="https://maps.google.com/?q=Alguer+Mia+Alghero" target="_blank" class="map-link">
+                    📍 Vedi su Google Maps
+                </a>
+            </article>
+            
+            <article class="place-card">
+                <h3>Cajo</h3>
+                <div class="tags">
+                    <span class="tag">Sardo-Napoletano</span>
+                </div>
+                <p>Un'esperienza culinaria unica che unisce i sapori tradizionali della Sardegna con la cucina napoletana. Interessante se vuoi provare qualcosa di diverso.</p>
+                <a href="https://maps.google.com/?q=Cajo+Alghero" target="_blank" class="map-link">
+                    📍 Vedi su Google Maps
+                </a>
+            </article>
+            
+            <article class="place-card">
+                <h3>Il Lido</h3>
+                <div class="tags">
+                    <span class="tag">Sulla spiaggia</span>
+                    <span class="tag">Pizza al metro</span>
+                </div>
+                <p>Location molto piacevole, direttamente sulla spiaggia. Cibo buono, pizza ottima. La servono al mezzo metro (per 2 persone) o al metro (per 4 persone).</p>
+                <a href="https://maps.google.com/?q=Il+Lido+Alghero" target="_blank" class="map-link">
+                    📍 Vedi su Google Maps
+                </a>
+            </article>
+        </section>
+        
+        <div class="divider" style="max-width: 800px; margin: 0 auto;"></div>
+        
+        <!-- VEGETARIANO -->
+        <section class="section">
+            <h2>🥗 Opzioni Vegetariane</h2>
+            <p class="section-intro">Se cerchi piatti vegetariani, questi posti hanno ottime scelte.</p>
+            
+            <article class="place-card">
+                <h3>MoS</h3>
+                <div class="tags">
+                    <span class="tag veg">🌱 Veg-friendly</span>
+                    <span class="tag">Tapas</span>
+                </div>
+                <p>Ristorante tapas molto buono, con eccellenti opzioni vegetariane. Perfetto per un aperitivo che diventa cena.</p>
+                <a href="https://maps.google.com/?q=MoS+Alghero" target="_blank" class="map-link">
+                    📍 Vedi su Google Maps
+                </a>
+            </article>
+            
+            <article class="place-card">
+                <h3>Il Piccolo Lido</h3>
+                <div class="tags">
+                    <span class="tag veg">🌱 Veg-friendly</span>
+                    <span class="tag">Versatile</span>
+                </div>
+                <p>Dalla pizza ai piatti più elaborati, con eccellenti opzioni vegetariane. Locale versatile che accontenta tutti.</p>
+                <a href="https://maps.google.com/?q=Il+Piccolo+Lido+Alghero" target="_blank" class="map-link">
+                    📍 Vedi su Google Maps
+                </a>
+            </article>
+            
+            <article class="place-card">
+                <h3>Vegamare</h3>
+                <div class="tags">
+                    <span class="tag veg">🌱 100% Veg</span>
+                    <span class="tag">Sulla spiaggia</span>
+                    <span class="tag">Solo estate</span>
+                </div>
+                <p>La scelta più vegetariana in assoluto. Aperto solo in estate, direttamente sulla spiaggia. Se cerchi cucina veg, questo è il posto giusto.</p>
+                <a href="https://maps.google.com/?q=Vegamare+Alghero" target="_blank" class="map-link">
+                    📍 Vedi su Google Maps
+                </a>
+            </article>
+        </section>
+    </main>
+    
+    <footer>
+        <p><a href="guida-alghero.html">← Torna alla guida</a></p>
+        <p style="margin-top: 16px; opacity: 0.7; font-size: 0.9rem;">Alghero Fronte Mare • Case fronte mare in gestione diretta</p>
+    </footer>
+</body>
+</html>
