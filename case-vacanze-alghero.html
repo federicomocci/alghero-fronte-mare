@@ -241,6 +241,28 @@
         @media (min-width: 1024px) {
             .section { padding: var(--space-xxl) 0; }
         }
+            /* WHATSAPP STICKY */
+        .whatsapp-sticky {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: fixed;
+            bottom: 24px;
+            right: 24px;
+            width: 60px;
+            height: 60px;
+            background: #25D366;
+            border-radius: 50%;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+            z-index: 1000;
+            transition: transform 0.2s;
+        }
+        .whatsapp-sticky:hover {
+            transform: scale(1.1);
+        }
+        @media (min-width: 1024px) {
+            .whatsapp-sticky { display: none; }
+        }
     </style>
     <!-- Schema.org JSON-LD -->
     <script type="application/ld+json">
