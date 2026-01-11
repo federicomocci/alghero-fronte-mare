@@ -215,6 +215,11 @@
             text-decoration: none;
         }
 
+        .site-nav-bar { position: sticky; top: 0; background: var(--color-sand); border-bottom: 1px solid var(--color-sand-dark); padding: 12px 0; z-index: 99; }
+        .site-nav-bar .container { display: flex; justify-content: center; gap: 3rem; }
+        .site-nav-bar a { color: var(--color-text); text-decoration: none; font-size: 0.95rem; font-weight: 400; }
+        .site-nav-bar a:hover { color: var(--color-sea-deep); }
+
         .site-nav__link:hover {
             color: var(--color-sea-deep);
         }
@@ -658,12 +663,21 @@
     <header class="site-header">
         <div class="container site-header__inner">
             <a href="/" class="site-logo">Alghero Fronte Mare</a>
-            <nav class="site-nav">
-                <a href="/case-vacanze-alghero" class="site-nav__link">Le case</a>
-                <a href="/chi-sono" class="site-nav__link">Chi sono</a>
-            </nav>
+            <!-- nav moved below -->
+                
+                
+            
         </div>
     </header>
+
+    <!-- NAV BAR -->
+    <nav class="site-nav-bar">
+        <div class="container">
+            <a href="/case-vacanze-alghero">Le case</a>
+            <a href="/chi-sono">Chi sono</a>
+            <a href="/guida-alghero">Guida</a>
+        </div>
+    </nav>
 
     <!-- MAIN -->
     <main id="main-content">
