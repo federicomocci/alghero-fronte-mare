@@ -1,10 +1,13 @@
-# Robots.txt per algherofrontemare.it
-
 User-agent: *
 Allow: /
 
-# Sitemap
 Sitemap: https://www.algherofrontemare.it/sitemap.xml
 
-# Blocca pagine non necessarie per i motori
-Disallow: /cdn-cgi/
+User-agent: GPTBot
+Allow: /
+
+User-agent: anthropic-ai
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
