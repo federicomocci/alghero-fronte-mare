@@ -4,12 +4,16 @@
   "redirects": [
     { "source": "/foto-lido", "destination": "/lido-113-fronte-mare", "permanent": true },
     { "source": "/foto-lido/", "destination": "/lido-113-fronte-mare", "permanent": true },
+    { "source": "/foto-lido.html", "destination": "/lido-113-fronte-mare", "permanent": true },
     { "source": "/foto-studio-flat", "destination": "/lido-113-loft", "permanent": true },
     { "source": "/foto-studio-flat/", "destination": "/lido-113-loft", "permanent": true },
+    { "source": "/foto-studio-flat.html", "destination": "/lido-113-loft", "permanent": true },
     { "source": "/dove-siamo", "destination": "/info-utili", "permanent": true },
     { "source": "/dove-siamo/", "destination": "/info-utili", "permanent": true },
+    { "source": "/dove-siamo.html", "destination": "/info-utili", "permanent": true },
     { "source": "/prenota-ora", "destination": "/info-utili", "permanent": true },
     { "source": "/prenota-ora/", "destination": "/info-utili", "permanent": true },
+    { "source": "/prenota-ora.html", "destination": "/info-utili", "permanent": true },
     { "source": "/index.html", "destination": "/", "permanent": true }
   ],
   "headers": [
@@ -17,7 +21,8 @@
       "source": "/(.*)",
       "headers": [
         { "key": "X-Content-Type-Options", "value": "nosniff" },
-        { "key": "X-Frame-Options", "value": "DENY" }
+        { "key": "X-Frame-Options", "value": "DENY" },
+        { "key": "X-XSS-Protection", "value": "1; mode=block" }
       ]
     }
   ]
