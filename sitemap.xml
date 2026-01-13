@@ -1,69 +1,327 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  
+  <!-- HOMEPAGE -->
   <url>
     <loc>https://www.algherofrontemare.it/</loc>
-    <lastmod>2026-01-09</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>1.0</priority>
+    <xhtml:link rel="alternate" hreflang="it" href="https://www.algherofrontemare.it/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.algherofrontemare.it/en/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://www.algherofrontemare.it/de/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.algherofrontemare.it/fr/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.algherofrontemare.it/es/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.algherofrontemare.it/"/>
   </url>
   <url>
-    <loc>https://www.algherofrontemare.it/case-vacanze-alghero</loc>
-    <lastmod>2026-01-09</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
+    <loc>https://www.algherofrontemare.it/en/</loc>
+    <xhtml:link rel="alternate" hreflang="it" href="https://www.algherofrontemare.it/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.algherofrontemare.it/en/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://www.algherofrontemare.it/de/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.algherofrontemare.it/fr/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.algherofrontemare.it/es/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.algherofrontemare.it/"/>
   </url>
+  <url>
+    <loc>https://www.algherofrontemare.it/de/</loc>
+    <xhtml:link rel="alternate" hreflang="it" href="https://www.algherofrontemare.it/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.algherofrontemare.it/en/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://www.algherofrontemare.it/de/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.algherofrontemare.it/fr/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.algherofrontemare.it/es/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.algherofrontemare.it/"/>
+  </url>
+  <url>
+    <loc>https://www.algherofrontemare.it/fr/</loc>
+    <xhtml:link rel="alternate" hreflang="it" href="https://www.algherofrontemare.it/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.algherofrontemare.it/en/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://www.algherofrontemare.it/de/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.algherofrontemare.it/fr/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.algherofrontemare.it/es/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.algherofrontemare.it/"/>
+  </url>
+  <url>
+    <loc>https://www.algherofrontemare.it/es/</loc>
+    <xhtml:link rel="alternate" hreflang="it" href="https://www.algherofrontemare.it/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.algherofrontemare.it/en/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://www.algherofrontemare.it/de/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.algherofrontemare.it/fr/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.algherofrontemare.it/es/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.algherofrontemare.it/"/>
+  </url>
+
+  <!-- LIDO 113 FRONTE MARE -->
   <url>
     <loc>https://www.algherofrontemare.it/lido-113-fronte-mare</loc>
-    <lastmod>2026-01-09</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="it" href="https://www.algherofrontemare.it/lido-113-fronte-mare"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.algherofrontemare.it/en/lido-113-fronte-mare"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://www.algherofrontemare.it/de/lido-113-fronte-mare"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.algherofrontemare.it/fr/lido-113-fronte-mare"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.algherofrontemare.it/es/lido-113-fronte-mare"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.algherofrontemare.it/lido-113-fronte-mare"/>
   </url>
+  <url>
+    <loc>https://www.algherofrontemare.it/en/lido-113-fronte-mare</loc>
+    <xhtml:link rel="alternate" hreflang="it" href="https://www.algherofrontemare.it/lido-113-fronte-mare"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.algherofrontemare.it/en/lido-113-fronte-mare"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://www.algherofrontemare.it/de/lido-113-fronte-mare"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.algherofrontemare.it/fr/lido-113-fronte-mare"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.algherofrontemare.it/es/lido-113-fronte-mare"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.algherofrontemare.it/lido-113-fronte-mare"/>
+  </url>
+  <url>
+    <loc>https://www.algherofrontemare.it/de/lido-113-fronte-mare</loc>
+    <xhtml:link rel="alternate" hreflang="it" href="https://www.algherofrontemare.it/lido-113-fronte-mare"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.algherofrontemare.it/en/lido-113-fronte-mare"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://www.algherofrontemare.it/de/lido-113-fronte-mare"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.algherofrontemare.it/fr/lido-113-fronte-mare"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.algherofrontemare.it/es/lido-113-fronte-mare"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.algherofrontemare.it/lido-113-fronte-mare"/>
+  </url>
+  <url>
+    <loc>https://www.algherofrontemare.it/fr/lido-113-fronte-mare</loc>
+    <xhtml:link rel="alternate" hreflang="it" href="https://www.algherofrontemare.it/lido-113-fronte-mare"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.algherofrontemare.it/en/lido-113-fronte-mare"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://www.algherofrontemare.it/de/lido-113-fronte-mare"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.algherofrontemare.it/fr/lido-113-fronte-mare"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.algherofrontemare.it/es/lido-113-fronte-mare"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.algherofrontemare.it/lido-113-fronte-mare"/>
+  </url>
+  <url>
+    <loc>https://www.algherofrontemare.it/es/lido-113-fronte-mare</loc>
+    <xhtml:link rel="alternate" hreflang="it" href="https://www.algherofrontemare.it/lido-113-fronte-mare"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.algherofrontemare.it/en/lido-113-fronte-mare"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://www.algherofrontemare.it/de/lido-113-fronte-mare"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.algherofrontemare.it/fr/lido-113-fronte-mare"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.algherofrontemare.it/es/lido-113-fronte-mare"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.algherofrontemare.it/lido-113-fronte-mare"/>
+  </url>
+
+  <!-- LIDO 113 LOFT -->
   <url>
     <loc>https://www.algherofrontemare.it/lido-113-loft</loc>
-    <lastmod>2026-01-09</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="it" href="https://www.algherofrontemare.it/lido-113-loft"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.algherofrontemare.it/en/lido-113-loft"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://www.algherofrontemare.it/de/lido-113-loft"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.algherofrontemare.it/fr/lido-113-loft"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.algherofrontemare.it/es/lido-113-loft"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.algherofrontemare.it/lido-113-loft"/>
   </url>
   <url>
-    <loc>https://www.algherofrontemare.it/orti-36-sky-suite</loc>
-    <lastmod>2026-01-09</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.7</priority>
+    <loc>https://www.algherofrontemare.it/en/lido-113-loft</loc>
+    <xhtml:link rel="alternate" hreflang="it" href="https://www.algherofrontemare.it/lido-113-loft"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.algherofrontemare.it/en/lido-113-loft"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://www.algherofrontemare.it/de/lido-113-loft"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.algherofrontemare.it/fr/lido-113-loft"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.algherofrontemare.it/es/lido-113-loft"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.algherofrontemare.it/lido-113-loft"/>
   </url>
   <url>
-    <loc>https://www.algherofrontemare.it/orti-36-sea-suite</loc>
-    <lastmod>2026-01-09</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.7</priority>
+    <loc>https://www.algherofrontemare.it/de/lido-113-loft</loc>
+    <xhtml:link rel="alternate" hreflang="it" href="https://www.algherofrontemare.it/lido-113-loft"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.algherofrontemare.it/en/lido-113-loft"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://www.algherofrontemare.it/de/lido-113-loft"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.algherofrontemare.it/fr/lido-113-loft"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.algherofrontemare.it/es/lido-113-loft"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.algherofrontemare.it/lido-113-loft"/>
   </url>
   <url>
-    <loc>https://www.algherofrontemare.it/attico-vista-mare</loc>
-    <lastmod>2026-01-09</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.7</priority>
+    <loc>https://www.algherofrontemare.it/fr/lido-113-loft</loc>
+    <xhtml:link rel="alternate" hreflang="it" href="https://www.algherofrontemare.it/lido-113-loft"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.algherofrontemare.it/en/lido-113-loft"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://www.algherofrontemare.it/de/lido-113-loft"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.algherofrontemare.it/fr/lido-113-loft"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.algherofrontemare.it/es/lido-113-loft"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.algherofrontemare.it/lido-113-loft"/>
   </url>
+  <url>
+    <loc>https://www.algherofrontemare.it/es/lido-113-loft</loc>
+    <xhtml:link rel="alternate" hreflang="it" href="https://www.algherofrontemare.it/lido-113-loft"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.algherofrontemare.it/en/lido-113-loft"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://www.algherofrontemare.it/de/lido-113-loft"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.algherofrontemare.it/fr/lido-113-loft"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.algherofrontemare.it/es/lido-113-loft"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.algherofrontemare.it/lido-113-loft"/>
+  </url>
+
+  <!-- GUIDA -->
+  <url>
+    <loc>https://www.algherofrontemare.it/guida-alghero</loc>
+    <xhtml:link rel="alternate" hreflang="it" href="https://www.algherofrontemare.it/guida-alghero"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.algherofrontemare.it/en/guide"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://www.algherofrontemare.it/de/guide"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.algherofrontemare.it/fr/guide"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.algherofrontemare.it/es/guia"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.algherofrontemare.it/guida-alghero"/>
+  </url>
+  <url>
+    <loc>https://www.algherofrontemare.it/en/guide</loc>
+    <xhtml:link rel="alternate" hreflang="it" href="https://www.algherofrontemare.it/guida-alghero"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.algherofrontemare.it/en/guide"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://www.algherofrontemare.it/de/guide"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.algherofrontemare.it/fr/guide"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.algherofrontemare.it/es/guia"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.algherofrontemare.it/guida-alghero"/>
+  </url>
+  <url>
+    <loc>https://www.algherofrontemare.it/de/guide</loc>
+    <xhtml:link rel="alternate" hreflang="it" href="https://www.algherofrontemare.it/guida-alghero"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.algherofrontemare.it/en/guide"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://www.algherofrontemare.it/de/guide"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.algherofrontemare.it/fr/guide"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.algherofrontemare.it/es/guia"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.algherofrontemare.it/guida-alghero"/>
+  </url>
+  <url>
+    <loc>https://www.algherofrontemare.it/fr/guide</loc>
+    <xhtml:link rel="alternate" hreflang="it" href="https://www.algherofrontemare.it/guida-alghero"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.algherofrontemare.it/en/guide"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://www.algherofrontemare.it/de/guide"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.algherofrontemare.it/fr/guide"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.algherofrontemare.it/es/guia"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.algherofrontemare.it/guida-alghero"/>
+  </url>
+  <url>
+    <loc>https://www.algherofrontemare.it/es/guia</loc>
+    <xhtml:link rel="alternate" hreflang="it" href="https://www.algherofrontemare.it/guida-alghero"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.algherofrontemare.it/en/guide"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://www.algherofrontemare.it/de/guide"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.algherofrontemare.it/fr/guide"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.algherofrontemare.it/es/guia"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.algherofrontemare.it/guida-alghero"/>
+  </url>
+
+  <!-- INFO -->
+  <url>
+    <loc>https://www.algherofrontemare.it/info-utili</loc>
+    <xhtml:link rel="alternate" hreflang="it" href="https://www.algherofrontemare.it/info-utili"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.algherofrontemare.it/en/info"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://www.algherofrontemare.it/de/info"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.algherofrontemare.it/fr/info"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.algherofrontemare.it/es/info"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.algherofrontemare.it/info-utili"/>
+  </url>
+  <url>
+    <loc>https://www.algherofrontemare.it/en/info</loc>
+    <xhtml:link rel="alternate" hreflang="it" href="https://www.algherofrontemare.it/info-utili"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.algherofrontemare.it/en/info"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://www.algherofrontemare.it/de/info"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.algherofrontemare.it/fr/info"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.algherofrontemare.it/es/info"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.algherofrontemare.it/info-utili"/>
+  </url>
+  <url>
+    <loc>https://www.algherofrontemare.it/de/info</loc>
+    <xhtml:link rel="alternate" hreflang="it" href="https://www.algherofrontemare.it/info-utili"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.algherofrontemare.it/en/info"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://www.algherofrontemare.it/de/info"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.algherofrontemare.it/fr/info"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.algherofrontemare.it/es/info"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.algherofrontemare.it/info-utili"/>
+  </url>
+  <url>
+    <loc>https://www.algherofrontemare.it/fr/info</loc>
+    <xhtml:link rel="alternate" hreflang="it" href="https://www.algherofrontemare.it/info-utili"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.algherofrontemare.it/en/info"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://www.algherofrontemare.it/de/info"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.algherofrontemare.it/fr/info"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.algherofrontemare.it/es/info"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.algherofrontemare.it/info-utili"/>
+  </url>
+  <url>
+    <loc>https://www.algherofrontemare.it/es/info</loc>
+    <xhtml:link rel="alternate" hreflang="it" href="https://www.algherofrontemare.it/info-utili"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.algherofrontemare.it/en/info"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://www.algherofrontemare.it/de/info"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.algherofrontemare.it/fr/info"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.algherofrontemare.it/es/info"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.algherofrontemare.it/info-utili"/>
+  </url>
+
+  <!-- CHI SONO / ABOUT -->
   <url>
     <loc>https://www.algherofrontemare.it/chi-sono</loc>
-    <lastmod>2026-01-09</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="it" href="https://www.algherofrontemare.it/chi-sono"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.algherofrontemare.it/en/about"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://www.algherofrontemare.it/de/about"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.algherofrontemare.it/fr/about"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.algherofrontemare.it/es/about"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.algherofrontemare.it/chi-sono"/>
   </url>
   <url>
-    <loc>https://www.algherofrontemare.it/cosa-fare-alghero</loc>
-    <lastmod>2026-01-09</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <loc>https://www.algherofrontemare.it/en/about</loc>
+    <xhtml:link rel="alternate" hreflang="it" href="https://www.algherofrontemare.it/chi-sono"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.algherofrontemare.it/en/about"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://www.algherofrontemare.it/de/about"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.algherofrontemare.it/fr/about"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.algherofrontemare.it/es/about"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.algherofrontemare.it/chi-sono"/>
   </url>
   <url>
-    <loc>https://www.algherofrontemare.it/privacy-policy</loc>
-    <lastmod>2026-01-09</lastmod>
-    <changefreq>yearly</changefreq>
-    <priority>0.3</priority>
+    <loc>https://www.algherofrontemare.it/de/about</loc>
+    <xhtml:link rel="alternate" hreflang="it" href="https://www.algherofrontemare.it/chi-sono"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.algherofrontemare.it/en/about"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://www.algherofrontemare.it/de/about"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.algherofrontemare.it/fr/about"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.algherofrontemare.it/es/about"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.algherofrontemare.it/chi-sono"/>
   </url>
   <url>
-    <loc>https://www.algherofrontemare.it/cookie-policy</loc>
-    <lastmod>2026-01-09</lastmod>
-    <changefreq>yearly</changefreq>
-    <priority>0.3</priority>
+    <loc>https://www.algherofrontemare.it/fr/about</loc>
+    <xhtml:link rel="alternate" hreflang="it" href="https://www.algherofrontemare.it/chi-sono"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.algherofrontemare.it/en/about"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://www.algherofrontemare.it/de/about"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.algherofrontemare.it/fr/about"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.algherofrontemare.it/es/about"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.algherofrontemare.it/chi-sono"/>
   </url>
+  <url>
+    <loc>https://www.algherofrontemare.it/es/about</loc>
+    <xhtml:link rel="alternate" hreflang="it" href="https://www.algherofrontemare.it/chi-sono"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.algherofrontemare.it/en/about"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://www.algherofrontemare.it/de/about"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.algherofrontemare.it/fr/about"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.algherofrontemare.it/es/about"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.algherofrontemare.it/chi-sono"/>
+  </url>
+
+  <!-- GUIDE IT -->
+  <url><loc>https://www.algherofrontemare.it/dove-mangiare</loc></url>
+  <url><loc>https://www.algherofrontemare.it/bar-e-aperitivi</loc></url>
+  <url><loc>https://www.algherofrontemare.it/gelaterie</loc></url>
+  <url><loc>https://www.algherofrontemare.it/spiagge</loc></url>
+  <url><loc>https://www.algherofrontemare.it/luoghi-segreti</loc></url>
+  <url><loc>https://www.algherofrontemare.it/esperienze</loc></url>
+
+  <!-- GUIDE EN -->
+  <url><loc>https://www.algherofrontemare.it/en/guide/where-to-eat</loc></url>
+  <url><loc>https://www.algherofrontemare.it/en/guide/bars-aperitivo</loc></url>
+  <url><loc>https://www.algherofrontemare.it/en/guide/gelato</loc></url>
+  <url><loc>https://www.algherofrontemare.it/en/guide/beaches</loc></url>
+  <url><loc>https://www.algherofrontemare.it/en/guide/secret-spots</loc></url>
+  <url><loc>https://www.algherofrontemare.it/en/guide/experiences</loc></url>
+
+  <!-- GUIDE DE -->
+  <url><loc>https://www.algherofrontemare.it/de/guide/restaurants</loc></url>
+  <url><loc>https://www.algherofrontemare.it/de/guide/bars-aperitivo</loc></url>
+  <url><loc>https://www.algherofrontemare.it/de/guide/eis</loc></url>
+  <url><loc>https://www.algherofrontemare.it/de/guide/straende</loc></url>
+  <url><loc>https://www.algherofrontemare.it/de/guide/geheimtipps</loc></url>
+  <url><loc>https://www.algherofrontemare.it/de/guide/erlebnisse</loc></url>
+
+  <!-- GUIDE FR -->
+  <url><loc>https://www.algherofrontemare.it/fr/guide/restaurants</loc></url>
+  <url><loc>https://www.algherofrontemare.it/fr/guide/bars-aperitivo</loc></url>
+  <url><loc>https://www.algherofrontemare.it/fr/guide/glaces</loc></url>
+  <url><loc>https://www.algherofrontemare.it/fr/guide/plages</loc></url>
+  <url><loc>https://www.algherofrontemare.it/fr/guide/coins-secrets</loc></url>
+  <url><loc>https://www.algherofrontemare.it/fr/guide/experiences</loc></url>
+
+  <!-- GUIDE ES -->
+  <url><loc>https://www.algherofrontemare.it/es/guia/restaurantes</loc></url>
+  <url><loc>https://www.algherofrontemare.it/es/guia/bares-aperitivo</loc></url>
+  <url><loc>https://www.algherofrontemare.it/es/guia/heladerias</loc></url>
+  <url><loc>https://www.algherofrontemare.it/es/guia/playas</loc></url>
+  <url><loc>https://www.algherofrontemare.it/es/guia/rincones-secretos</loc></url>
+  <url><loc>https://www.algherofrontemare.it/es/guia/experiencias</loc></url>
+
 </urlset>
