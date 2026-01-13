@@ -2,6 +2,14 @@
   "cleanUrls": true,
   "trailingSlash": false,
   "redirects": [
+    { "source": "/foto-lido", "destination": "/lido-113-fronte-mare", "permanent": true },
+    { "source": "/foto-lido/", "destination": "/lido-113-fronte-mare", "permanent": true },
+    { "source": "/foto-studio-flat", "destination": "/lido-113-loft", "permanent": true },
+    { "source": "/foto-studio-flat/", "destination": "/lido-113-loft", "permanent": true },
+    { "source": "/dove-siamo", "destination": "/info-utili", "permanent": true },
+    { "source": "/dove-siamo/", "destination": "/info-utili", "permanent": true },
+    { "source": "/prenota-ora", "destination": "/info-utili", "permanent": true },
+    { "source": "/prenota-ora/", "destination": "/info-utili", "permanent": true },
     { "source": "/index.html", "destination": "/", "permanent": true }
   ],
   "headers": [
