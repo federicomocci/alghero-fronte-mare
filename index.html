@@ -702,6 +702,17 @@
         @media (min-width: 1024px) {
             .whatsapp-sticky { display: none; }
         }
+
+        /* Language Dropdown */
+        .lang-dropdown { position: relative; }
+        .lang-dropdown__toggle { background: none; border: none; cursor: pointer; font-size: 1.5rem; padding: 4px 8px; border-radius: 4px; transition: background 0.2s; }
+        .lang-dropdown__toggle:hover { background: var(--color-sand); }
+        .lang-dropdown__menu { position: absolute; top: 100%; right: 0; background: var(--color-white); border: 1px solid var(--color-sand-dark); border-radius: 8px; box-shadow: 0 4px 12px rgba(0,0,0,0.1); display: none; min-width: 140px; z-index: 100; overflow: hidden; margin-top: 4px; }
+        .lang-dropdown:hover .lang-dropdown__menu { display: block; }
+        .lang-dropdown__menu a { display: flex; align-items: center; gap: 10px; padding: 10px 14px; text-decoration: none; color: var(--color-text); font-size: 0.95rem; transition: background 0.2s; }
+        .lang-dropdown__menu a:hover { background: var(--color-sand); }
+        .lang-dropdown__menu a.active { background: var(--color-sea-light); font-weight: 600; }
+        .lang-dropdown__flag { font-size: 1.2rem; }
     </style>
     <!-- Schema.org JSON-LD -->
     <script type="application/ld+json">
@@ -745,12 +756,15 @@
     <header class="site-header">
         <div class="container site-header__inner">
             <a href="/" class="site-logo">Alghero Fronte Mare</a>
-            <div class="lang-switcher">
-                <a href="/" class="active">IT</a>
-                <a href="/en/">EN</a>
-                <a href="/de/">DE</a>
-                <a href="/fr/">FR</a>
-                <a href="/es/">ES</a>
+            <div class="lang-dropdown">
+                <button class="lang-dropdown__toggle" aria-label="Seleziona lingua">🇮🇹</button>
+                <div class="lang-dropdown__menu">
+                    <a href="/" class="active"><span class="lang-dropdown__flag">🇮🇹</span> Italiano</a>
+                    <a href="/en/"><span class="lang-dropdown__flag">🇬🇧</span> English</a>
+                    <a href="/de/"><span class="lang-dropdown__flag">🇩🇪</span> Deutsch</a>
+                    <a href="/fr/"><span class="lang-dropdown__flag">🇫🇷</span> Français</a>
+                    <a href="/es/"><span class="lang-dropdown__flag">🇪🇸</span> Español</a>
+                </div>
             </div>
         </div>
     </header>
