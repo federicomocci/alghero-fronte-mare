@@ -662,9 +662,32 @@
     {
       "@context": "https://schema.org",
       "@type": "VacationRental",
-      "name": "Lido 113 · Loft Fronte Mare",
-      "description": "Appartamento mansardato fronte mare ad Alghero al terzo piano. 4 posti letto, vista alta sul mare, completamente attrezzato.",
+      "name": "Lido 113 Loft — Mansarda fronte mare Alghero",
+      "description": "Loft mansardato fronte mare ad Alghero. Terzo piano, vista panoramica sul mare. 4 posti letto, 60mq con soppalco, aria condizionata, Wi-Fi. Spiaggia del Lido a 50 metri. Gestione diretta, risposta in pochi minuti.",
       "url": "https://www.algherofrontemare.it/lido-113-loft",
+      "image": [
+        "https://www.algherofrontemare.it/images/loft/hero-soggiorno.webp"
+      ],
+      "numberOfRooms": 2,
+      "occupancy": {
+        "@type": "QuantitativeValue",
+        "value": 4
+      },
+      "floorSize": {
+        "@type": "QuantitativeValue",
+        "value": 60,
+        "unitCode": "MTK"
+      },
+      "amenityFeature": [
+        {"@type": "LocationFeatureSpecification", "name": "Vista mare panoramica", "value": true},
+        {"@type": "LocationFeatureSpecification", "name": "Soppalco", "value": true},
+        {"@type": "LocationFeatureSpecification", "name": "Terrazza", "value": true},
+        {"@type": "LocationFeatureSpecification", "name": "Aria condizionata", "value": true},
+        {"@type": "LocationFeatureSpecification", "name": "Wi-Fi gratuito", "value": true},
+        {"@type": "LocationFeatureSpecification", "name": "Cucina attrezzata", "value": true},
+        {"@type": "LocationFeatureSpecification", "name": "Lavatrice", "value": true},
+        {"@type": "LocationFeatureSpecification", "name": "Biancheria inclusa", "value": true}
+      ],
       "address": {
         "@type": "PostalAddress",
         "streetAddress": "Via Lido 113",
@@ -673,21 +696,18 @@
         "postalCode": "07041",
         "addressCountry": "IT"
       },
-      "numberOfRooms": 2,
-      "occupancy": {
-        "@type": "QuantitativeValue",
-        "maxValue": 4
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": 40.5587,
+        "longitude": 8.3190
       },
-      "amenityFeature": [
-        {"@type": "LocationFeatureSpecification", "name": "Vista mare", "value": true},
-        {"@type": "LocationFeatureSpecification", "name": "Terrazza", "value": true},
-        {"@type": "LocationFeatureSpecification", "name": "Aria condizionata", "value": true},
-        {"@type": "LocationFeatureSpecification", "name": "Wi-Fi", "value": true},
-        {"@type": "LocationFeatureSpecification", "name": "Cucina", "value": true},
-        {"@type": "LocationFeatureSpecification", "name": "Lavatrice", "value": true}
-      ],
+      "checkinTime": "15:00",
+      "checkoutTime": "10:00",
+      "petsAllowed": true,
+      "smokingAllowed": false,
       "telephone": "+393293370792",
-      "email": "federicomocci12@gmail.com"
+      "email": "federicomocci12@gmail.com",
+      "tourBookingPage": "https://wa.me/393293370792"
     }
     </script>
     <script type="application/ld+json">
@@ -697,34 +717,10 @@
       "mainEntity": [
         {
           "@type": "Question",
-          "name": "A che ora posso fare il check-in e il check-out?",
+          "name": "A che ora posso fare il check-in?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Check-in dalle 15:00, check-out entro le 10:00. Se hai esigenze diverse, scrivimi e vediamo di organizzarci."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "C'è il parcheggio?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Sì, c'è parcheggio gratuito nelle vie limitrofe. In alta stagione può essere più difficile trovare posto vicino, ma si trova sempre nelle vicinanze."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "L'appartamento ha l'aria condizionata?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Sì, c'è l'aria condizionata in tutti gli ambienti."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "Posso portare animali?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Sì, gli animali domestici sono benvenuti. Fammelo sapere al momento della prenotazione."
+            "text": "Check-in dalle 15:00. Se arrivi prima, puoi lasciare i bagagli. Check-out entro le 10:00."
           }
         },
         {
@@ -732,17 +728,52 @@
           "name": "Quanto dista la spiaggia?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "La spiaggia è proprio sotto casa, a meno di 50 metri. Scendi e sei sulla sabbia."
+            "text": "La spiaggia del Lido è proprio davanti casa, a 50 metri. Attraversi la strada e sei sulla sabbia."
           }
         },
         {
           "@type": "Question",
-          "name": "C'è il Wi-Fi?",
+          "name": "C è parcheggio?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Sì, Wi-Fi veloce e gratuito incluso."
+            "text": "Sì, parcheggio gratuito in strada. La zona è residenziale e si trova sempre posto."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Posso portare animali?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Sì, gli animali sono benvenuti. Fammelo sapere al momento della prenotazione."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Il loft è adatto a bambini piccoli?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Il soppalco ha una scala, quindi è più adatto a bambini dai 6 anni in su o adulti."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Come prenoto?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Scrivimi su WhatsApp al +39 329 337 0792 indicando date e numero ospiti. Rispondo in pochi minuti."
           }
         }
+      ]
+    }
+    </script>
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.algherofrontemare.it/"},
+        {"@type": "ListItem", "position": 2, "name": "Le case", "item": "https://www.algherofrontemare.it/case-vacanze-alghero"},
+        {"@type": "ListItem", "position": 3, "name": "Lido 113 Loft", "item": "https://www.algherofrontemare.it/lido-113-loft"}
       ]
     }
     </script>
