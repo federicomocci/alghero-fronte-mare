@@ -182,7 +182,7 @@
             box-shadow: 0 4px 12px rgba(37, 211, 102, 0.3);
         }
 
-        .btn--secondary {
+        .btn--secondary { background-color: rgba(255,255,255,0.95);
             background-color: transparent;
             color: var(--color-sea-deep);
             border: 1px solid var(--color-sea-deep);
@@ -198,7 +198,7 @@
         .cta-group {
             display: flex;
             flex-direction: column;
-            gap: var(--space-sm);
+            gap: var(--space-md);
             margin-top: var(--space-lg);
         }
 
@@ -228,7 +228,7 @@
 
         .site-nav__link {
             font-size: 0.9375rem;
-            color: var(--color-text-light);
+            color: rgba(255,255,255,0.9);
             text-decoration: none;
         }
 
@@ -246,21 +246,21 @@
            ============================================= */
         .hero {
             padding: var(--space-xl) 0 var(--space-xxl);
-            background: linear-gradient(180deg, var(--color-sea-light) 0%, var(--color-white) 100%);
+            background: linear-gradient(rgba(0,0,0,0.35),rgba(0,0,0,0.35)),url("/images/fronte-mare/hero-terrazza.webp") center/cover no-repeat;
         }
 
         .hero__content {
             max-width: 680px;
         }
 
-        .hero__title {
+        .hero__title { color: #fff;
             margin-bottom: var(--space-md);
         }
 
         .hero__subtitle {
             font-size: 1.125rem;
             font-weight: 300;
-            color: var(--color-text-light);
+            color: rgba(255,255,255,0.9);
             line-height: 1.6;
         }
 
@@ -280,7 +280,7 @@
             font-weight: 700;
             text-transform: uppercase;
             letter-spacing: 0.1em;
-            color: var(--color-text-light);
+            color: rgba(255,255,255,0.9);
             margin-bottom: var(--space-xs);
         }
 
@@ -379,14 +379,14 @@
         .benefits-list {
             list-style: none;
             display: grid;
-            gap: var(--space-sm);
+            gap: var(--space-md);
             margin-top: var(--space-lg);
         }
 
         .benefits-list__item {
             display: flex;
             align-items: flex-start;
-            gap: var(--space-sm);
+            gap: var(--space-md);
             padding: var(--space-sm) 0;
             border-bottom: 1px solid var(--color-sand-dark);
         }
@@ -452,14 +452,14 @@
         .feedback-list {
             list-style: none;
             display: grid;
-            gap: var(--space-sm);
+            gap: var(--space-md);
             margin-top: var(--space-lg);
         }
 
         .feedback-list__item {
             display: flex;
             align-items: flex-start;
-            gap: var(--space-sm);
+            gap: var(--space-md);
             padding: var(--space-md);
             background-color: var(--color-white);
             border-radius: 6px;
@@ -521,7 +521,7 @@
             content: '—';
             position: absolute;
             left: 0;
-            color: var(--color-text-light);
+            color: rgba(255,255,255,0.9);
         }
 
         /* Alternative section */
@@ -569,21 +569,21 @@
 
         .site-footer__text {
             font-size: 0.875rem;
-            color: var(--color-text-light);
+            color: rgba(255,255,255,0.9);
         }
 
         .site-footer__text a {
-            color: var(--color-text-light);
+            color: rgba(255,255,255,0.9);
         }
 
         .site-footer__legal {
             font-size: 0.8125rem;
-            color: var(--color-text-light);
+            color: rgba(255,255,255,0.9);
             margin-top: var(--space-sm);
         }
 
         .site-footer__legal a {
-            color: var(--color-text-light);
+            color: rgba(255,255,255,0.9);
         }
 
         /* =============================================
@@ -976,7 +976,7 @@
         <section class="section">
             <div class="container container--narrow" style="text-align: center;">
                 <h2>Scopri Alghero con la mia guida</h2>
-                <p style="color: var(--color-text-light); margin-bottom: var(--space-lg);">Ho scritto una guida con i posti dove vado io: ristoranti, spiagge, bar, gelaterie e luoghi segreti. Niente trappole turistiche, solo consigli autentici.</p>
+                <p style="color: rgba(255,255,255,0.9); margin-bottom: var(--space-lg);">Ho scritto una guida con i posti dove vado io: ristoranti, spiagge, bar, gelaterie e luoghi segreti. Niente trappole turistiche, solo consigli autentici.</p>
                 <a href="/guida-alghero" class="btn btn--secondary">Esplora la guida →</a>
             </div>
         </section>
