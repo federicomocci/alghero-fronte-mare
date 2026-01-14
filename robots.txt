@@ -3,11 +3,5 @@ Allow: /
 
 Sitemap: https://www.algherofrontemare.it/sitemap.xml
 
-User-agent: GPTBot
-Allow: /
-
-User-agent: anthropic-ai
-Allow: /
-
-User-agent: Google-Extended
-Allow: /
+# Block system paths
+Disallow: /cdn-cgi/
