@@ -466,6 +466,12 @@
         }
 
         /* Footer */
+        .related-links { display: grid; gap: 1rem; margin-top: 1.5rem; }
+        .related-link { display: block; padding: 1.25rem; background: var(--color-sand); border-radius: 8px; text-decoration: none; transition: transform 0.2s, box-shadow 0.2s; }
+        .related-link:hover { transform: translateY(-2px); box-shadow: 0 4px 12px rgba(0,0,0,0.1); }
+        .related-link strong { display: block; color: var(--color-sea-deep); margin-bottom: 0.25rem; }
+        .related-link span { color: var(--color-text-light); font-size: 0.9rem; }
+
         .site-footer {
             padding: var(--space-lg) 0;
             background-color: var(--color-sand);
@@ -1210,6 +1216,28 @@
     </main>
 
     <!-- FOOTER -->
+
+    <!-- POTREBBE INTERESSARTI -->
+    <section class="section">
+        <div class="container container--narrow">
+            <h2>Potrebbe interessarti</h2>
+            <div class="related-links">
+                <a href="/vacanze-alghero-bambini-famiglia" class="related-link">
+                    <strong>Vacanze ad Alghero con bambini</strong>
+                    <span>Guida completa per famiglie: spiagge sicure, cosa fare, consigli pratici</span>
+                </a>
+                <a href="/prenotazione-diretta-alghero" class="related-link">
+                    <strong>Perché prenotare direttamente</strong>
+                    <span>Vantaggi rispetto a Booking e Airbnb: prezzi, flessibilità, contatto diretto</span>
+                </a>
+                <a href="/last-minute-alghero" class="related-link">
+                    <strong>Last minute Alghero</strong>
+                    <span>Disponibilità immediata e risposta rapida per prenotazioni dell'ultimo minuto</span>
+                </a>
+            </div>
+        </div>
+    </section>
+
     <footer class="site-footer">
         <div class="container">
             <p class="site-footer__text">Alghero Fronte Mare — Case fronte mare gestite da Federico</p>
