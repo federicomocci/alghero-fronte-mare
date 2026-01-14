@@ -289,6 +289,48 @@
             padding: var(--space-xl) 0;
         }
 
+        /* Pricing Table */
+        .pricing-table {
+            margin: var(--space-lg) 0;
+            border-radius: 12px;
+            overflow: hidden;
+            border: 1px solid var(--color-sand-dark);
+        }
+        .pricing-row {
+            display: flex;
+            justify-content: space-between;
+            padding: 12px 20px;
+            background: var(--color-white);
+        }
+        .pricing-row:nth-child(even) {
+            background: var(--color-sand);
+        }
+        .pricing-month {
+            font-weight: 600;
+            color: var(--color-text);
+        }
+        .pricing-price {
+            color: var(--color-sea-deep);
+            font-weight: 700;
+        }
+        .pricing-includes {
+            margin-top: var(--space-lg);
+            padding: var(--space-md);
+            background: var(--color-sand);
+            border-radius: 12px;
+        }
+        .pricing-includes ul {
+            list-style: none;
+            margin: var(--space-sm) 0;
+        }
+        .pricing-includes li {
+            padding: 4px 0;
+        }
+        .pricing-cta {
+            margin-top: var(--space-lg);
+            text-align: center;
+        }
+
         /* Features */
         .features-grid {
             display: grid;
@@ -1025,6 +1067,39 @@
                     </iframe>
                     <p class="map-link"><a href="https://www.google.com/maps/search/?api=1&query=Via+Lido+113,+Alghero,+Italy" target="_blank" rel="noopener">Apri in Google Maps →</a></p>
                 </div>
+            </div>
+        </section>
+
+        <!-- PREZZI -->
+        <section class="content-section">
+            <div class="container container--narrow">
+                <h2>Prezzi indicativi</h2>
+                <p>I prezzi variano in base al periodo. Scrivimi le date su WhatsApp per un preventivo esatto — spesso posso farti un offerta speciale.</p>
+                
+                <div class="pricing-table">
+                    <div class="pricing-row"><span class="pricing-month">Marzo</span><span class="pricing-price">da €80/notte</span></div>
+                    <div class="pricing-row"><span class="pricing-month">Aprile</span><span class="pricing-price">da €135/notte</span></div>
+                    <div class="pricing-row"><span class="pricing-month">Maggio</span><span class="pricing-price">da €160/notte</span></div>
+                    <div class="pricing-row"><span class="pricing-month">Giugno</span><span class="pricing-price">da €240/notte</span></div>
+                    <div class="pricing-row"><span class="pricing-month">Luglio</span><span class="pricing-price">da €320/notte</span></div>
+                    <div class="pricing-row"><span class="pricing-month">Agosto</span><span class="pricing-price">da €400/notte</span></div>
+                    <div class="pricing-row"><span class="pricing-month">Settembre</span><span class="pricing-price">da €320/notte</span></div>
+                    <div class="pricing-row"><span class="pricing-month">Ottobre</span><span class="pricing-price">da €280/notte</span></div>
+                    <div class="pricing-row"><span class="pricing-month">Novembre</span><span class="pricing-price">da €160/notte</span></div>
+                </div>
+                
+                <div class="pricing-includes">
+                    <p><strong>Sempre incluso:</strong></p>
+                    <ul>
+                        <li>✓ Pulizia finale</li>
+                        <li>✓ Biancheria e asciugamani</li>
+                        <li>✓ Wi-Fi</li>
+                        <li>✓ Aria condizionata</li>
+                    </ul>
+                    <p><strong>Soggiorno minimo:</strong> 3 notti</p>
+                </div>
+                
+                <p class="pricing-cta"><a href="https://wa.me/393293370792?text=Ciao%20Federico!%20Sono%20interessato%20a%20Lido%20113%20Loft.%20Vorrei%20un%20preventivo%20per%20[DATE]%20per%20[N]%20persone." class="btn btn--primary">Richiedi preventivo esatto</a></p>
             </div>
         </section>
 
