@@ -1,16 +1,36 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-    <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-SWY4HV4168"></script>
-    <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag("js",new Date());gtag("config","G-SWY4HV4168");</script>
+<!-- GA4 con consenso -->
+    <script>
+    window.loadGA4 = function() {
+        if (document.querySelector('script[src*="googletagmanager"]')) return;
+        var s = document.createElement('script');
+        s.async = true;
+        s.src = 'https://www.googletagmanager.com/gtag/js?id=G-SWY4HV4168';
+        document.head.appendChild(s);
+        s.onload = function() {
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'G-SWY4HV4168');
+        };
+    };
+    if (localStorage.getItem('cookie-consent') === 'accepted') {
+        window.loadGA4();
+    }
+    </script>
+    
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Last Minute Alghero | Appartement Bord de Mer Disponible</title>
     <meta name="description" content="Cherchez-vous un last minute à Alghero? Appartement en bord de mer disponible pour réservations de dernière minute. Réponse immédiate sur WhatsApp.">
     <link rel="canonical" href="https://www.algherofrontemare.it/fr/last-minute-alghero">
     <style>@font-face{font-family:"Lato";font-style:normal;font-weight:400;font-display:swap;src:url("/fonts/lato-v24-latin-regular.woff2") format("woff2")}@font-face{font-family:"Lato";font-style:normal;font-weight:700;font-display:swap;src:url("/fonts/lato-v24-latin-700.woff2") format("woff2")}</style>
-    <style>:root{--color-sea-deep:#8B7355;--color-sea-medium:#C4A77D;--color-sand:#f5f1eb;--color-sand-dark:#d9d2c7;--color-text:#2c2c2c;--color-text-light:#5a5a5a;--color-white:#fff;--font-main:'Lato',Helvetica,Arial,sans-serif;--space-xs:0.5rem;--space-sm:1rem;--space-md:1.5rem;--space-lg:2.5rem;--space-xl:4rem}*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}body{font-family:var(--font-main);font-size:1.0625rem;line-height:1.7;color:var(--color-text);background:var(--color-white)}.container{max-width:800px;margin:0 auto;padding:0 var(--space-md)}.site-header{padding:var(--space-md);background:var(--color-white);border-bottom:1px solid var(--color-sand-dark)}.site-header__inner{max-width:1200px;margin:0 auto;display:flex;justify-content:space-between;align-items:center}.site-logo{font-weight:700;color:var(--color-sea-deep);text-decoration:none;font-size:1.1rem}.site-nav-bar{position:sticky;top:0;background:var(--color-sand);border-bottom:1px solid var(--color-sand-dark);padding:12px 0;z-index:99}.site-nav-bar .container{max-width:1200px;display:flex;justify-content:center;gap:3rem}.site-nav-bar a{color:var(--color-text);text-decoration:none;font-size:0.95rem}.hero{background:linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)),url("/images/hero-alghero.webp") center/cover no-repeat;padding:var(--space-xl) var(--space-md);color:white}.hero h1{font-size:2.2rem;margin-bottom:var(--space-md);line-height:1.3}.hero p{font-size:1.1rem;opacity:0.9;max-width:600px}.content-section{padding:var(--space-xl) var(--space-md)}.content-section--alt{background:var(--color-sand)}.content-section h2{font-size:1.6rem;color:var(--color-sea-deep);margin-bottom:var(--space-md)}.content-section h3{font-size:1.2rem;color:var(--color-sea-deep);margin:var(--space-lg) 0 var(--space-sm)}.content-section p{margin-bottom:var(--space-sm)}.content-section ul{margin:var(--space-sm) 0 var(--space-md) var(--space-md)}.content-section li{margin-bottom:var(--space-xs)}.urgency-box{background:#fff3cd;border:2px solid #ffc107;border-radius:12px;padding:var(--space-md);margin:var(--space-lg) 0}.urgency-box h3{color:#856404;margin-top:0}.cta-section{background:var(--color-sea-deep);color:white;padding:var(--space-xl) var(--space-md);text-align:center}.cta-section h2{color:white;margin-bottom:var(--space-sm)}.cta-section p{opacity:0.9;margin-bottom:var(--space-lg)}.btn{display:inline-flex;align-items:center;gap:8px;padding:14px 28px;border-radius:30px;text-decoration:none;font-weight:600;transition:transform 0.2s}.btn--primary{background:#25D366;color:white}.site-footer{padding:var(--space-lg) var(--space-md);background:var(--color-sand);text-align:center}.site-footer p{font-size:0.9rem;color:var(--color-text-light);margin-bottom:var(--space-xs)}.site-footer a{color:var(--color-sea-medium)}.whatsapp-sticky{display:flex;align-items:center;justify-content:center;position:fixed;bottom:24px;right:24px;width:60px;height:60px;background:#25D366;border-radius:50%;box-shadow:0 4px 12px rgba(0,0,0,0.2);z-index:1000}@media(min-width:1024px){.whatsapp-sticky{width:auto;padding:14px 24px;border-radius:30px}.whatsapp-sticky::after{content:"Écrivez-moi";color:white;font-weight:600;font-size:0.95rem;margin-left:8px}}@media(max-width:640px){.hero h1{font-size:1.8rem}.site-nav-bar .container{gap:1.5rem}}</style>
+    <style>:root{--color-sea-deep:#8B7355;--color-sea-medium:#C4A77D;--color-sand:#f5f1eb;--color-sand-dark:#d9d2c7;--color-text:#2c2c2c;--color-text-light:#5a5a5a;--color-white:#fff;--font-main:'Lato',Helvetica,Arial,sans-serif;--space-xs:0.5rem;--space-sm:1rem;--space-md:1.5rem;--space-lg:2.5rem;--space-xl:4rem}*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}body{font-family:var(--font-main);font-size:1.0625rem;line-height:1.7;color:var(--color-text);background:var(--color-white)}.container{max-width:800px;margin:0 auto;padding:0 var(--space-md)}.site-header{padding:var(--space-md);background:var(--color-white);border-bottom:1px solid var(--color-sand-dark)}.site-header__inner{max-width:1200px;margin:0 auto;display:flex;justify-content:space-between;align-items:center}.site-logo{font-weight:700;color:var(--color-sea-deep);text-decoration:none;font-size:1.1rem}.site-nav-bar{position:sticky;top:0;background:var(--color-sand);border-bottom:1px solid var(--color-sand-dark);padding:12px 0;z-index:99}.site-nav-bar .container{max-width:1200px;display:flex;justify-content:center;gap:3rem}.site-nav-bar a{color:var(--color-text);text-decoration:none;font-size:0.95rem}.hero{background:linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)),url("/images/hero-alghero.webp") center/cover no-repeat;padding:var(--space-xl) var(--space-md);color:white}.hero h1{font-size:2.2rem;margin-bottom:var(--space-md);line-height:1.3}.hero p{font-size:1.1rem;opacity:0.9;max-width:600px}.content-section{padding:var(--space-xl) var(--space-md)}.content-section--alt{background:var(--color-sand)}.content-section h2{font-size:1.6rem;color:var(--color-sea-deep);margin-bottom:var(--space-md)}.content-section h3{font-size:1.2rem;color:var(--color-sea-deep);margin:var(--space-lg) 0 var(--space-sm)}.content-section p{margin-bottom:var(--space-sm)}.content-section ul{margin:var(--space-sm) 0 var(--space-md) var(--space-md)}.content-section li{margin-bottom:var(--space-xs)}.urgency-box{background:#fff3cd;border:2px solid #ffc107;border-radius:12px;padding:var(--space-md);margin:var(--space-lg) 0}.urgency-box h3{color:#856404;margin-top:0}.cta-section{background:var(--color-sea-deep);color:white;padding:var(--space-xl) var(--space-md);text-align:center}.cta-section h2{color:white;margin-bottom:var(--space-sm)}.cta-section p{opacity:0.9;margin-bottom:var(--space-lg)}.btn{display:inline-flex;align-items:center;gap:8px;padding:14px 28px;border-radius:30px;text-decoration:none;font-weight:600;transition:transform 0.2s}.btn--primary{background:#25D366;color:white}.site-footer{padding:var(--space-lg) var(--space-md);background:var(--color-sand);text-align:center}.site-footer p{font-size:0.9rem;color:var(--color-text-light);margin-bottom:var(--space-xs)}.site-footer a{color:var(--color-sea-medium)}.whatsapp-sticky{display:flex;align-items:center;justify-content:center;position:fixed;bottom:24px;right:24px;width:60px;height:60px;background:#25D366;border-radius:50%;box-shadow:0 4px 12px rgba(0,0,0,0.2);z-index:1000}@media(min-width:1024px){.whatsapp-sticky{width:auto;padding:14px 24px;border-radius:30px}.whatsapp-sticky::after{content:"Écrivez-moi";color:white;font-weight:600;font-size:0.95rem;margin-left:8px}}@media(max-width:640px){.hero h1{font-size:1.8rem}.site-nav-bar .container{gap:1.5rem}}
+/* Cookie Banner */
+.cookie-banner{position:fixed;bottom:0;left:0;right:0;z-index:9999;padding:0 1rem 1rem;pointer-events:none;opacity:0;transform:translateY(100%);transition:opacity .3s ease,transform .3s ease}.cookie-banner--visible{opacity:1;transform:translateY(0);pointer-events:auto}.cookie-banner__content{max-width:480px;margin:0 auto;background:#1a3a4a;border-radius:16px;padding:1.25rem 1.5rem;box-shadow:0 8px 32px rgba(0,0,0,.2);display:flex;flex-direction:column;align-items:center;text-align:center;gap:.75rem}.cookie-banner__icon{font-size:2rem;line-height:1}.cookie-banner__text{color:#fff;font-size:1rem;line-height:1.5;margin:0}.cookie-banner__buttons{display:flex;gap:.75rem;width:100%;margin-top:.25rem}.cookie-banner__btn{flex:1;padding:.75rem 1rem;border:none;border-radius:25px;font-size:.95rem;font-weight:600;cursor:pointer;transition:transform .2s ease,box-shadow .2s ease;font-family:inherit}.cookie-banner__btn:hover{transform:scale(1.03)}.cookie-banner__btn--reject{background:transparent;color:#a0b4bc;border:1.5px solid #a0b4bc}.cookie-banner__btn--reject:hover{background:rgba(255,255,255,.1);color:#fff;border-color:#fff}.cookie-banner__btn--accept{background:#c4956a;color:#fff;box-shadow:0 4px 12px rgba(196,149,106,.3)}.cookie-banner__btn--accept:hover{background:#d4a57a;box-shadow:0 6px 16px rgba(196,149,106,.4)}.cookie-banner__link{color:#a0b4bc;font-size:.8rem;text-decoration:none;margin-top:.25rem}.cookie-banner__link:hover{color:#fff;text-decoration:underline}@media(max-width:520px){.cookie-banner{padding:0 .75rem .75rem}.cookie-banner__content{border-radius:12px;padding:1rem 1.25rem}.cookie-banner__text{font-size:.95rem}.cookie-banner__btn{padding:.7rem .75rem;font-size:.9rem}}
+    </style>
 </head>
 <body>
     <header class="site-header"><div class="site-header__inner"><a href="/fr/" class="site-logo">Alghero Fronte Mare</a></div></header>
@@ -21,5 +41,37 @@
     <section class="cta-section"><div class="container"><h2>Vérifiez la disponibilité maintenant</h2><p>Écrivez-moi sur WhatsApp avec vos dates. Je réponds en quelques minutes.</p><a href="https://wa.me/393293370792?text=Bonjour%20Federico!%20Je%20cherche%20un%20last%20minute%20%C3%A0%20Alghero.%20Disponibilit%C3%A9%20pour%20[DATES]%20pour%20[N]%20personnes?" class="btn btn--primary"><svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>Écrivez-moi maintenant sur WhatsApp</a></div></section>
     <footer class="site-footer"><p>Alghero Fronte Mare — Appartements en bord de mer gérés par Federico</p><p>CIN: IT090003B4000F3434</p><p><a href="mailto:info@algherofrontemare.it">info@algherofrontemare.it</a> · <a href="https://wa.me/393293370792">+39 329 337 0792</a></p></footer>
     <a href="https://wa.me/393293370792?text=Bonjour%20Federico!" class="whatsapp-sticky"><svg width="28" height="28" viewBox="0 0 24 24" fill="white"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg></a>
+
+<!-- Cookie Banner -->
+<div id="cookie-banner" class="cookie-banner" role="dialog" aria-label="Cookie consent">
+    <div class="cookie-banner__content">
+        <span class="cookie-banner__icon">🍪</span>
+        <p class="cookie-banner__text">J'utilise des cookies pour comprendre quelles pages fonctionnent le mieux. Puis-je ?</p>
+        <div class="cookie-banner__buttons">
+            <button id="cookie-reject" class="cookie-banner__btn cookie-banner__btn--reject">Non merci</button>
+            <button id="cookie-accept" class="cookie-banner__btn cookie-banner__btn--accept">Oui, d'accord</button>
+        </div>
+        <a href="/fr/cookie-policy" class="cookie-banner__link">Politique des cookies</a>
+    </div>
+</div>
+<script>
+(function() {
+    var banner = document.getElementById('cookie-banner');
+    var consent = localStorage.getItem('cookie-consent');
+    if (consent) { banner.style.display = 'none'; return; }
+    banner.classList.add('cookie-banner--visible');
+    document.getElementById('cookie-accept').addEventListener('click', function() {
+        localStorage.setItem('cookie-consent', 'accepted');
+        banner.classList.remove('cookie-banner--visible');
+        setTimeout(function() { banner.style.display = 'none'; }, 300);
+        window.loadGA4();
+    });
+    document.getElementById('cookie-reject').addEventListener('click', function() {
+        localStorage.setItem('cookie-consent', 'rejected');
+        banner.classList.remove('cookie-banner--visible');
+        setTimeout(function() { banner.style.display = 'none'; }, 300);
+    });
+})();
+</script>
 </body>
 </html>

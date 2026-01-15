@@ -1,9 +1,26 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-SWY4HV4168"></script>
-    <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag("js",new Date());gtag("config","G-SWY4HV4168");</script>
+<!-- GA4 con consenso -->
+    <script>
+    window.loadGA4 = function() {
+        if (document.querySelector('script[src*="googletagmanager"]')) return;
+        var s = document.createElement('script');
+        s.async = true;
+        s.src = 'https://www.googletagmanager.com/gtag/js?id=G-SWY4HV4168';
+        document.head.appendChild(s);
+        s.onload = function() {
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'G-SWY4HV4168');
+        };
+    };
+    if (localStorage.getItem('cookie-consent') === 'accepted') {
+        window.loadGA4();
+    }
+    </script>
+    
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Lido 113 Fronte Mare | Seafront Apartment Alghero | Sleeps 4</title>
@@ -44,7 +61,10 @@
             <a href="/en/info">Info</a>
         </div>
     </nav>
-    <style>.breadcrumb{padding:1rem 0;background:var(--color-sand)}.breadcrumb__list{display:flex;gap:0.5rem;list-style:none;font-size:0.9rem;max-width:1100px;margin:0 auto;padding:0 1.5rem}.breadcrumb__item{display:flex;align-items:center}.breadcrumb__item:not(:last-child)::after{content:"›";margin-left:0.5rem;color:var(--color-text-light)}.breadcrumb__item a{color:var(--color-sea-medium);text-decoration:none}.breadcrumb__item a:hover{text-decoration:underline}.breadcrumb__item span{color:var(--color-text-light)}</style>
+    <style>.breadcrumb{padding:1rem 0;background:var(--color-sand)}.breadcrumb__list{display:flex;gap:0.5rem;list-style:none;font-size:0.9rem;max-width:1100px;margin:0 auto;padding:0 1.5rem}.breadcrumb__item{display:flex;align-items:center}.breadcrumb__item:not(:last-child)::after{content:"›";margin-left:0.5rem;color:var(--color-text-light)}.breadcrumb__item a{color:var(--color-sea-medium);text-decoration:none}.breadcrumb__item a:hover{text-decoration:underline}.breadcrumb__item span{color:var(--color-text-light)}
+/* Cookie Banner */
+.cookie-banner{position:fixed;bottom:0;left:0;right:0;z-index:9999;padding:0 1rem 1rem;pointer-events:none;opacity:0;transform:translateY(100%);transition:opacity .3s ease,transform .3s ease}.cookie-banner--visible{opacity:1;transform:translateY(0);pointer-events:auto}.cookie-banner__content{max-width:480px;margin:0 auto;background:#1a3a4a;border-radius:16px;padding:1.25rem 1.5rem;box-shadow:0 8px 32px rgba(0,0,0,.2);display:flex;flex-direction:column;align-items:center;text-align:center;gap:.75rem}.cookie-banner__icon{font-size:2rem;line-height:1}.cookie-banner__text{color:#fff;font-size:1rem;line-height:1.5;margin:0}.cookie-banner__buttons{display:flex;gap:.75rem;width:100%;margin-top:.25rem}.cookie-banner__btn{flex:1;padding:.75rem 1rem;border:none;border-radius:25px;font-size:.95rem;font-weight:600;cursor:pointer;transition:transform .2s ease,box-shadow .2s ease;font-family:inherit}.cookie-banner__btn:hover{transform:scale(1.03)}.cookie-banner__btn--reject{background:transparent;color:#a0b4bc;border:1.5px solid #a0b4bc}.cookie-banner__btn--reject:hover{background:rgba(255,255,255,.1);color:#fff;border-color:#fff}.cookie-banner__btn--accept{background:#c4956a;color:#fff;box-shadow:0 4px 12px rgba(196,149,106,.3)}.cookie-banner__btn--accept:hover{background:#d4a57a;box-shadow:0 6px 16px rgba(196,149,106,.4)}.cookie-banner__link{color:#a0b4bc;font-size:.8rem;text-decoration:none;margin-top:.25rem}.cookie-banner__link:hover{color:#fff;text-decoration:underline}@media(max-width:520px){.cookie-banner{padding:0 .75rem .75rem}.cookie-banner__content{border-radius:12px;padding:1rem 1.25rem}.cookie-banner__text{font-size:.95rem}.cookie-banner__btn{padding:.7rem .75rem;font-size:.9rem}}
+    </style>
     <nav class="breadcrumb" aria-label="Breadcrumb"><ol class="breadcrumb__list"><li class="breadcrumb__item"><a href="/en/">Home</a></li><li class="breadcrumb__item"><span>Lido 113 Fronte Mare</span></li></ol></nav>
     <section class="hero">
         <div class="container hero__inner">
@@ -252,5 +272,37 @@
             <p><a href="mailto:federicomocci12@gmail.com">federicomocci12@gmail.com</a> · <a href="https://wa.me/393293370792?text=Hi%20Federico!%20I%20am%20interested%20in%20Lido%20113%20Fronte%20Mare.%20Could%20you%20check%20availability%3F">+39 329 337 0792</a></p>
         </div>
     </footer>
+
+<!-- Cookie Banner -->
+<div id="cookie-banner" class="cookie-banner" role="dialog" aria-label="Cookie consent">
+    <div class="cookie-banner__content">
+        <span class="cookie-banner__icon">🍪</span>
+        <p class="cookie-banner__text">I use cookies to understand which pages work best. May I?</p>
+        <div class="cookie-banner__buttons">
+            <button id="cookie-reject" class="cookie-banner__btn cookie-banner__btn--reject">No thanks</button>
+            <button id="cookie-accept" class="cookie-banner__btn cookie-banner__btn--accept">Yes, that's fine</button>
+        </div>
+        <a href="/en/cookie-policy" class="cookie-banner__link">Cookie Policy</a>
+    </div>
+</div>
+<script>
+(function() {
+    var banner = document.getElementById('cookie-banner');
+    var consent = localStorage.getItem('cookie-consent');
+    if (consent) { banner.style.display = 'none'; return; }
+    banner.classList.add('cookie-banner--visible');
+    document.getElementById('cookie-accept').addEventListener('click', function() {
+        localStorage.setItem('cookie-consent', 'accepted');
+        banner.classList.remove('cookie-banner--visible');
+        setTimeout(function() { banner.style.display = 'none'; }, 300);
+        window.loadGA4();
+    });
+    document.getElementById('cookie-reject').addEventListener('click', function() {
+        localStorage.setItem('cookie-consent', 'rejected');
+        banner.classList.remove('cookie-banner--visible');
+        setTimeout(function() { banner.style.display = 'none'; }, 300);
+    });
+})();
+</script>
 </body>
 </html>

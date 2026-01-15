@@ -1,9 +1,25 @@
 <!DOCTYPE html>
 <html lang="it">
 <head>
-    <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-SWY4HV4168"></script>
-    <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag("js",new Date());gtag("config","G-SWY4HV4168");</script>
+<!-- GA4 con consenso -->
+    <script>
+    window.loadGA4 = function() {
+        if (document.querySelector('script[src*="googletagmanager"]')) return;
+        var s = document.createElement('script');
+        s.async = true;
+        s.src = 'https://www.googletagmanager.com/gtag/js?id=G-SWY4HV4168';
+        document.head.appendChild(s);
+        s.onload = function() {
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'G-SWY4HV4168');
+        };
+    };
+    if (localStorage.getItem('cookie-consent') === 'accepted') {
+        window.loadGA4();
+    }
+    </script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
@@ -13,9 +29,9 @@
     
     <link rel="canonical" href="https://www.algherofrontemare.it/privacy-policy">
     
-    
-    
-    <style>@font-face{font-family:"Lato";font-style:normal;font-weight:400;font-display:swap;src:url("/fonts/lato-v24-latin-regular.woff2") format("woff2")}@font-face{font-family:"Lato";font-style:normal;font-weight:700;font-display:swap;src:url("/fonts/lato-v24-latin-700.woff2") format("woff2")}</style>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
 
     <style>
         :root {
@@ -107,6 +123,9 @@
             color: var(--color-text-light);
             margin-bottom: var(--space-lg);
         }
+    
+/* Cookie Banner */
+.cookie-banner{position:fixed;bottom:0;left:0;right:0;z-index:9999;padding:0 1rem 1rem;pointer-events:none;opacity:0;transform:translateY(100%);transition:opacity .3s ease,transform .3s ease}.cookie-banner--visible{opacity:1;transform:translateY(0);pointer-events:auto}.cookie-banner__content{max-width:480px;margin:0 auto;background:#1a3a4a;border-radius:16px;padding:1.25rem 1.5rem;box-shadow:0 8px 32px rgba(0,0,0,.2);display:flex;flex-direction:column;align-items:center;text-align:center;gap:.75rem}.cookie-banner__icon{font-size:2rem;line-height:1}.cookie-banner__text{color:#fff;font-size:1rem;line-height:1.5;margin:0}.cookie-banner__buttons{display:flex;gap:.75rem;width:100%;margin-top:.25rem}.cookie-banner__btn{flex:1;padding:.75rem 1rem;border:none;border-radius:25px;font-size:.95rem;font-weight:600;cursor:pointer;transition:transform .2s ease,box-shadow .2s ease;font-family:inherit}.cookie-banner__btn:hover{transform:scale(1.03)}.cookie-banner__btn--reject{background:transparent;color:#a0b4bc;border:1.5px solid #a0b4bc}.cookie-banner__btn--reject:hover{background:rgba(255,255,255,.1);color:#fff;border-color:#fff}.cookie-banner__btn--accept{background:#c4956a;color:#fff;box-shadow:0 4px 12px rgba(196,149,106,.3)}.cookie-banner__btn--accept:hover{background:#d4a57a;box-shadow:0 6px 16px rgba(196,149,106,.4)}.cookie-banner__link{color:#a0b4bc;font-size:.8rem;text-decoration:none;margin-top:.25rem}.cookie-banner__link:hover{color:#fff;text-decoration:underline}@media(max-width:520px){.cookie-banner{padding:0 .75rem .75rem}.cookie-banner__content{border-radius:12px;padding:1rem 1.25rem}.cookie-banner__text{font-size:.95rem}.cookie-banner__btn{padding:.7rem .75rem;font-size:.9rem}}
     </style>
 </head>
 
@@ -115,7 +134,7 @@
         <div class="site-header__inner">
             <a href="/" class="site-logo">Alghero Fronte Mare</a>
             <nav class="site-nav">
-                <a href="/case-vacanze-alghero" class="site-nav__link">Le case</a>
+                <a href="/" class="site-nav__link">Le case</a>
                 <a href="/chi-sono" class="site-nav__link">Chi sono</a>
             </nav>
         </div>
@@ -132,7 +151,7 @@
             Federico Mocci<br>
             Alghero (SS), Italia<br>
             P.IVA: 02821390909<br>
-            Email: <a href="/cdn-cgi/l/email-protection#ccaaa9a8a9bea5afa3a1a3afafa5fdfe8caba1ada5a0e2afa3a1"><span class="__cf_email__" data-cfemail="6305060706110a000c0e0c00000a525123040e020a0f4d000c0e">[email&#160;protected]</span></a>
+            Email: <a href="mailto:federicomocci12@gmail.com">federicomocci12@gmail.com</a>
         </p>
 
         <h2>Dati raccolti</h2>
@@ -146,8 +165,8 @@
 
         <h2>Servizi di terze parti</h2>
         
-        <h3>Google Analytics</h3>
-        <p>Il sito utilizza Google Analytics 4 (GA4) per analizzare il traffico in forma aggregata. I dati raccolti includono: pagine visitate, durata della sessione, dispositivo e browser. Questi dati sono utilizzati esclusivamente per migliorare il sito. Per maggiori informazioni: <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Privacy Policy di Google</a>.</p>
+        <h3>Google Fonts</h3>
+        <p>Il sito utilizza Google Fonts per il caricamento dei caratteri tipografici. Questo comporta una connessione ai server di Google. Per maggiori informazioni: <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Privacy Policy di Google</a>.</p>
 
         <h3>WhatsApp</h3>
         <p>Il sito contiene link per contattare il titolare via WhatsApp. Cliccando sul link, l'utente viene reindirizzato all'applicazione WhatsApp. Il trattamento dei dati su WhatsApp è regolato dalla <a href="https://www.whatsapp.com/legal/privacy-policy" target="_blank" rel="noopener">Privacy Policy di WhatsApp</a>.</p>
@@ -177,11 +196,47 @@
             <li>Richiedere la portabilità dei dati</li>
             <li>Proporre reclamo all'Autorità Garante per la protezione dei dati personali</li>
         </ul>
-        <p>Per esercitare i propri diritti, contattare il titolare all'indirizzo <a href="/cdn-cgi/l/email-protection#385e5d5c5d4a515b5755575b5b51090a785f55595154165b5755"><span class="__cf_email__" data-cfemail="bbdddedfdec9d2d8d4d6d4d8d8d28a89fbdcd6dad2d795d8d4d6">[email&#160;protected]</span></a>.</p>
+        <p>Per esercitare i propri diritti, contattare il titolare all'indirizzo <a href="mailto:federicomocci12@gmail.com">federicomocci12@gmail.com</a>.</p>
 
         <h2>Modifiche alla policy</h2>
         <p>Il titolare si riserva di modificare questa informativa. La data dell'ultimo aggiornamento è indicata in alto.</p>
     </main>
 
     <footer class="site-footer">
-        <p>Alghero Fronte Mare — <a href="/cdn-cgi/l/email-protection#93f5f6f7f6e1faf0fcfefcf0f0faa2a1d3f4fef2faffbdf0fcfe"><span class="__cf_email__" data-cfemail="a5c3c0c1c0d7ccc6cac8cac6c6cc9497e5c2c8c4ccc98bc6cac8">[email&#160;protected]</spa
+        <p>Alghero Fronte Mare — <a href="mailto:federicomocci12@gmail.com">federicomocci12@gmail.com</a></p>
+        <p><a href="/privacy-policy">Privacy Policy</a> · <a href="/cookie-policy">Cookie Policy</a></p>
+    </footer>
+
+<!-- Cookie Banner -->
+<div id="cookie-banner" class="cookie-banner" role="dialog" aria-label="Cookie consent">
+    <div class="cookie-banner__content">
+        <span class="cookie-banner__icon">🍪</span>
+        <p class="cookie-banner__text">Uso i cookie per capire quali pagine funzionano meglio. Posso?</p>
+        <div class="cookie-banner__buttons">
+            <button id="cookie-reject" class="cookie-banner__btn cookie-banner__btn--reject">No grazie</button>
+            <button id="cookie-accept" class="cookie-banner__btn cookie-banner__btn--accept">Sì, va bene</button>
+        </div>
+        <a href="/cookie-policy" class="cookie-banner__link">Cookie Policy</a>
+    </div>
+</div>
+<script>
+(function() {
+    var banner = document.getElementById('cookie-banner');
+    var consent = localStorage.getItem('cookie-consent');
+    if (consent) { banner.style.display = 'none'; return; }
+    banner.classList.add('cookie-banner--visible');
+    document.getElementById('cookie-accept').addEventListener('click', function() {
+        localStorage.setItem('cookie-consent', 'accepted');
+        banner.classList.remove('cookie-banner--visible');
+        setTimeout(function() { banner.style.display = 'none'; }, 300);
+        window.loadGA4();
+    });
+    document.getElementById('cookie-reject').addEventListener('click', function() {
+        localStorage.setItem('cookie-consent', 'rejected');
+        banner.classList.remove('cookie-banner--visible');
+        setTimeout(function() { banner.style.display = 'none'; }, 300);
+    });
+})();
+</script>
+</body>
+</html>
