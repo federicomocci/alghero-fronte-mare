@@ -2,13 +2,28 @@
   "cleanUrls": true,
   "redirects": [
     {
-      "source": "/foto-casa-del-professore/",
+      "source": "/foto-casa-del-professore/:path*",
       "destination": "/",
       "permanent": true
     },
     {
-      "source": "/foto-casa-del-professore",
-      "destination": "/",
+      "source": "/foto-lido/:path*",
+      "destination": "/lido-113-fronte-mare",
+      "permanent": true
+    },
+    {
+      "source": "/foto-studio-flat/:path*",
+      "destination": "/lido-113-loft",
+      "permanent": true
+    },
+    {
+      "source": "/dove-siamo/:path*",
+      "destination": "/info-utili",
+      "permanent": true
+    },
+    {
+      "source": "/dove-siamo",
+      "destination": "/info-utili",
       "permanent": true
     }
   ]
