@@ -39,6 +39,13 @@ Se vuoi scegliere tu la foto di copertina, chiamala `copertina.jpg`.
    git push
    ```
 
+### Oppure da Google Drive
+
+Condividi la cartella con **"Chiunque abbia il link"** e manda il link a
+Claude dicendo di quale casa sono le foto. Nelle impostazioni dell'ambiente
+cloud (Edit → Network access) devono essere consentiti `drive.google.com` e
+`drive.usercontent.google.com`.
+
 ## 2. Avvisa Claude
 
 Scrivi in chat qualcosa come "ho caricato le foto nuove del Loft".
@@ -47,11 +54,9 @@ dà nomi descrittivi, le mette in `images/<casa>/`, aggiorna galleria,
 copertina e anteprima WhatsApp in tutte le lingue e poi svuota questa
 cartella.
 
-## Cosa servirebbe (controllo di ottobre 2026)
+## Cosa servirebbe (aggiornato all'11 ottobre 2026)
 
-- **Sea Suite**: tutte le foto, la pagina oggi non ne ha nessuna.
-- **Loft**: da rifare. Manca la foto della vista mare (il punto forte),
-  il grandangolo deforma troppo e in due foto c'è una borsa sul letto.
+- **Loft** e **Sea Suite**: fatte (servizio fotografico nuovo, 12 e 10 foto).
 - **Sky Suite**: manca la camera da letto; il soggiorno con meno oggetti
   in giro.
 - **Fronte Mare**: già buone. Si possono aggiungere la spiaggia sotto

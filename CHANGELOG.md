@@ -30,6 +30,11 @@ Cronologia completa dello sviluppo del sito dal 9 al 15 gennaio 2025.
 ### Foto nuove
 - Cartella foto-nuove/ con istruzioni per caricare le foto (esclusa dal sito con .vercelignore)
 
+### Foto nuove (servizio fotografico)
+- Lido 113 Loft: 12 foto nuove (terrazza vista mare come foto principale), galleria completa anche in EN/DE/FR/ES; tolte le 12 foto vecchie
+- Orti 36 Sea Suite: prima foto in assoluto, 10 foto (foto principale + galleria) e foto nella scheda "Altre case"
+- Foto convertite da Adobe RGB a sRGB, WebP 1600/1200/800 px; anteprime social images/og/loft.jpg e sea-suite.jpg
+
 ### Correzioni
 - Email nel footer (8 pagine IT): mostrava "[email protected]" con link rotto, ora mailto normale
 - 94 link rotti nelle pagine EN/DE/FR/ES (cookie/privacy policy e case consigliate) ora puntano alle pagine esistenti

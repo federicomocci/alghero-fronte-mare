@@ -39,7 +39,7 @@
     <meta property="og:locale" content="it_IT">
     <meta property="og:url" content="https://www.algherofrontemare.it/orti-36-sea-suite">
     <meta property="og:site_name" content="Alghero Fronte Mare">
-    <meta property="og:image" content="https://www.algherofrontemare.it/images/og/alghero.jpg">
+    <meta property="og:image" content="https://www.algherofrontemare.it/images/og/sea-suite.jpg">
     <meta property="og:image:width" content="1200">
     <meta property="og:image:height" content="630">
     <meta name="twitter:card" content="summary_large_image">
@@ -396,6 +396,10 @@
       "name": "Orti 36 · Sea Suite",
       "description": "Appartamento al terzo piano con terrazza vista mare ad Alghero. 2 posti letto, design moderno, completamente attrezzato.",
       "url": "https://www.algherofrontemare.it/orti-36-sea-suite",
+      "image": [
+        "https://www.algherofrontemare.it/images/sea-suite/terrazza-vista-mare.webp",
+        "https://www.algherofrontemare.it/images/sea-suite/soggiorno-cucina.webp"
+      ],
       "address": {
         "@type": "PostalAddress",
         "streetAddress": "Via degli Orti 36",
@@ -479,6 +483,7 @@
     </script>
     <link rel="stylesheet" href="/calendario-disponibilita.css">
     <script src="/calendario-disponibilita.js" defer></script>
+    <style>.hero-image{width:100%;height:60vh;min-height:400px;max-height:600px;overflow:hidden;padding:0}.hero-image__img{width:100%;height:100%;object-fit:cover}.gallery{padding:var(--space-xl) 0}.gallery__grid{display:flex;overflow-x:auto;scroll-snap-type:x mandatory;gap:var(--space-sm);padding-bottom:var(--space-sm);-webkit-overflow-scrolling:touch}.gallery__grid::-webkit-scrollbar{height:8px}.gallery__grid::-webkit-scrollbar-track{background:var(--color-sand);border-radius:4px}.gallery__grid::-webkit-scrollbar-thumb{background:var(--color-sand-dark);border-radius:4px}.gallery__item{flex:0 0 85%;scroll-snap-align:center;aspect-ratio:4/3;overflow:hidden;border-radius:8px}.gallery__item img{width:100%;height:100%;object-fit:cover;transition:transform 0.3s ease}.gallery__item:hover img{transform:scale(1.03)}@media(min-width:640px){.gallery__item{flex:0 0 45%}}@media(min-width:1024px){.gallery__item{flex:0 0 30%}.hero-image{height:70vh;max-height:700px}}</style>
 </head>
 
 <body>
@@ -513,6 +518,11 @@
 
     <!-- MAIN -->
     <main id="main-content">
+
+        <!-- HERO IMAGE -->
+        <section class="hero-image">
+            <img src="/images/sea-suite/terrazza-vista-mare.webp" alt="Terrazza della Sea Suite con tavolo e vista mare tra le palme" class="hero-image__img" fetchpriority="high" width="1600" height="1067">
+        </section>
 
         <!-- HERO -->
         <section class="hero">
@@ -576,6 +586,42 @@
                 <h2>Disponibilità</h2>
                 <p>Il calendario si aggiorna automaticamente. Le date in verde sono libere.</p>
                 <div id="calendario-disponibilita" data-appartamento="orti-36-sea-suite" style="margin-top: 1.5rem;"></div>
+            </div>
+        </section>
+
+        <!-- GALLERIA FOTO -->
+        <section class="gallery">
+            <div class="container">
+                <h2>Le foto</h2>
+                <div class="gallery__grid">
+                    <div class="gallery__item">
+                        <img src="/images/sea-suite/terrazza.webp" alt="Tavolo in terrazza con vista sul mare" loading="lazy" srcset="/images/sea-suite/terrazza-800.webp 800w, /images/sea-suite/terrazza-1200.webp 1200w, /images/sea-suite/terrazza.webp 1600w" sizes="(min-width: 1024px) 390px, (min-width: 640px) 51vw, 96vw" width="1600" height="1067">
+                    </div>
+                    <div class="gallery__item">
+                        <img src="/images/sea-suite/soggiorno-cucina.webp" alt="Monolocale luminoso con cucina, tavolo e divano" loading="lazy" srcset="/images/sea-suite/soggiorno-cucina-800.webp 800w, /images/sea-suite/soggiorno-cucina-1200.webp 1200w, /images/sea-suite/soggiorno-cucina.webp 1600w" sizes="(min-width: 1024px) 390px, (min-width: 640px) 51vw, 96vw" width="1600" height="1067">
+                    </div>
+                    <div class="gallery__item">
+                        <img src="/images/sea-suite/cucina-terrazza.webp" alt="Cucina e tavolo accanto alla porta finestra sulla terrazza" loading="lazy" srcset="/images/sea-suite/cucina-terrazza-800.webp 800w, /images/sea-suite/cucina-terrazza-1200.webp 1200w, /images/sea-suite/cucina-terrazza.webp 1600w" sizes="(min-width: 1024px) 390px, (min-width: 640px) 51vw, 96vw" width="1600" height="1067">
+                    </div>
+                    <div class="gallery__item">
+                        <img src="/images/sea-suite/tavolo-divano.webp" alt="Tavolo rotondo e divano nella zona giorno" loading="lazy" srcset="/images/sea-suite/tavolo-divano-800.webp 800w, /images/sea-suite/tavolo-divano-1200.webp 1200w, /images/sea-suite/tavolo-divano.webp 1600w" sizes="(min-width: 1024px) 390px, (min-width: 640px) 51vw, 96vw" width="1600" height="1067">
+                    </div>
+                    <div class="gallery__item">
+                        <img src="/images/sea-suite/zona-giorno.webp" alt="Zona giorno con il letto matrimoniale chiuso nella parete" loading="lazy" srcset="/images/sea-suite/zona-giorno-800.webp 800w, /images/sea-suite/zona-giorno-1200.webp 1200w, /images/sea-suite/zona-giorno.webp 1600w" sizes="(min-width: 1024px) 390px, (min-width: 640px) 51vw, 96vw" width="1600" height="1067">
+                    </div>
+                    <div class="gallery__item">
+                        <img src="/images/sea-suite/letto-a-scomparsa.webp" alt="Letto matrimoniale a scomparsa aperto" loading="lazy" srcset="/images/sea-suite/letto-a-scomparsa-800.webp 800w, /images/sea-suite/letto-a-scomparsa-1200.webp 1200w, /images/sea-suite/letto-a-scomparsa.webp 1600w" sizes="(min-width: 1024px) 390px, (min-width: 640px) 51vw, 96vw" width="1600" height="1067">
+                    </div>
+                    <div class="gallery__item">
+                        <img src="/images/sea-suite/vista-ingresso.webp" alt="Vista d'insieme dall'ingresso: cucina, tavolo e finestra" loading="lazy" srcset="/images/sea-suite/vista-ingresso-800.webp 800w, /images/sea-suite/vista-ingresso-1200.webp 1200w, /images/sea-suite/vista-ingresso.webp 1600w" sizes="(min-width: 1024px) 390px, (min-width: 640px) 51vw, 96vw" width="1600" height="1067">
+                    </div>
+                    <div class="gallery__item">
+                        <img src="/images/sea-suite/bagno.webp" alt="Bagno con lavabo, wc e bidet" loading="lazy" srcset="/images/sea-suite/bagno-800.webp 800w, /images/sea-suite/bagno-1200.webp 1200w, /images/sea-suite/bagno.webp 1600w" sizes="(min-width: 1024px) 390px, (min-width: 640px) 51vw, 96vw" width="1600" height="1067">
+                    </div>
+                    <div class="gallery__item">
+                        <img src="/images/sea-suite/bagno-doccia.webp" alt="Doccia e lavatrice" loading="lazy" srcset="/images/sea-suite/bagno-doccia-800.webp 800w, /images/sea-suite/bagno-doccia-1200.webp 1200w, /images/sea-suite/bagno-doccia.webp 1600w" sizes="(min-width: 1024px) 390px, (min-width: 640px) 51vw, 96vw" width="1600" height="1067">
+                    </div>
+                </div>
             </div>
         </section>
 
