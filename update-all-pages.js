@@ -29,28 +29,28 @@ const TRANSLATIONS = {
         accept: 'Yes, that\'s fine',
         reject: 'No thanks',
         link: 'Cookie Policy',
-        policyUrl: '/en/cookie-policy'
+        policyUrl: '/cookie-policy'
     },
     de: {
         text: 'Ich verwende Cookies, um zu verstehen, welche Seiten am besten funktionieren. Darf ich?',
         accept: 'Ja, klar',
         reject: 'Nein danke',
         link: 'Cookie-Richtlinie',
-        policyUrl: '/de/cookie-policy'
+        policyUrl: '/cookie-policy'
     },
     fr: {
         text: 'J\'utilise des cookies pour comprendre quelles pages fonctionnent le mieux. Puis-je ?',
         accept: 'Oui, d\'accord',
         reject: 'Non merci',
         link: 'Politique des cookies',
-        policyUrl: '/fr/cookie-policy'
+        policyUrl: '/cookie-policy'
     },
     es: {
         text: 'Uso cookies para entender qué páginas funcionan mejor. ¿Puedo?',
         accept: 'Sí, vale',
         reject: 'No gracias',
         link: 'Política de cookies',
-        policyUrl: '/es/cookie-policy'
+        policyUrl: '/cookie-policy'
     }
 };
 
