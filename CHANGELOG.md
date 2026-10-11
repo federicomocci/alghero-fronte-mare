@@ -30,6 +30,12 @@ Cronologia completa dello sviluppo del sito dal 9 al 15 gennaio 2025.
 ### Foto nuove
 - Cartella foto-nuove/ con istruzioni per caricare le foto (esclusa dal sito con .vercelignore)
 
+### Correzioni
+- Email nel footer (8 pagine IT): mostrava "[email protected]" con link rotto, ora mailto normale
+- 94 link rotti nelle pagine EN/DE/FR/ES (cookie/privacy policy e case consigliate) ora puntano alle pagine esistenti
+- Pagina "Le case" troncata a metà footer: ricostruiti footer, bottone WhatsApp, banner cookie e chiusura
+- Tabella di confronto delle pagine "prenotazione diretta" leggibile su cellulare (prima la pagina scorreva di lato)
+
 ---
 
 ## 15 Gennaio 2025
