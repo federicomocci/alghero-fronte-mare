@@ -4,6 +4,34 @@ Cronologia completa dello sviluppo del sito dal 9 al 15 gennaio 2025.
 
 ---
 
+## 11 Ottobre 2026
+
+### Anteprime social
+- Open Graph completo + twitter:card su tutte le 92 pagine (prima 73 senza immagine)
+- Immagini di anteprima JPG 1200x630 in images/og/ (compatibili con WhatsApp)
+
+### Calendario disponibilità
+- Aggiunto alle pagine Lido 113 in EN/DE/FR/ES
+- Un solo file condiviso (calendario-disponibilita.js/.css) per tutte le pagine
+- Corretto lo spostamento di un giorno delle date (fuso orario UTC)
+- Messaggio di errore se le prenotazioni non si caricano
+
+### Recensioni
+- Punteggio visibile: 4,94/5 su 218 (home, Loft) e 4,99/5 su 108 (Fronte Mare)
+- 3 recensioni vere nella home, in tutte le lingue
+
+### Favicon
+- favicon.svg, favicon.ico (16/32/48), apple-touch-icon.png su tutte le pagine
+
+### Immagini
+- Versioni 800/1200 px di ogni foto con srcset: circa -40% di peso su cellulare, -60% su computer
+- width/height su tutte le immagini, lazy loading sotto la piega
+
+### Foto nuove
+- Cartella foto-nuove/ con istruzioni per caricare le foto (esclusa dal sito con .vercelignore)
+
+---
+
 ## 15 Gennaio 2025
 
 ### Google Analytics
