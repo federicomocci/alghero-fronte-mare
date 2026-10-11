@@ -126,6 +126,12 @@
     color: #5a5a5a;
 }
 
+.cal-errore {
+    margin: 0;
+    color: #5a5a5a;
+    line-height: 1.6;
+}
+
 /* Responsive */
 @media (max-width: 480px) {
     .cal-wrapper {
