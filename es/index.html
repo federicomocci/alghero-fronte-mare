@@ -53,6 +53,7 @@
 .cookie-banner{position:fixed;bottom:0;left:0;right:0;z-index:9999;padding:0 1rem 1rem;pointer-events:none;opacity:0;transform:translateY(100%);transition:opacity .3s ease,transform .3s ease}.cookie-banner--visible{opacity:1;transform:translateY(0);pointer-events:auto}.cookie-banner__content{max-width:480px;margin:0 auto;background:#1a3a4a;border-radius:16px;padding:1.25rem 1.5rem;box-shadow:0 8px 32px rgba(0,0,0,.2);display:flex;flex-direction:column;align-items:center;text-align:center;gap:.75rem}.cookie-banner__icon{font-size:2rem;line-height:1}.cookie-banner__text{color:#fff;font-size:1rem;line-height:1.5;margin:0}.cookie-banner__buttons{display:flex;gap:.75rem;width:100%;margin-top:.25rem}.cookie-banner__btn{flex:1;padding:.75rem 1rem;border:none;border-radius:25px;font-size:.95rem;font-weight:600;cursor:pointer;transition:transform .2s ease,box-shadow .2s ease;font-family:inherit}.cookie-banner__btn:hover{transform:scale(1.03)}.cookie-banner__btn--reject{background:transparent;color:#a0b4bc;border:1.5px solid #a0b4bc}.cookie-banner__btn--reject:hover{background:rgba(255,255,255,.1);color:#fff;border-color:#fff}.cookie-banner__btn--accept{background:#c4956a;color:#fff;box-shadow:0 4px 12px rgba(196,149,106,.3)}.cookie-banner__btn--accept:hover{background:#d4a57a;box-shadow:0 6px 16px rgba(196,149,106,.4)}.cookie-banner__link{color:#a0b4bc;font-size:.8rem;text-decoration:none;margin-top:.25rem}.cookie-banner__link:hover{color:#fff;text-decoration:underline}@media(max-width:520px){.cookie-banner{padding:0 .75rem .75rem}.cookie-banner__content{border-radius:12px;padding:1rem 1.25rem}.cookie-banner__text{font-size:.95rem}.cookie-banner__btn{padding:.7rem .75rem;font-size:.9rem}}
     </style>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"LodgingBusiness","name":"Alghero Fronte Mare","description":"Dos apartamentos frente al mar en Alghero gestionados directamente por Federico. Primera línea de mar, reserva directa por WhatsApp.","url":"https://www.algherofrontemare.it/es/","telephone":"+393293370792","email":"info@algherofrontemare.it","address":{"@type":"PostalAddress","streetAddress":"Via Lido 113","addressLocality":"Alghero","addressRegion":"SS","postalCode":"07041","addressCountry":"IT"},"geo":{"@type":"GeoCoordinates","latitude":"40.5583","longitude":"8.3138"},"image":"https://www.algherofrontemare.it/images/hero-alghero.webp","priceRange":"€€"}</script>
+    <style>.rating-summary{display:inline-flex;flex-direction:column;gap:.15rem;margin:0 0 1.5rem;padding:.75rem 1.25rem;background:#fff;border:1px solid var(--color-sand-dark);border-radius:12px;line-height:1.4}.rating-summary__stars{color:#f5a623;letter-spacing:2px;margin-right:.35rem}.rating-summary__score{color:var(--color-text)}.rating-summary__score strong{font-size:1.35rem;color:var(--color-sea-deep)}.rating-summary__count{font-size:.875rem;color:var(--color-text-light)}.reviews-section .rating-summary{display:flex;width:fit-content;margin:-1rem auto 2rem;align-items:center;text-align:center}.hero__rating{display:inline-block;margin-top:1.5rem;color:#fff;text-decoration:none;font-size:.95rem;line-height:1.5}.hero__rating:hover{text-decoration:underline}.hero__rating .rating-summary__stars{color:#f5a623}.hero__rating strong{font-size:1.1rem}.reviews-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(300px,100%),1fr));gap:1.5rem;margin-top:2.5rem}.review-card{background:#fff;padding:1.5rem;border-radius:12px;box-shadow:0 2px 8px rgba(0,0,0,0.06)}.review-card__header{display:flex;align-items:center;gap:12px;margin-bottom:1rem}.review-card__avatar{flex-shrink:0;width:48px;height:48px;border-radius:50%;background:var(--color-sea-light);display:flex;align-items:center;justify-content:center;font-weight:700;color:var(--color-sea-deep)}.review-card__name{font-weight:600}.review-card__location{font-size:0.85rem;color:var(--color-text-light)}.review-card__stars{color:#f5a623;margin-bottom:0.75rem}.review-card__text{color:var(--color-text-light);font-size:0.95rem;line-height:1.6;font-style:italic}</style>
 </head>
 <body>
     <header class="site-header">
@@ -89,6 +90,7 @@
                 </a>
                 <a href="#apartments" class="btn btn--secondary">Ver los apartamentos</a>
             </div>
+            <a href="#opiniones" class="hero__rating"><span class="rating-summary__stars" aria-hidden="true">★★★★★</span> <strong>4,94</strong>/5 · 218 reseñas de mis huéspedes</a>
         </div>
     </section>
     <section class="section">
@@ -176,9 +178,13 @@
             </ul>
         </div>
     </section>
-    <section class="section section--alt">
+    <section id="opiniones" class="section section--alt">
         <div class="container">
             <h2>Lo que dicen los huéspedes</h2>
+            <div class="rating-summary">
+                <span class="rating-summary__score"><span class="rating-summary__stars" aria-hidden="true">★★★★★</span> <strong>4,94</strong> de 5</span>
+                <span class="rating-summary__count">218 reseñas de mis huéspedes</span>
+            </div>
             <p>Estos son los puntos que más se repiten en las reseñas de mis huéspedes:</p>
             <ul class="features-list">
                 <li>La ubicación es realmente frente al mar, como en las fotos</li>
@@ -187,6 +193,32 @@
                 <li>Problemas resueltos de inmediato, sin complicaciones</li>
                 <li>Check-in sencillo y bienvenida cálida</li>
             </ul>
+            <div class="reviews-grid">
+                <div class="review-card">
+                    <div class="review-card__header">
+                        <div class="review-card__avatar">M</div>
+                        <div><div class="review-card__name">Matt</div><div class="review-card__location">Texas, USA</div></div>
+                    </div>
+                    <div class="review-card__stars">★★★★★</div>
+                    <p class="review-card__text">"Un lugar maravilloso y Federico es la persona más amable del mundo. Nos recibió y nos dio todas las recomendaciones. La ubicación es perfecta!"</p>
+                </div>
+                <div class="review-card">
+                    <div class="review-card__header">
+                        <div class="review-card__avatar">M</div>
+                        <div><div class="review-card__name">Marlén</div><div class="review-card__location">Airbnb</div></div>
+                    </div>
+                    <div class="review-card__stars">★★★★★</div>
+                    <p class="review-card__text">"Nosotros, una familia de cuatro, pasamos un tiempo fantástico. El apartamento estaba muy bien equipado. Federico fue un anfitrión increíble. Lo recomendamos!"</p>
+                </div>
+                <div class="review-card">
+                    <div class="review-card__header">
+                        <div class="review-card__avatar">R</div>
+                        <div><div class="review-card__name">Ramune</div><div class="review-card__location">Airbnb</div></div>
+                    </div>
+                    <div class="review-card__stars">★★★★★</div>
+                    <p class="review-card__text">"Hermoso apartamento, la vista desde el balcón es preciosa. Todo está limpio. El anfitrión es muy amable y servicial, responde muy rápido."</p>
+                </div>
+            </div>
         </div>
     </section>
     <section class="section">
