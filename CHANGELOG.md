@@ -4,6 +4,45 @@ Cronologia completa dello sviluppo del sito dal 9 al 15 gennaio 2025.
 
 ---
 
+## 11 Ottobre 2026
+
+### Anteprime social
+- Open Graph completo + twitter:card su tutte le 92 pagine (prima 73 senza immagine)
+- Immagini di anteprima JPG 1200x630 in images/og/ (compatibili con WhatsApp)
+
+### Calendario disponibilità
+- Aggiunto alle pagine Lido 113 in EN/DE/FR/ES
+- Un solo file condiviso (calendario-disponibilita.js/.css) per tutte le pagine
+- Corretto lo spostamento di un giorno delle date (fuso orario UTC)
+- Messaggio di errore se le prenotazioni non si caricano
+
+### Recensioni
+- Punteggio visibile: 4,94/5 su 218 (home, Loft) e 4,99/5 su 108 (Fronte Mare)
+- 3 recensioni vere nella home, in tutte le lingue
+
+### Favicon
+- favicon.svg, favicon.ico (16/32/48), apple-touch-icon.png su tutte le pagine
+
+### Immagini
+- Versioni 800/1200 px di ogni foto con srcset: circa -40% di peso su cellulare, -60% su computer
+- width/height su tutte le immagini, lazy loading sotto la piega
+
+### Foto nuove
+- Cartella foto-nuove/ con istruzioni per caricare le foto (esclusa dal sito con .vercelignore)
+
+### Foto nuove (servizio fotografico)
+- Lido 113 Loft: 12 foto nuove (terrazza vista mare come foto principale), galleria completa anche in EN/DE/FR/ES; tolte le 12 foto vecchie
+- Orti 36 Sea Suite: prima foto in assoluto, 10 foto (foto principale + galleria) e foto nella scheda "Altre case"
+- Foto convertite da Adobe RGB a sRGB, WebP 1600/1200/800 px; anteprime social images/og/loft.jpg e sea-suite.jpg
+
+### Correzioni
+- Email nel footer (8 pagine IT): mostrava "[email protected]" con link rotto, ora mailto normale
+- 94 link rotti nelle pagine EN/DE/FR/ES (cookie/privacy policy e case consigliate) ora puntano alle pagine esistenti
+- Pagina "Le case" troncata a metà footer: ricostruiti footer, bottone WhatsApp, banner cookie e chiusura
+- Tabella di confronto delle pagine "prenotazione diretta" leggibile su cellulare (prima la pagina scorreva di lato)
+
+---
+
 ## 15 Gennaio 2025
 
 ### Google Analytics
