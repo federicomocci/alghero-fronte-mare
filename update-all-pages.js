@@ -65,7 +65,7 @@ const NEW_GA4_CODE = `<!-- GA4 con consenso -->
         document.head.appendChild(s);
         s.onload = function() {
             window.dataLayer = window.dataLayer || [];
-            function gtag(){dataLayer.push(arguments);}
+            window.gtag = function(){dataLayer.push(arguments);};
             gtag('js', new Date());
             gtag('config', 'G-SWY4HV4168');
         };
@@ -73,6 +73,14 @@ const NEW_GA4_CODE = `<!-- GA4 con consenso -->
     if (localStorage.getItem('cookie-consent') === 'accepted') {
         window.loadGA4();
     }
+    // Contatti: evento generate_lead a ogni click su WhatsApp, telefono o email (solo se GA4 è attivo, cioè con consenso)
+    document.addEventListener('click', function(e) {
+        var a = e.target.closest && e.target.closest('a[href]');
+        if (!a || !window.gtag) return;
+        var href = a.getAttribute('href');
+        var metodo = href.indexOf('wa.me/') !== -1 ? 'whatsapp' : href.indexOf('tel:') === 0 ? 'telefono' : href.indexOf('mailto:') === 0 ? 'email' : '';
+        if (metodo) gtag('event', 'generate_lead', { contact_method: metodo });
+    });
     </script>`;
 
 // CSS del cookie banner (minificato)

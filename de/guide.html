@@ -11,7 +11,7 @@
         document.head.appendChild(s);
         s.onload = function() {
             window.dataLayer = window.dataLayer || [];
-            function gtag(){dataLayer.push(arguments);}
+            window.gtag = function(){dataLayer.push(arguments);};
             gtag('js', new Date());
             gtag('config', 'G-SWY4HV4168');
         };
@@ -19,6 +19,14 @@
     if (localStorage.getItem('cookie-consent') === 'accepted') {
         window.loadGA4();
     }
+    // Contatti: evento generate_lead a ogni click su WhatsApp, telefono o email (solo se GA4 è attivo, cioè con consenso)
+    document.addEventListener('click', function(e) {
+        var a = e.target.closest && e.target.closest('a[href]');
+        if (!a || !window.gtag) return;
+        var href = a.getAttribute('href');
+        var metodo = href.indexOf('wa.me/') !== -1 ? 'whatsapp' : href.indexOf('tel:') === 0 ? 'telefono' : href.indexOf('mailto:') === 0 ? 'email' : '';
+        if (metodo) gtag('event', 'generate_lead', { contact_method: metodo });
+    });
     </script>
     
     <meta charset="UTF-8">
@@ -51,22 +59,42 @@
     
     <style>@font-face{font-family:"Lato";font-style:normal;font-weight:400;font-display:swap;src:url("/fonts/lato-v24-latin-regular.woff2") format("woff2")}@font-face{font-family:"Lato";font-style:normal;font-weight:700;font-display:swap;src:url("/fonts/lato-v24-latin-700.woff2") format("woff2")}</style>
     <style>
-        :root{--color-sea-deep:#8B7355;--color-sea-medium:#C4A77D;--color-sea-light:#E8DCC8;--color-sand:#f5f1eb;--color-sand-dark:#d9d2c7;--color-text:#2c2c2c;--color-text-light:#5a5a5a;--color-white:#fff;--font-main:'Lato',Helvetica,Arial,sans-serif;--space-xs:0.5rem;--space-sm:1rem;--space-md:1.5rem;--space-lg:2.5rem;--space-xl:4rem}*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}body{font-family:var(--font-main);font-size:1.0625rem;line-height:1.7;color:var(--color-text);background:var(--color-white)}.site-header{padding:var(--space-md);background:var(--color-white);border-bottom:1px solid var(--color-sand-dark)}.site-header__inner{display:flex;justify-content:space-between;align-items:center;max-width:1200px;margin:0 auto}.site-logo{font-weight:700;color:var(--color-sea-deep);text-decoration:none;font-size:1.1rem}.lang-dropdown{position:relative}.lang-dropdown__toggle{background:none;border:none;cursor:pointer;font-size:1.5rem;padding:4px 8px;border-radius:4px;transition:background 0.2s}.lang-dropdown__toggle:hover{background:var(--color-sand)}.lang-dropdown__menu{position:absolute;top:100%;right:0;background:var(--color-white);border:1px solid var(--color-sand-dark);border-radius:8px;box-shadow:0 4px 12px rgba(0,0,0,0.1);display:none;min-width:140px;z-index:100;overflow:hidden;margin-top:4px}.lang-dropdown:hover .lang-dropdown__menu{display:block}.lang-dropdown__menu a{display:flex;align-items:center;gap:10px;padding:10px 14px;text-decoration:none;color:var(--color-text);font-size:0.95rem;transition:background 0.2s}.lang-dropdown__menu a:hover{background:var(--color-sand)}.lang-dropdown__menu a.active{background:var(--color-sea-light);font-weight:600}.lang-dropdown__flag{font-size:1.2rem}.site-nav-bar{position:sticky;top:0;background:var(--color-sand);border-bottom:1px solid var(--color-sand-dark);padding:12px 0;z-index:99}.site-nav-bar .container{display:flex;justify-content:center;gap:3rem}.site-nav-bar a{color:var(--color-text);text-decoration:none;font-size:0.95rem}.site-nav-bar a:hover{color:var(--color-sea-deep)}.container{max-width:1100px;margin:0 auto;padding:0 var(--space-md)}.hero{background:var(--color-sea-light);padding:var(--space-xl) var(--space-md);text-align:center}.hero h1{font-size:2.2rem;color:var(--color-sea-deep);margin-bottom:var(--space-sm)}.hero p{font-size:1.1rem;color:var(--color-text-light);max-width:600px;margin:0 auto}.section{padding:var(--space-xl) var(--space-md)}.section--alt{background:var(--color-sand)}.section h2{font-size:1.8rem;color:var(--color-sea-deep);margin-bottom:var(--space-md);text-align:center}.intro{max-width:700px;margin:0 auto var(--space-lg);text-align:center}.intro p{color:var(--color-text-light)}.guide-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:var(--space-md);max-width:900px;margin:0 auto}.guide-card{background:var(--color-white);border:2px solid var(--color-sand-dark);border-radius:12px;padding:var(--space-md);text-decoration:none;color:inherit;display:flex;align-items:center;gap:var(--space-md);transition:all 0.2s}.guide-card:hover{border-color:var(--color-sea-medium);transform:translateY(-2px);box-shadow:0 8px 24px rgba(0,0,0,0.08)}.card-icon{width:60px;height:60px;background:var(--color-sea-light);border-radius:12px;display:flex;align-items:center;justify-content:center;font-size:1.8rem;flex-shrink:0}.card-content h3{font-size:1.2rem;color:var(--color-sea-deep);margin-bottom:4px}.card-content p{font-size:0.95rem;color:var(--color-text-light);margin:0}.quick-info{background:var(--color-sea-deep);color:#fff;padding:var(--space-xl) var(--space-md)}.quick-info h2{color:#fff;text-align:center;margin-bottom:var(--space-lg)}.info-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:var(--space-md);max-width:900px;margin:0 auto}.info-box{background:rgba(255,255,255,0.1);border-radius:12px;padding:var(--space-md)}.info-box h3{font-size:1.1rem;margin-bottom:var(--space-xs);color:var(--color-sea-light)}.info-box p{font-size:0.95rem;opacity:0.9;margin:0}.site-footer{padding:var(--space-lg) var(--space-md);background:var(--color-sand);text-align:center}.site-footer p{font-size:0.9rem;color:var(--color-text-light);margin-bottom:var(--space-xs)}.site-footer a{color:var(--color-sea-medium)}@media(max-width:640px){.hero h1{font-size:1.8rem}.site-nav-bar .container{gap:1.5rem}.guide-grid{grid-template-columns:1fr}}
+        :root{--color-sea-deep:#8B7355;--color-sea-medium:#C4A77D;--color-sea-light:#E8DCC8;--color-sand:#f5f1eb;--color-sand-dark:#d9d2c7;--color-text:#2c2c2c;--color-text-light:#5a5a5a;--color-white:#fff;--font-main:'Lato',Helvetica,Arial,sans-serif;--space-xs:0.5rem;--space-sm:1rem;--space-md:1.5rem;--space-lg:2.5rem;--space-xl:4rem}*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}body{font-family:var(--font-main);font-size:1.0625rem;line-height:1.7;color:var(--color-text);background:var(--color-white)}.site-header{padding:var(--space-md);background:var(--color-white);border-bottom:1px solid var(--color-sand-dark)}.site-header__inner{display:flex;justify-content:space-between;align-items:center;max-width:1200px;margin:0 auto}.site-logo{font-weight:700;color:var(--color-sea-deep);text-decoration:none;font-size:1.1rem}.lang-dropdown{position:relative}.lang-dropdown__toggle{background:none;border:none;cursor:pointer;font-size:1.5rem;padding:4px 8px;border-radius:4px;transition:background 0.2s}.lang-dropdown__toggle:hover{background:var(--color-sand)}.lang-dropdown__menu{position:absolute;top:100%;right:0;background:var(--color-white);border:1px solid var(--color-sand-dark);border-radius:8px;box-shadow:0 4px 12px rgba(0,0,0,0.1);display:none;min-width:140px;z-index:100;overflow:hidden;margin-top:4px}.lang-dropdown__menu a{display:flex;align-items:center;gap:10px;padding:10px 14px;text-decoration:none;color:var(--color-text);font-size:0.95rem;transition:background 0.2s}.lang-dropdown__menu a:hover{background:var(--color-sand)}.lang-dropdown__menu a.active{background:var(--color-sea-light);font-weight:600}.lang-dropdown__flag{font-size:1.2rem}.site-nav-bar{position:sticky;top:0;background:var(--color-sand);border-bottom:1px solid var(--color-sand-dark);padding:12px 0;z-index:99}.site-nav-bar .container{display:flex;justify-content:center;gap:3rem}.site-nav-bar a{color:var(--color-text);text-decoration:none;font-size:0.95rem}.site-nav-bar a:hover{color:var(--color-sea-deep)}.container{max-width:1100px;margin:0 auto;padding:0 var(--space-md)}.hero{background:var(--color-sea-light);padding:var(--space-xl) var(--space-md);text-align:center}.hero h1{font-size:2.2rem;color:var(--color-sea-deep);margin-bottom:var(--space-sm)}.hero p{font-size:1.1rem;color:var(--color-text-light);max-width:600px;margin:0 auto}.section{padding:var(--space-xl) var(--space-md)}.section--alt{background:var(--color-sand)}.section h2{font-size:1.8rem;color:var(--color-sea-deep);margin-bottom:var(--space-md);text-align:center}.intro{max-width:700px;margin:0 auto var(--space-lg);text-align:center}.intro p{color:var(--color-text-light)}.guide-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:var(--space-md);max-width:900px;margin:0 auto}.guide-card{background:var(--color-white);border:2px solid var(--color-sand-dark);border-radius:12px;padding:var(--space-md);text-decoration:none;color:inherit;display:flex;align-items:center;gap:var(--space-md);transition:all 0.2s}.guide-card:hover{border-color:var(--color-sea-medium);transform:translateY(-2px);box-shadow:0 8px 24px rgba(0,0,0,0.08)}.card-icon{width:60px;height:60px;background:var(--color-sea-light);border-radius:12px;display:flex;align-items:center;justify-content:center;font-size:1.8rem;flex-shrink:0}.card-content h3{font-size:1.2rem;color:var(--color-sea-deep);margin-bottom:4px}.card-content p{font-size:0.95rem;color:var(--color-text-light);margin:0}.quick-info{background:var(--color-sea-deep);color:#fff;padding:var(--space-xl) var(--space-md)}.quick-info h2{color:#fff;text-align:center;margin-bottom:var(--space-lg)}.info-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:var(--space-md);max-width:900px;margin:0 auto}.info-box{background:rgba(255,255,255,0.1);border-radius:12px;padding:var(--space-md)}.info-box h3{font-size:1.1rem;margin-bottom:var(--space-xs);color:var(--color-sea-light)}.info-box p{font-size:0.95rem;opacity:0.9;margin:0}.site-footer{padding:var(--space-lg) var(--space-md);background:var(--color-sand);text-align:center}.site-footer p{font-size:0.9rem;color:var(--color-text-light);margin-bottom:var(--space-xs)}.site-footer a{color:var(--color-sea-medium)}@media(max-width:640px){.hero h1{font-size:1.8rem}.site-nav-bar .container{gap:1.5rem}.guide-grid{grid-template-columns:1fr}}
     
 /* Cookie Banner */
 .cookie-banner{position:fixed;bottom:0;left:0;right:0;z-index:9999;padding:0 1rem 1rem;pointer-events:none;opacity:0;transform:translateY(100%);transition:opacity .3s ease,transform .3s ease}.cookie-banner--visible{opacity:1;transform:translateY(0);pointer-events:auto}.cookie-banner__content{max-width:480px;margin:0 auto;background:#1a3a4a;border-radius:16px;padding:1.25rem 1.5rem;box-shadow:0 8px 32px rgba(0,0,0,.2);display:flex;flex-direction:column;align-items:center;text-align:center;gap:.75rem}.cookie-banner__icon{font-size:2rem;line-height:1}.cookie-banner__text{color:#fff;font-size:1rem;line-height:1.5;margin:0}.cookie-banner__buttons{display:flex;gap:.75rem;width:100%;margin-top:.25rem}.cookie-banner__btn{flex:1;padding:.75rem 1rem;border:none;border-radius:25px;font-size:.95rem;font-weight:600;cursor:pointer;transition:transform .2s ease,box-shadow .2s ease;font-family:inherit}.cookie-banner__btn:hover{transform:scale(1.03)}.cookie-banner__btn--reject{background:transparent;color:#a0b4bc;border:1.5px solid #a0b4bc}.cookie-banner__btn--reject:hover{background:rgba(255,255,255,.1);color:#fff;border-color:#fff}.cookie-banner__btn--accept{background:#c4956a;color:#fff;box-shadow:0 4px 12px rgba(196,149,106,.3)}.cookie-banner__btn--accept:hover{background:#d4a57a;box-shadow:0 6px 16px rgba(196,149,106,.4)}.cookie-banner__link{color:#a0b4bc;font-size:.8rem;text-decoration:none;margin-top:.25rem}.cookie-banner__link:hover{color:#fff;text-decoration:underline}@media(max-width:520px){.cookie-banner{padding:0 .75rem .75rem}.cookie-banner__content{border-radius:12px;padding:1rem 1.25rem}.cookie-banner__text{font-size:.95rem}.cookie-banner__btn{padding:.7rem .75rem;font-size:.9rem}}
     </style>
+    <style>
+/* Selettore lingua */
+.lang-dropdown{position:relative}
+.lang-dropdown__toggle{background:none;border:none;cursor:pointer;font-size:1.5rem;line-height:1;padding:4px 8px;border-radius:30px;transition:background .2s}
+.lang-dropdown__toggle:hover,.lang-dropdown__toggle:focus-visible,.lang-dropdown--open .lang-dropdown__toggle{background:#f5f1eb}
+.lang-dropdown__menu{position:absolute;top:100%;right:0;margin-top:4px;min-width:150px;background:#fff;border:1px solid #d9d2c7;border-radius:8px;box-shadow:0 4px 12px rgba(0,0,0,.1);display:none;z-index:1001;overflow:hidden}
+.lang-dropdown--open .lang-dropdown__menu{display:block}
+@media (hover:hover) and (pointer:fine){.lang-dropdown:hover .lang-dropdown__menu{display:block}}
+.lang-dropdown__menu a{display:flex;align-items:center;gap:10px;padding:10px 14px;color:#2c2c2c;font-size:.95rem;text-decoration:none;background:none}
+.lang-dropdown__menu a:hover{background:#f5f1eb}
+.lang-dropdown__menu a.active{background:#E8DCC8;font-weight:600}
+.lang-dropdown__flag{font-size:1.2rem}
+.lang-dropdown--float{position:absolute;top:12px;right:16px;z-index:1001}
+.lang-dropdown--float .lang-dropdown__toggle{background:#fff;border:1px solid #d9d2c7;box-shadow:0 2px 8px rgba(0,0,0,.08)}
+    </style>
+    <script src="/selettore-lingua.js" defer></script>
 </head>
 <body>
     <header class="site-header">
         <div class="site-header__inner container">
             <a href="/de/" class="site-logo">Alghero Fronte Mare</a>
-            <div class="lang-dropdown"><button class="lang-dropdown__toggle" aria-label="Sprache wählen">🇩🇪</button><div class="lang-dropdown__menu">
-                <a href="/guida-alghero"><span class="lang-dropdown__flag">🇮🇹</span> Italiano</a>
-                <a href="/en/guide"><span class="lang-dropdown__flag">🇬🇧</span> English</a>
-                <a href="/de/guide" class="active"><span class="lang-dropdown__flag">🇩🇪</span> Deutsch</a>
-                <a href="/fr/guide"><span class="lang-dropdown__flag">🇫🇷</span> Français</a>
-                <a href="/es/guia"><span class="lang-dropdown__flag">🇪🇸</span> Español</a></div></div>
+            <div class="lang-dropdown">
+                <button type="button" class="lang-dropdown__toggle" aria-label="Sprache wählen" aria-expanded="false" aria-haspopup="true">🇩🇪</button>
+                <div class="lang-dropdown__menu">
+                    <a href="/guida-alghero" hreflang="it" lang="it"><span class="lang-dropdown__flag">🇮🇹</span> Italiano</a>
+                    <a href="/en/guide" hreflang="en" lang="en"><span class="lang-dropdown__flag">🇬🇧</span> English</a>
+                    <a href="/de/guide" hreflang="de" lang="de" class="active" aria-current="page"><span class="lang-dropdown__flag">🇩🇪</span> Deutsch</a>
+                    <a href="/fr/guide" hreflang="fr" lang="fr"><span class="lang-dropdown__flag">🇫🇷</span> Français</a>
+                    <a href="/es/guia" hreflang="es" lang="es"><span class="lang-dropdown__flag">🇪🇸</span> Español</a>
+                </div>
+            </div>
             </div>
         </div>
     </header>
@@ -163,7 +191,7 @@
         <div class="container">
             <p>Alghero Fronte Mare — Ferienwohnungen am Meer, verwaltet von Federico</p>
             <p>CIN: IT090003B4000F3434</p>
-            <p><a href="mailto:federicomocci12@gmail.com">federicomocci12@gmail.com</a> · <a href="https://wa.me/393293370792">+39 329 337 0792</a></p>
+            <p><a href="mailto:algherovistamare@gmail.com">algherovistamare@gmail.com</a> · <a href="tel:+393293370792">+39 329 337 0792</a> · <a href="https://wa.me/393293370792">WhatsApp</a></p>
         </div>
     </footer>
 

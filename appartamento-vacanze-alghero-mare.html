@@ -11,7 +11,7 @@
         document.head.appendChild(s);
         s.onload = function() {
             window.dataLayer = window.dataLayer || [];
-            function gtag(){dataLayer.push(arguments);}
+            window.gtag = function(){dataLayer.push(arguments);};
             gtag('js', new Date());
             gtag('config', 'G-SWY4HV4168');
         };
@@ -19,6 +19,14 @@
     if (localStorage.getItem('cookie-consent') === 'accepted') {
         window.loadGA4();
     }
+    // Contatti: evento generate_lead a ogni click su WhatsApp, telefono o email (solo se GA4 è attivo, cioè con consenso)
+    document.addEventListener('click', function(e) {
+        var a = e.target.closest && e.target.closest('a[href]');
+        if (!a || !window.gtag) return;
+        var href = a.getAttribute('href');
+        var metodo = href.indexOf('wa.me/') !== -1 ? 'whatsapp' : href.indexOf('tel:') === 0 ? 'telefono' : href.indexOf('mailto:') === 0 ? 'email' : '';
+        if (metodo) gtag('event', 'generate_lead', { contact_method: metodo });
+    });
     </script>
     
     <meta charset="UTF-8">
@@ -46,6 +54,12 @@
     
     <!-- Canonical -->
     <link rel="canonical" href="https://www.algherofrontemare.it/appartamento-vacanze-alghero-mare">
+    <link rel="alternate" hreflang="it" href="https://www.algherofrontemare.it/appartamento-vacanze-alghero-mare">
+    <link rel="alternate" hreflang="en" href="https://www.algherofrontemare.it/en/holiday-apartment-alghero-beachfront">
+    <link rel="alternate" hreflang="de" href="https://www.algherofrontemare.it/de/ferienwohnung-alghero-am-meer">
+    <link rel="alternate" hreflang="fr" href="https://www.algherofrontemare.it/fr/appartement-vacances-alghero-mer">
+    <link rel="alternate" hreflang="es" href="https://www.algherofrontemare.it/es/apartamento-vacaciones-alghero-mar">
+    <link rel="alternate" hreflang="x-default" href="https://www.algherofrontemare.it/appartamento-vacanze-alghero-mare">
     
     <!-- Fonts -->
     <style>@font-face{font-family:"Lato";font-style:normal;font-weight:400;font-display:swap;src:url("/fonts/lato-v24-latin-regular.woff2") format("woff2")}@font-face{font-family:"Lato";font-style:normal;font-weight:700;font-display:swap;src:url("/fonts/lato-v24-latin-700.woff2") format("woff2")}</style>
@@ -297,19 +311,35 @@
 /* Cookie Banner */
 .cookie-banner{position:fixed;bottom:0;left:0;right:0;z-index:9999;padding:0 1rem 1rem;pointer-events:none;opacity:0;transform:translateY(100%);transition:opacity .3s ease,transform .3s ease}.cookie-banner--visible{opacity:1;transform:translateY(0);pointer-events:auto}.cookie-banner__content{max-width:480px;margin:0 auto;background:#1a3a4a;border-radius:16px;padding:1.25rem 1.5rem;box-shadow:0 8px 32px rgba(0,0,0,.2);display:flex;flex-direction:column;align-items:center;text-align:center;gap:.75rem}.cookie-banner__icon{font-size:2rem;line-height:1}.cookie-banner__text{color:#fff;font-size:1rem;line-height:1.5;margin:0}.cookie-banner__buttons{display:flex;gap:.75rem;width:100%;margin-top:.25rem}.cookie-banner__btn{flex:1;padding:.75rem 1rem;border:none;border-radius:25px;font-size:.95rem;font-weight:600;cursor:pointer;transition:transform .2s ease,box-shadow .2s ease;font-family:inherit}.cookie-banner__btn:hover{transform:scale(1.03)}.cookie-banner__btn--reject{background:transparent;color:#a0b4bc;border:1.5px solid #a0b4bc}.cookie-banner__btn--reject:hover{background:rgba(255,255,255,.1);color:#fff;border-color:#fff}.cookie-banner__btn--accept{background:#c4956a;color:#fff;box-shadow:0 4px 12px rgba(196,149,106,.3)}.cookie-banner__btn--accept:hover{background:#d4a57a;box-shadow:0 6px 16px rgba(196,149,106,.4)}.cookie-banner__link{color:#a0b4bc;font-size:.8rem;text-decoration:none;margin-top:.25rem}.cookie-banner__link:hover{color:#fff;text-decoration:underline}@media(max-width:520px){.cookie-banner{padding:0 .75rem .75rem}.cookie-banner__content{border-radius:12px;padding:1rem 1.25rem}.cookie-banner__text{font-size:.95rem}.cookie-banner__btn{padding:.7rem .75rem;font-size:.9rem}}
     </style>
+    <style>
+/* Selettore lingua */
+.lang-dropdown{position:relative}
+.lang-dropdown__toggle{background:none;border:none;cursor:pointer;font-size:1.5rem;line-height:1;padding:4px 8px;border-radius:30px;transition:background .2s}
+.lang-dropdown__toggle:hover,.lang-dropdown__toggle:focus-visible,.lang-dropdown--open .lang-dropdown__toggle{background:#f5f1eb}
+.lang-dropdown__menu{position:absolute;top:100%;right:0;margin-top:4px;min-width:150px;background:#fff;border:1px solid #d9d2c7;border-radius:8px;box-shadow:0 4px 12px rgba(0,0,0,.1);display:none;z-index:1001;overflow:hidden}
+.lang-dropdown--open .lang-dropdown__menu{display:block}
+@media (hover:hover) and (pointer:fine){.lang-dropdown:hover .lang-dropdown__menu{display:block}}
+.lang-dropdown__menu a{display:flex;align-items:center;gap:10px;padding:10px 14px;color:#2c2c2c;font-size:.95rem;text-decoration:none;background:none}
+.lang-dropdown__menu a:hover{background:#f5f1eb}
+.lang-dropdown__menu a.active{background:#E8DCC8;font-weight:600}
+.lang-dropdown__flag{font-size:1.2rem}
+.lang-dropdown--float{position:absolute;top:12px;right:16px;z-index:1001}
+.lang-dropdown--float .lang-dropdown__toggle{background:#fff;border:1px solid #d9d2c7;box-shadow:0 2px 8px rgba(0,0,0,.08)}
+    </style>
+    <script src="/selettore-lingua.js" defer></script>
 </head>
 <body>
     <header class="site-header">
         <div class="site-header__inner">
             <a href="/" class="site-logo">Alghero Fronte Mare</a>
-            <div style="position: relative;" onmouseover="this.querySelector('.dropdown').style.display='block'" onmouseout="this.querySelector('.dropdown').style.display='none'">
-                <button style="background: none; border: none; cursor: pointer; font-size: 1.5rem; padding: 4px 8px;" aria-label="Seleziona lingua">🇮🇹</button>
-                <div class="dropdown">
-                    <a href="/" style="display: flex; align-items: center; gap: 10px; padding: 10px 14px; text-decoration: none; color: #2c2c2c; font-size: 0.95rem; background: #E8DCC8; font-weight: 600;"><span>🇮🇹</span> Italiano</a>
-                    <a href="/en/" style="display: flex; align-items: center; gap: 10px; padding: 10px 14px; text-decoration: none; color: #2c2c2c; font-size: 0.95rem;"><span>🇬🇧</span> English</a>
-                    <a href="/de/" style="display: flex; align-items: center; gap: 10px; padding: 10px 14px; text-decoration: none; color: #2c2c2c; font-size: 0.95rem;"><span>🇩🇪</span> Deutsch</a>
-                    <a href="/fr/" style="display: flex; align-items: center; gap: 10px; padding: 10px 14px; text-decoration: none; color: #2c2c2c; font-size: 0.95rem;"><span>🇫🇷</span> Français</a>
-                    <a href="/es/" style="display: flex; align-items: center; gap: 10px; padding: 10px 14px; text-decoration: none; color: #2c2c2c; font-size: 0.95rem;"><span>🇪🇸</span> Español</a>
+            <div class="lang-dropdown">
+                <button type="button" class="lang-dropdown__toggle" aria-label="Seleziona lingua" aria-expanded="false" aria-haspopup="true">🇮🇹</button>
+                <div class="lang-dropdown__menu">
+                    <a href="/appartamento-vacanze-alghero-mare" hreflang="it" lang="it" class="active" aria-current="page"><span class="lang-dropdown__flag">🇮🇹</span> Italiano</a>
+                    <a href="/en/holiday-apartment-alghero-beachfront" hreflang="en" lang="en"><span class="lang-dropdown__flag">🇬🇧</span> English</a>
+                    <a href="/de/ferienwohnung-alghero-am-meer" hreflang="de" lang="de"><span class="lang-dropdown__flag">🇩🇪</span> Deutsch</a>
+                    <a href="/fr/appartement-vacances-alghero-mer" hreflang="fr" lang="fr"><span class="lang-dropdown__flag">🇫🇷</span> Français</a>
+                    <a href="/es/apartamento-vacaciones-alghero-mar" hreflang="es" lang="es"><span class="lang-dropdown__flag">🇪🇸</span> Español</a>
                 </div>
             </div>
         </div>
@@ -334,8 +364,8 @@
     <section class="content-section">
         <div class="container">
             <h2>Perché scegliere un appartamento fronte mare ad Alghero</h2>
-            <p>Alghero è una delle destinazioni più richieste della Sardegna: centro storico catalano, spiagge caraibiche, aeroporto a 10 minuti. Ma trovare un appartamento <strong>davvero sul mare</strong> non è facile.</p>
-            <p>Molti annunci dicono "vicino al mare" o "a pochi passi dalla spiaggia". La realtà? Spesso c'è una strada da attraversare, un parcheggio, o edifici che bloccano la vista.</p>
+            <p>Alghero è una delle destinazioni più richieste della Sardegna: centro storico catalano, spiagge caraibiche, aeroporto a 15 minuti. Ma trovare un appartamento <strong>davvero sul mare</strong> non è facile.</p>
+            <p>Molti annunci dicono "vicino al mare" o "a pochi passi dalla spiaggia". La realtà? Spesso ci sono altri palazzi davanti, parcheggi o interi isolati di mezzo, e dalla finestra il mare non si vede.</p>
             <p><strong>I miei appartamenti sono diversi:</strong> sono in prima linea, il mare lo vedi dalla finestra, la spiaggia è sotto casa. Non è un modo di dire — è la posizione reale.</p>
             
             <h3>Cosa significa "fronte mare" per me</h3>
@@ -377,19 +407,19 @@
     <section class="content-section">
         <div class="container">
             <h2>Perché prenotare direttamente con me</h2>
-            <p>Sono Federico, il proprietario. Non sono un'agenzia, non uso piattaforme. Quando mi scrivi, rispondo io.</p>
+            <p>Sono Federico, il proprietario. Non sono un'agenzia: le mie case sono anche sulle piattaforme di prenotazione, ma se prenoti qui parli direttamente con me e non paghi commissioni. Quando mi scrivi, rispondo io.</p>
             
             <h3>I vantaggi concreti</h3>
             <ul>
                 <li><strong>Prezzo diretto</strong> — Nessuna commissione di Booking o Airbnb (che aggiungono 15-20%)</li>
-                <li><strong>Risposta rapida</strong> — Ti rispondo su WhatsApp, di solito entro poche ore</li>
+                <li><strong>Risposta rapida</strong> — Ti rispondo su WhatsApp, di solito in pochi minuti</li>
                 <li><strong>Flessibilità</strong> — Possiamo accordarci su orari, date, esigenze specifiche</li>
                 <li><strong>Un solo referente</strong> — Prima, durante e dopo il soggiorno parli sempre con me</li>
                 <li><strong>Check-in di persona</strong> — Ti accolgo io, ti mostro la casa, ti do i miei consigli su Alghero</li>
             </ul>
             
             <h3>Cosa dicono gli ospiti</h3>
-            <p>Non pubblico recensioni singole, ma questi sono i feedback più comuni:</p>
+            <p>I miei ospiti mi danno in media 4,94 su 5, su 218 recensioni. Questi sono i commenti che tornano più spesso:</p>
             <ul>
                 <li>"La posizione è esattamente come nelle foto"</li>
                 <li>"Federico risponde subito e risolve tutto"</li>
@@ -407,7 +437,7 @@
             <p>Gli appartamenti sono in Via Lido, zona Lido di Alghero. La spiaggia del Lido è proprio sotto casa (10 metri). Il centro storico è a 2 km, raggiungibile con una passeggiata sul lungomare.</p>
             
             <h3>Come arrivare</h3>
-            <p>L'aeroporto di Alghero-Fertilia è a 12 km (15 minuti in auto). Parcheggio gratuito disponibile nelle vie limitrofe.</p>
+            <p>L'aeroporto di Alghero-Fertilia è a 12 km (15 minuti in auto). Posto auto riservato e gratuito nel parcheggio privato del palazzo.</p>
             
             <h3>Prezzi</h3>
             <p>I prezzi variano da €80 a €500 a notte in base al periodo e all'appartamento. Scrivimi le date per un preventivo esatto — spesso posso farti un'offerta speciale.</p>
@@ -426,7 +456,7 @@
     <section class="cta-section">
         <div class="container">
             <h2>Vuoi sapere se c'è disponibilità?</h2>
-            <p>Scrivimi su WhatsApp con le date e il numero di persone. Ti rispondo io, di solito in giornata.</p>
+            <p>Scrivimi su WhatsApp con le date e il numero di persone. Ti rispondo io, di solito in pochi minuti.</p>
             <a href="https://wa.me/393293370792?text=Ciao%20Federico!%20Ho%20visto%20la%20pagina%20appartamenti%20vacanze%20Alghero%20e%20vorrei%20sapere%20la%20disponibilit%C3%A0%20per%20[DATE]%20per%20[N]%20persone." class="btn btn--primary">
                 <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
                 Scrivimi su WhatsApp
@@ -437,7 +467,7 @@
     <footer class="site-footer">
         <p>Alghero Fronte Mare — Case fronte mare gestite da Federico</p>
         <p>CIN: IT090003B4000F3434</p>
-        <p><a href="mailto:info@algherofrontemare.it">info@algherofrontemare.it</a> · <a href="https://wa.me/393293370792">+39 329 337 0792</a></p>
+        <p><a href="mailto:algherovistamare@gmail.com">algherovistamare@gmail.com</a> · <a href="tel:+393293370792">+39 329 337 0792</a> · <a href="https://wa.me/393293370792">WhatsApp</a></p>
         <p><a href="/privacy-policy">Privacy Policy</a> · <a href="/cookie-policy">Cookie Policy</a></p>
     </footer>
 

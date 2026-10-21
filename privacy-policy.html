@@ -11,7 +11,7 @@
         document.head.appendChild(s);
         s.onload = function() {
             window.dataLayer = window.dataLayer || [];
-            function gtag(){dataLayer.push(arguments);}
+            window.gtag = function(){dataLayer.push(arguments);};
             gtag('js', new Date());
             gtag('config', 'G-SWY4HV4168');
         };
@@ -19,6 +19,14 @@
     if (localStorage.getItem('cookie-consent') === 'accepted') {
         window.loadGA4();
     }
+    // Contatti: evento generate_lead a ogni click su WhatsApp, telefono o email (solo se GA4 è attivo, cioè con consenso)
+    document.addEventListener('click', function(e) {
+        var a = e.target.closest && e.target.closest('a[href]');
+        if (!a || !window.gtag) return;
+        var href = a.getAttribute('href');
+        var metodo = href.indexOf('wa.me/') !== -1 ? 'whatsapp' : href.indexOf('tel:') === 0 ? 'telefono' : href.indexOf('mailto:') === 0 ? 'email' : '';
+        if (metodo) gtag('event', 'generate_lead', { contact_method: metodo });
+    });
     </script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -166,7 +174,7 @@
             Federico Mocci<br>
             Alghero (SS), Italia<br>
             P.IVA: 02821390909<br>
-            Email: <a href="mailto:federicomocci12@gmail.com">federicomocci12@gmail.com</a>
+            Email: <a href="mailto:algherovistamare@gmail.com">algherovistamare@gmail.com</a>
         </p>
 
         <h2>Dati raccolti</h2>
@@ -211,14 +219,14 @@
             <li>Richiedere la portabilità dei dati</li>
             <li>Proporre reclamo all'Autorità Garante per la protezione dei dati personali</li>
         </ul>
-        <p>Per esercitare i propri diritti, contattare il titolare all'indirizzo <a href="mailto:federicomocci12@gmail.com">federicomocci12@gmail.com</a>.</p>
+        <p>Per esercitare i propri diritti, contattare il titolare all'indirizzo <a href="mailto:algherovistamare@gmail.com">algherovistamare@gmail.com</a>.</p>
 
         <h2>Modifiche alla policy</h2>
         <p>Il titolare si riserva di modificare questa informativa. La data dell'ultimo aggiornamento è indicata in alto.</p>
     </main>
 
     <footer class="site-footer">
-        <p>Alghero Fronte Mare — <a href="mailto:federicomocci12@gmail.com">federicomocci12@gmail.com</a></p>
+        <p>Alghero Fronte Mare — <a href="mailto:algherovistamare@gmail.com">algherovistamare@gmail.com</a></p>
         <p><a href="/privacy-policy">Privacy Policy</a> · <a href="/cookie-policy">Cookie Policy</a></p>
     </footer>
 

@@ -4,6 +4,49 @@ Cronologia completa dello sviluppo del sito dal 9 al 15 gennaio 2025.
 
 ---
 
+## 21 Ottobre 2026
+
+### Testi coerenti in tutte le lingue
+- Spiaggia: tra il palazzo e la sabbia c'è Via Lido, da attraversare sulle strisce pedonali (prima la home diceva "nessuna strada da attraversare")
+- Parcheggio: ovunque posto auto privato nel palazzo (alcune pagine dicevano "nelle vie limitrofe")
+- Tempo di risposta: ovunque "di solito in pochi minuti" (prima secondi, ore o "in giornata" a seconda della pagina)
+- Recensioni: tolto "non pubblico recensioni", ora c'è il punteggio 4,94/5 su 218
+- Tolto "non uso piattaforme": le case sono anche sulle piattaforme, prenotando diretto non si pagano commissioni
+- Email unica algherovistamare@gmail.com su tutte le pagine, nei dati strutturati e nel llms.txt
+- Centro storico a 2 km (circa 25 minuti a piedi) e aeroporto a 15 minuti, come nelle distanze
+
+### Posizione
+- Coordinate esatte di Via Lido 113 (40.57744, 8.31382) nei dati strutturati, nelle pagine info e nel llms.txt (prima c'erano tre coordinate diverse, spostate di circa 2 km)
+- Mappa con il punto preciso del palazzo nelle pagine di Fronte Mare e Loft
+
+### Prezzi
+- Ottobre: Fronte Mare da €250 (prima €350, più di giugno) e Loft da €200 (prima €280), in tutte le lingue e nel llms.txt
+- Pagina spagnola del Fronte Mare: aggiunta la tabella prezzi, che mancava
+- Pagina spagnola del Loft: la tabella prezzi era finita dentro la sezione "Mis apartamentos", ora è prima come nelle altre lingue
+
+### Correzioni
+- Fronte Mare e Loft: il riquadro "Distanze" non si vedeva (era finito dentro il codice della mappa) e la mappa si caricava subito invece che al bisogno
+- Home: il box "In sintesi" era nascosto fuori dallo schermo, ora è visibile sotto la foto principale
+- Home: bottoni in alto allineati (una parentesi in più nel CSS annullava il loro stile)
+- Foto principale delle case in versione leggera su cellulare
+
+### Dati strutturati (Google e AI)
+- Un solo blocco per casa, con dati corretti, in tutte e 5 le lingue (prima due blocchi diversi in italiano e nessuno nelle altre lingue)
+- Tolti dai dati strutturati i voti presi da Airbnb (Google non li accetta per questo tipo di attività); restano visibili sulla pagina
+- FAQ nei dati strutturati identiche a quelle visibili
+- Breadcrumb Home › Le case › casa
+
+### Lingue
+- hreflang completi per 85 pagine (prima funzionavano solo per 30) e date di aggiornamento nella sitemap
+- Selettore lingua su tutte le pagine (prima mancava in 32): porta alla stessa pagina nell'altra lingua e si apre anche al tocco e da tastiera (selettore-lingua.js)
+
+### Contatti e misurazione
+- Numero di telefono cliccabile nel footer, accanto al link WhatsApp
+- Contatti nel footer delle guide in italiano (CIN, email, telefono, WhatsApp)
+- GA4: evento generate_lead a ogni click su WhatsApp, telefono o email (solo con consenso ai cookie). Va segnato come "evento chiave" in GA4
+
+---
+
 ## 11 Ottobre 2026
 
 ### Anteprime social
