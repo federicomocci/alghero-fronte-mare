@@ -52,9 +52,7 @@
     
     <link rel="canonical" href="https://www.algherofrontemare.it/cookie-policy">
     
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+    <style>@font-face{font-family:"Lato";font-style:normal;font-weight:400;font-display:swap;src:url("/fonts/lato-v24-latin-regular.woff2") format("woff2")}@font-face{font-family:"Lato";font-style:normal;font-weight:700;font-display:swap;src:url("/fonts/lato-v24-latin-700.woff2") format("woff2")}</style>
 
     <style>
         :root {
@@ -164,9 +162,20 @@
             color: var(--color-sea-deep);
         }
     
+        .cookie-reset {
+            font: inherit;
+            color: var(--color-white);
+            background-color: var(--color-sea-deep);
+            border: none;
+            border-radius: 30px;
+            padding: 0.6rem 1.25rem;
+            cursor: pointer;
+        }
+
 /* Cookie Banner */
 .cookie-banner{position:fixed;bottom:0;left:0;right:0;z-index:9999;padding:0 1rem 1rem;pointer-events:none;opacity:0;transform:translateY(100%);transition:opacity .3s ease,transform .3s ease}.cookie-banner--visible{opacity:1;transform:translateY(0);pointer-events:auto}.cookie-banner__content{max-width:480px;margin:0 auto;background:#1a3a4a;border-radius:16px;padding:1.25rem 1.5rem;box-shadow:0 8px 32px rgba(0,0,0,.2);display:flex;flex-direction:column;align-items:center;text-align:center;gap:.75rem}.cookie-banner__icon{font-size:2rem;line-height:1}.cookie-banner__text{color:#fff;font-size:1rem;line-height:1.5;margin:0}.cookie-banner__buttons{display:flex;gap:.75rem;width:100%;margin-top:.25rem}.cookie-banner__btn{flex:1;padding:.75rem 1rem;border:none;border-radius:25px;font-size:.95rem;font-weight:600;cursor:pointer;transition:transform .2s ease,box-shadow .2s ease;font-family:inherit}.cookie-banner__btn:hover{transform:scale(1.03)}.cookie-banner__btn--reject{background:transparent;color:#a0b4bc;border:1.5px solid #a0b4bc}.cookie-banner__btn--reject:hover{background:rgba(255,255,255,.1);color:#fff;border-color:#fff}.cookie-banner__btn--accept{background:#c4956a;color:#fff;box-shadow:0 4px 12px rgba(196,149,106,.3)}.cookie-banner__btn--accept:hover{background:#d4a57a;box-shadow:0 6px 16px rgba(196,149,106,.4)}.cookie-banner__link{color:#a0b4bc;font-size:.8rem;text-decoration:none;margin-top:.25rem}.cookie-banner__link:hover{color:#fff;text-decoration:underline}@media(max-width:520px){.cookie-banner{padding:0 .75rem .75rem}.cookie-banner__content{border-radius:12px;padding:1rem 1.25rem}.cookie-banner__text{font-size:.95rem}.cookie-banner__btn{padding:.7rem .75rem;font-size:.9rem}}
     </style>
+    <script defer src="/_vercel/insights/script.js"></script>
 </head>
 
 <body>
@@ -182,37 +191,48 @@
 
     <main class="container">
         <h1>Cookie Policy</h1>
-        <p class="last-updated">Ultimo aggiornamento: gennaio 2026</p>
+        <p class="last-updated">Ultimo aggiornamento: ottobre 2026</p>
 
-        <p>Questa pagina descrive come il sito <strong>algherofrontemare.it</strong> utilizza i cookie, ai sensi dell'art. 122 del D.Lgs. 196/2003 e del Regolamento UE 2016/679 (GDPR).</p>
+        <p>Questa pagina descrive come il sito <strong>algherofrontemare.it</strong> utilizza i cookie e strumenti simili, ai sensi dell'art. 122 del D.Lgs. 196/2003 e del Regolamento UE 2016/679 (GDPR).</p>
 
         <h2>Cosa sono i cookie</h2>
         <p>I cookie sono piccoli file di testo che i siti web salvano sul dispositivo dell'utente durante la navigazione. Vengono utilizzati per diverse finalità: tecniche, statistiche, di profilazione.</p>
 
-        <h2>Cookie utilizzati da questo sito</h2>
-        <p>Il sito <strong>algherofrontemare.it</strong> utilizza esclusivamente cookie tecnici, che non richiedono il consenso dell'utente.</p>
+        <h2>Cookie e strumenti utilizzati da questo sito</h2>
+        <p>Alla prima visita un banner chiede se accetti i cookie statistici. Finché non accetti, il sito usa solo strumenti tecnici e statistiche anonime che non salvano nulla sul tuo dispositivo.</p>
 
         <table>
             <thead>
                 <tr>
-                    <th>Tipo</th>
+                    <th>Nome</th>
                     <th>Finalità</th>
                     <th>Durata</th>
                 </tr>
             </thead>
             <tbody>
                 <tr>
-                    <td>Cookie tecnici</td>
-                    <td>Funzionamento del sito</td>
-                    <td>Sessione</td>
+                    <td>cookie-consent (memoria del browser)</td>
+                    <td>Tecnico: ricorda la scelta fatta sul banner</td>
+                    <td>Finché non la cancelli</td>
+                </tr>
+                <tr>
+                    <td>_ga, _ga_* (Google Analytics 4)</td>
+                    <td>Statistiche su visite e contatti (click su WhatsApp, telefono, email). Solo se accetti dal banner</td>
+                    <td>2 anni</td>
                 </tr>
             </tbody>
         </table>
 
-        <h2>Cookie di terze parti</h2>
-        
-        <h3>Google Fonts</h3>
-        <p>Il sito carica i font da Google Fonts. Questo può comportare l'invio di informazioni tecniche (come l'indirizzo IP) ai server di Google. Google può utilizzare questi dati secondo la propria <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Privacy Policy</a>.</p>
+        <h2>Servizi di terze parti</h2>
+
+        <h3>Google Analytics 4 (solo con il tuo consenso)</h3>
+        <p>Se accetti i cookie dal banner, il sito carica Google Analytics 4 di Google Ireland Limited, per capire quali pagine vengono visitate e quante persone contattano il titolare. Se rifiuti, Google Analytics non viene caricato. Google tratta questi dati secondo la <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Privacy Policy di Google</a>.</p>
+
+        <h3>Vercel Web Analytics (senza cookie)</h3>
+        <p>Il sito usa Vercel Web Analytics per contare le visite in forma anonima e aggregata: pagine viste, sito di provenienza, paese, tipo di dispositivo e browser. Non usa cookie e non salva informazioni sul tuo dispositivo: il visitatore è riconosciuto con un codice calcolato dalla richiesta, che viene cancellato dopo 24 ore. Per questo non richiede il consenso. Maggiori informazioni: <a href="https://vercel.com/docs/analytics/privacy-policy" target="_blank" rel="noopener">Vercel Web Analytics e privacy</a>.</p>
+
+        <h3>Google Maps</h3>
+        <p>Le pagine degli appartamenti mostrano una mappa di Google Maps. Quando la mappa viene caricata, il browser si collega ai server di Google, che può impostare propri cookie secondo la <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Privacy Policy di Google</a>.</p>
 
         <h3>Vercel</h3>
         <p>Il sito è ospitato su Vercel, che può utilizzare cookie tecnici per il corretto funzionamento del servizio. Per maggiori informazioni: <a href="https://vercel.com/legal/privacy-policy" target="_blank" rel="noopener">Privacy Policy di Vercel</a>.</p>
@@ -222,12 +242,12 @@
         <ul>
             <li>Cookie di profilazione</li>
             <li>Cookie pubblicitari</li>
-            <li>Cookie di tracciamento di terze parti</li>
-            <li>Google Analytics o altri strumenti di analisi</li>
         </ul>
 
         <h2>Come gestire i cookie</h2>
-        <p>L'utente può gestire le preferenze sui cookie direttamente dal proprio browser. Ecco i link alle guide dei principali browser:</p>
+        <p>Puoi cambiare idea in qualsiasi momento: il banner ricompare e i cookie di Google Analytics già salvati vengono cancellati.</p>
+        <p><button type="button" id="cookie-reset" class="cookie-reset">Cambia le preferenze sui cookie</button></p>
+        <p>Puoi anche gestire i cookie dal tuo browser. Ecco le guide dei principali browser:</p>
         <ul>
             <li><a href="https://support.google.com/chrome/answer/95647" target="_blank" rel="noopener">Google Chrome</a></li>
             <li><a href="https://support.mozilla.org/it/kb/protezione-antitracciamento-avanzata-firefox-desktop" target="_blank" rel="noopener">Mozilla Firefox</a></li>
@@ -284,6 +304,21 @@
         setTimeout(function() { banner.style.display = 'none'; }, 300);
     });
 })();
+</script>
+<script>
+// Revoca del consenso: cancella la scelta e i cookie di Google Analytics, poi ricarica (il banner ricompare)
+document.getElementById('cookie-reset').addEventListener('click', function() {
+    try { localStorage.removeItem('cookie-consent'); } catch (e) {}
+    var root = location.hostname.replace(/^www\./, '');
+    document.cookie.split(';').forEach(function(c) {
+        var name = c.split('=')[0].trim();
+        if (name.indexOf('_ga') !== 0) return;
+        ['', '; domain=' + location.hostname, '; domain=.' + root].forEach(function(d) {
+            document.cookie = name + '=; expires=Thu, 01 Jan 1970 00:00:00 GMT; path=/' + d;
+        });
+    });
+    location.reload();
+});
 </script>
 </body>
 </html>

@@ -6,6 +6,12 @@ Cronologia completa dello sviluppo del sito dal 9 al 15 gennaio 2025.
 
 ## 21 Ottobre 2026
 
+### Statistiche senza cookie e pagine legali
+- Vercel Web Analytics su tutte le pagine: conta tutte le visite senza cookie e senza banner (GA4 continua a partire solo con il consenso). Va attivato da Vercel, scheda Analytics
+- Cookie policy e privacy policy riscritte con quello che il sito fa davvero: GA4 con consenso (prima dicevano "non usiamo Google Analytics"), Vercel Web Analytics, mappa Google, calendario su Supabase
+- Le due pagine legali caricavano ancora Google Fonts (connessione a Google senza consenso): ora usano i font del sito come tutte le altre
+- Pulsante "Cambia le preferenze sui cookie" nella cookie policy: cancella la scelta e i cookie di Google Analytics e fa ricomparire il banner
+
 ### Testi coerenti in tutte le lingue
 - Spiaggia: tra il palazzo e la sabbia c'è Via Lido, da attraversare sulle strisce pedonali (prima la home diceva "nessuna strada da attraversare")
 - Parcheggio: ovunque posto auto privato nel palazzo (alcune pagine dicevano "nelle vie limitrofe")

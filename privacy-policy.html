@@ -52,9 +52,7 @@
     
     <link rel="canonical" href="https://www.algherofrontemare.it/privacy-policy">
     
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+    <style>@font-face{font-family:"Lato";font-style:normal;font-weight:400;font-display:swap;src:url("/fonts/lato-v24-latin-regular.woff2") format("woff2")}@font-face{font-family:"Lato";font-style:normal;font-weight:700;font-display:swap;src:url("/fonts/lato-v24-latin-700.woff2") format("woff2")}</style>
 
     <style>
         :root {
@@ -150,6 +148,7 @@
 /* Cookie Banner */
 .cookie-banner{position:fixed;bottom:0;left:0;right:0;z-index:9999;padding:0 1rem 1rem;pointer-events:none;opacity:0;transform:translateY(100%);transition:opacity .3s ease,transform .3s ease}.cookie-banner--visible{opacity:1;transform:translateY(0);pointer-events:auto}.cookie-banner__content{max-width:480px;margin:0 auto;background:#1a3a4a;border-radius:16px;padding:1.25rem 1.5rem;box-shadow:0 8px 32px rgba(0,0,0,.2);display:flex;flex-direction:column;align-items:center;text-align:center;gap:.75rem}.cookie-banner__icon{font-size:2rem;line-height:1}.cookie-banner__text{color:#fff;font-size:1rem;line-height:1.5;margin:0}.cookie-banner__buttons{display:flex;gap:.75rem;width:100%;margin-top:.25rem}.cookie-banner__btn{flex:1;padding:.75rem 1rem;border:none;border-radius:25px;font-size:.95rem;font-weight:600;cursor:pointer;transition:transform .2s ease,box-shadow .2s ease;font-family:inherit}.cookie-banner__btn:hover{transform:scale(1.03)}.cookie-banner__btn--reject{background:transparent;color:#a0b4bc;border:1.5px solid #a0b4bc}.cookie-banner__btn--reject:hover{background:rgba(255,255,255,.1);color:#fff;border-color:#fff}.cookie-banner__btn--accept{background:#c4956a;color:#fff;box-shadow:0 4px 12px rgba(196,149,106,.3)}.cookie-banner__btn--accept:hover{background:#d4a57a;box-shadow:0 6px 16px rgba(196,149,106,.4)}.cookie-banner__link{color:#a0b4bc;font-size:.8rem;text-decoration:none;margin-top:.25rem}.cookie-banner__link:hover{color:#fff;text-decoration:underline}@media(max-width:520px){.cookie-banner{padding:0 .75rem .75rem}.cookie-banner__content{border-radius:12px;padding:1rem 1.25rem}.cookie-banner__text{font-size:.95rem}.cookie-banner__btn{padding:.7rem .75rem;font-size:.9rem}}
     </style>
+    <script defer src="/_vercel/insights/script.js"></script>
 </head>
 
 <body>
@@ -165,7 +164,7 @@
 
     <main class="container">
         <h1>Privacy Policy</h1>
-        <p class="last-updated">Ultimo aggiornamento: gennaio 2026</p>
+        <p class="last-updated">Ultimo aggiornamento: ottobre 2026</p>
 
         <p>La presente informativa descrive come vengono trattati i dati personali degli utenti che visitano il sito <strong>algherofrontemare.it</strong>, ai sensi del Regolamento UE 2016/679 (GDPR).</p>
 
@@ -184,12 +183,24 @@
         <p>I sistemi informatici preposti al funzionamento del sito acquisiscono, nel corso del loro normale esercizio, alcuni dati la cui trasmissione è implicita nell'uso dei protocolli di comunicazione Internet (es. indirizzi IP, orari di accesso, pagine visitate).</p>
 
         <h3>Cookie</h3>
-        <p>Il sito utilizza esclusivamente cookie tecnici necessari al funzionamento. Per maggiori informazioni, consulta la <a href="/cookie-policy">Cookie Policy</a>.</p>
+        <p>Il sito usa un'informazione tecnica per ricordare la scelta fatta sul banner e, solo se accetti, i cookie di Google Analytics 4. Dettagli e durata nella <a href="/cookie-policy">Cookie Policy</a>, dove puoi anche cambiare la tua scelta.</p>
 
         <h2>Servizi di terze parti</h2>
         
-        <h3>Google Fonts</h3>
-        <p>Il sito utilizza Google Fonts per il caricamento dei caratteri tipografici. Questo comporta una connessione ai server di Google. Per maggiori informazioni: <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Privacy Policy di Google</a>.</p>
+        <h3>Google Analytics 4 (solo con il tuo consenso)</h3>
+        <p>Se accetti i cookie dal banner, il sito usa Google Analytics 4 di Google Ireland Limited per statistiche sulle pagine visitate e sui contatti (click su WhatsApp, telefono ed email), insieme a dati tecnici del dispositivo e del browser. Base giuridica: il tuo consenso, che puoi revocare in qualsiasi momento dalla <a href="/cookie-policy">Cookie Policy</a>. Google può trasferire dati negli Stati Uniti nell'ambito dell'EU-U.S. Data Privacy Framework. Maggiori informazioni: <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Privacy Policy di Google</a>.</p>
+
+        <h3>Vercel Web Analytics</h3>
+        <p>Il sito usa Vercel Web Analytics per statistiche anonime e aggregate sulle visite (pagine viste, sito di provenienza, paese, tipo di dispositivo e browser). Non usa cookie e non salva informazioni sul dispositivo: il visitatore è riconosciuto con un codice calcolato dalla richiesta, che viene cancellato dopo 24 ore. Maggiori informazioni: <a href="https://vercel.com/docs/analytics/privacy-policy" target="_blank" rel="noopener">Vercel Web Analytics e privacy</a>.</p>
+
+        <h3>Google Maps</h3>
+        <p>Le pagine degli appartamenti mostrano una mappa di Google Maps. Il caricamento della mappa comporta una connessione ai server di Google. Maggiori informazioni: <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Privacy Policy di Google</a>.</p>
+
+        <h3>Calendario delle disponibilità</h3>
+        <p>Il calendario delle disponibilità legge le date occupate da un database ospitato da Supabase. La richiesta comporta la trasmissione di dati tecnici della connessione, come l'indirizzo IP, ai server di Supabase. Maggiori informazioni: <a href="https://supabase.com/privacy" target="_blank" rel="noopener">Privacy Policy di Supabase</a>.</p>
+
+        <h3>Caratteri tipografici</h3>
+        <p>I caratteri tipografici sono caricati dal server del sito: non c'è nessuna connessione a Google Fonts.</p>
 
         <h3>WhatsApp</h3>
         <p>Il sito contiene link per contattare il titolare via WhatsApp. Cliccando sul link, l'utente viene reindirizzato all'applicazione WhatsApp. Il trattamento dei dati su WhatsApp è regolato dalla <a href="https://www.whatsapp.com/legal/privacy-policy" target="_blank" rel="noopener">Privacy Policy di WhatsApp</a>.</p>
@@ -201,11 +212,12 @@
         <p>I dati di navigazione sono utilizzati esclusivamente per:</p>
         <ul>
             <li>Garantire il corretto funzionamento del sito</li>
-            <li>Analisi statistiche in forma anonima e aggregata</li>
+            <li>Statistiche anonime e aggregate sulle visite (Vercel Web Analytics)</li>
+            <li>Solo con il tuo consenso, statistiche su visite e contatti (Google Analytics 4)</li>
         </ul>
 
         <h2>Base giuridica</h2>
-        <p>Il trattamento dei dati di navigazione si basa sul legittimo interesse del titolare a garantire il funzionamento e la sicurezza del sito.</p>
+        <p>Il trattamento dei dati di navigazione e le statistiche anonime si basano sul legittimo interesse del titolare a garantire il funzionamento e la sicurezza del sito e a capire come viene usato. Google Analytics 4 si basa sul tuo consenso, revocabile in qualsiasi momento.</p>
 
         <h2>Conservazione dei dati</h2>
         <p>I dati di navigazione non vengono conservati oltre il tempo necessario alle finalità per cui sono stati raccolti.</p>
