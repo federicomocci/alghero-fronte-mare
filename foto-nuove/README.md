@@ -8,8 +8,8 @@ vanno sul sito solo dopo essere state preparate.
 
 | Cartella | Casa |
 |---|---|
-| [`fronte-mare/`](fronte-mare/) | Lido 113 · Fronte Mare |
-| [`loft/`](loft/) | Lido 113 · Loft |
+| [`fronte-mare/`](fronte-mare/) | Alghero Fronte Mare |
+| [`loft/`](loft/) | Alghero Sopra il Mare |
 | [`sea-suite/`](sea-suite/) | Orti 36 · Sea Suite |
 | [`sky-suite/`](sky-suite/) | Orti 36 · Sky Suite |
 | [`attico/`](attico/) | Attico Vista Mare |
@@ -48,7 +48,7 @@ cloud (Edit → Network access) devono essere consentiti `drive.google.com` e
 
 ## 2. Avvisa Claude
 
-Scrivi in chat qualcosa come "ho caricato le foto nuove del Loft".
+Scrivi in chat qualcosa come "ho caricato le foto nuove di Sopra il Mare".
 Claude le converte in WebP nelle misure giuste (1600, 1200 e 800 px),
 dà nomi descrittivi, le mette in `images/<casa>/`, aggiorna galleria,
 copertina e anteprima WhatsApp in tutte le lingue e poi svuota questa
@@ -56,7 +56,7 @@ cartella.
 
 ## Cosa servirebbe (aggiornato all'11 ottobre 2026)
 
-- **Loft** e **Sea Suite**: fatte (servizio fotografico nuovo, 12 e 10 foto).
+- **Sopra il Mare** e **Sea Suite**: fatte (servizio fotografico nuovo, 12 e 10 foto).
 - **Sky Suite**: manca la camera da letto; il soggiorno con meno oggetti
   in giro.
 - **Fronte Mare**: già buone. Si possono aggiungere la spiaggia sotto

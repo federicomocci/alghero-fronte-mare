@@ -4,7 +4,7 @@
  * La lingua viene presa da <html lang="..."> (it, en, de, fr, es).
  *
  * Uso nella pagina:
- *   <div id="calendario-disponibilita" data-appartamento="lido-113-fronte-mare"></div>
+ *   <div id="calendario-disponibilita" data-appartamento="alghero-fronte-mare"></div>
  *   <script src="/calendario-disponibilita.js" defer></script>
  */
 
@@ -14,8 +14,8 @@
 
     // Mapping ID appartamenti -> pagine sito
     const APPARTAMENTI = {
-        'lido-113-fronte-mare': '2fc80ddd-3898-444f-bf98-40a7eb641cee',
-        'lido-113-loft': '79d5e98c-4f22-4686-a43b-53300ab75271',
+        'alghero-fronte-mare': '2fc80ddd-3898-444f-bf98-40a7eb641cee',
+        'alghero-sopra-il-mare': '79d5e98c-4f22-4686-a43b-53300ab75271',
         'orti-36-sea-suite': '82ab5050-54f1-4821-a80f-7b1ec0a61682',
         'orti-36-sky-suite': '1950c5b5-ec4d-4b1d-b13b-1eff93ce0511',
         'attico-vista-mare': 'c33fd913-c8bd-4ea5-95bc-2ff7d1c71404'
