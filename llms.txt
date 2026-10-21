@@ -4,7 +4,7 @@
 
 ## Appartamenti
 
-### Lido 113 Fronte Mare
+### Alghero Fronte Mare
 - Tipo: Appartamento
 - Piano: Secondo
 - Superficie: 65mq
@@ -19,10 +19,10 @@
 - Aria condizionata: sì
 - Prezzi indicativi a notte: marzo da €100, aprile da €170, maggio da €200, giugno da €300, luglio da €400, agosto da €500, settembre da €400, ottobre da €250, novembre da €200
 - Recensioni: 4,99/5 su 108
-- URL: https://www.algherofrontemare.it/lido-113-fronte-mare
+- URL: https://www.algherofrontemare.it/alghero-fronte-mare
 
-### Lido 113 Loft
-- Tipo: Mansarda/Loft
+### Alghero Sopra il Mare
+- Tipo: Mansarda con soppalco
 - Piano: Terzo
 - Superficie: 60mq con soppalco
 - Posti letto: 4
@@ -35,7 +35,7 @@
 - Wi-Fi: incluso
 - Aria condizionata: sì
 - Prezzi indicativi a notte: marzo da €80, aprile da €135, maggio da €160, giugno da €240, luglio da €320, agosto da €400, settembre da €320, ottobre da €200, novembre da €160
-- URL: https://www.algherofrontemare.it/lido-113-loft
+- URL: https://www.algherofrontemare.it/alghero-sopra-il-mare
 
 ### Per entrambi
 - Soggiorno minimo: 3 notti
@@ -96,8 +96,8 @@
 ## Pagine principali
 - Home: /
 - Appartamenti: /case-vacanze-alghero
-- Lido 113 Fronte Mare: /lido-113-fronte-mare
-- Lido 113 Loft: /lido-113-loft
+- Alghero Fronte Mare: /alghero-fronte-mare
+- Alghero Sopra il Mare: /alghero-sopra-il-mare
 - Prenotazione diretta: /prenotazione-diretta-alghero
 - Last minute: /last-minute-alghero
 - Chi sono: /chi-sono

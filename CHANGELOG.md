@@ -6,6 +6,11 @@ Cronologia completa dello sviluppo del sito dal 9 al 15 gennaio 2025.
 
 ## 21 Ottobre 2026
 
+### Nuovi nomi delle case
+- Lido 113 · Fronte Mare diventa **Alghero Fronte Mare** e Lido 113 · Loft diventa **Alghero Sopra il Mare**, in tutte le lingue: titoli, testi, schede, FAQ, messaggi WhatsApp precompilati, dati strutturati, llms.txt. "Loft" come descrizione diventa "mansarda"
+- Nuovi indirizzi /alghero-fronte-mare e /alghero-sopra-il-mare (anche /en/, /de/, /fr/, /es/); i vecchi /lido-113-… portano ai nuovi con un redirect 301 (vercel.json)
+- Dati strutturati collegati agli annunci Airbnb delle due case (sameAs)
+
 ### Statistiche senza cookie e pagine legali
 - Vercel Web Analytics su tutte le pagine: conta tutte le visite senza cookie e senza banner (GA4 continua a partire solo con il consenso). Va attivato da Vercel, scheda Analytics
 - Cookie policy e privacy policy riscritte con quello che il sito fa davvero: GA4 con consenso (prima dicevano "non usiamo Google Analytics"), Vercel Web Analytics, mappa Google, calendario su Supabase

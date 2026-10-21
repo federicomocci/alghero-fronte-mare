@@ -2,18 +2,118 @@
   "cleanUrls": true,
   "redirects": [
     {
+      "source": "/lido-113-fronte-mare",
+      "destination": "/alghero-fronte-mare",
+      "permanent": true
+    },
+    {
+      "source": "/lido-113-fronte-mare.html",
+      "destination": "/alghero-fronte-mare",
+      "permanent": true
+    },
+    {
+      "source": "/lido-113-loft",
+      "destination": "/alghero-sopra-il-mare",
+      "permanent": true
+    },
+    {
+      "source": "/lido-113-loft.html",
+      "destination": "/alghero-sopra-il-mare",
+      "permanent": true
+    },
+    {
+      "source": "/en/lido-113-fronte-mare",
+      "destination": "/en/alghero-fronte-mare",
+      "permanent": true
+    },
+    {
+      "source": "/en/lido-113-fronte-mare.html",
+      "destination": "/en/alghero-fronte-mare",
+      "permanent": true
+    },
+    {
+      "source": "/en/lido-113-loft",
+      "destination": "/en/alghero-sopra-il-mare",
+      "permanent": true
+    },
+    {
+      "source": "/en/lido-113-loft.html",
+      "destination": "/en/alghero-sopra-il-mare",
+      "permanent": true
+    },
+    {
+      "source": "/de/lido-113-fronte-mare",
+      "destination": "/de/alghero-fronte-mare",
+      "permanent": true
+    },
+    {
+      "source": "/de/lido-113-fronte-mare.html",
+      "destination": "/de/alghero-fronte-mare",
+      "permanent": true
+    },
+    {
+      "source": "/de/lido-113-loft",
+      "destination": "/de/alghero-sopra-il-mare",
+      "permanent": true
+    },
+    {
+      "source": "/de/lido-113-loft.html",
+      "destination": "/de/alghero-sopra-il-mare",
+      "permanent": true
+    },
+    {
+      "source": "/fr/lido-113-fronte-mare",
+      "destination": "/fr/alghero-fronte-mare",
+      "permanent": true
+    },
+    {
+      "source": "/fr/lido-113-fronte-mare.html",
+      "destination": "/fr/alghero-fronte-mare",
+      "permanent": true
+    },
+    {
+      "source": "/fr/lido-113-loft",
+      "destination": "/fr/alghero-sopra-il-mare",
+      "permanent": true
+    },
+    {
+      "source": "/fr/lido-113-loft.html",
+      "destination": "/fr/alghero-sopra-il-mare",
+      "permanent": true
+    },
+    {
+      "source": "/es/lido-113-fronte-mare",
+      "destination": "/es/alghero-fronte-mare",
+      "permanent": true
+    },
+    {
+      "source": "/es/lido-113-fronte-mare.html",
+      "destination": "/es/alghero-fronte-mare",
+      "permanent": true
+    },
+    {
+      "source": "/es/lido-113-loft",
+      "destination": "/es/alghero-sopra-il-mare",
+      "permanent": true
+    },
+    {
+      "source": "/es/lido-113-loft.html",
+      "destination": "/es/alghero-sopra-il-mare",
+      "permanent": true
+    },
+    {
       "source": "/foto-casa-del-professore/:path*",
       "destination": "/",
       "permanent": true
     },
     {
       "source": "/foto-lido/:path*",
-      "destination": "/lido-113-fronte-mare",
+      "destination": "/alghero-fronte-mare",
       "permanent": true
     },
     {
       "source": "/foto-studio-flat/:path*",
-      "destination": "/lido-113-loft",
+      "destination": "/alghero-sopra-il-mare",
       "permanent": true
     },
     {
