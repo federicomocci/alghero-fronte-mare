@@ -19,6 +19,11 @@ Cronologia completa dello sviluppo del sito dal 9 al 15 gennaio 2025.
 - Coordinate esatte di Via Lido 113 (40.57744, 8.31382) nei dati strutturati, nelle pagine info e nel llms.txt (prima c'erano tre coordinate diverse, spostate di circa 2 km)
 - Mappa con il punto preciso del palazzo nelle pagine di Fronte Mare e Loft
 
+### Prezzi
+- Ottobre: Fronte Mare da €250 (prima €350, più di giugno) e Loft da €200 (prima €280), in tutte le lingue e nel llms.txt
+- Pagina spagnola del Fronte Mare: aggiunta la tabella prezzi, che mancava
+- Pagina spagnola del Loft: la tabella prezzi era finita dentro la sezione "Mis apartamentos", ora è prima come nelle altre lingue
+
 ### Correzioni
 - Fronte Mare e Loft: il riquadro "Distanze" non si vedeva (era finito dentro il codice della mappa) e la mappa si caricava subito invece che al bisogno
 - Home: il box "In sintesi" era nascosto fuori dallo schermo, ora è visibile sotto la foto principale
