@@ -11,7 +11,7 @@
         document.head.appendChild(s);
         s.onload = function() {
             window.dataLayer = window.dataLayer || [];
-            function gtag(){dataLayer.push(arguments);}
+            window.gtag = function(){dataLayer.push(arguments);};
             gtag('js', new Date());
             gtag('config', 'G-SWY4HV4168');
         };
@@ -19,6 +19,14 @@
     if (localStorage.getItem('cookie-consent') === 'accepted') {
         window.loadGA4();
     }
+    // Contatti: evento generate_lead a ogni click su WhatsApp, telefono o email (solo se GA4 è attivo, cioè con consenso)
+    document.addEventListener('click', function(e) {
+        var a = e.target.closest && e.target.closest('a[href]');
+        if (!a || !window.gtag) return;
+        var href = a.getAttribute('href');
+        var metodo = href.indexOf('wa.me/') !== -1 ? 'whatsapp' : href.indexOf('tel:') === 0 ? 'telefono' : href.indexOf('mailto:') === 0 ? 'email' : '';
+        if (metodo) gtag('event', 'generate_lead', { contact_method: metodo });
+    });
     </script>
     
     <meta charset="UTF-8">
@@ -46,6 +54,12 @@
     
     <!-- Canonical -->
     <link rel="canonical" href="https://www.algherofrontemare.it/lido-113-fronte-mare">
+    <link rel="alternate" hreflang="it" href="https://www.algherofrontemare.it/lido-113-fronte-mare">
+    <link rel="alternate" hreflang="en" href="https://www.algherofrontemare.it/en/lido-113-fronte-mare">
+    <link rel="alternate" hreflang="de" href="https://www.algherofrontemare.it/de/lido-113-fronte-mare">
+    <link rel="alternate" hreflang="fr" href="https://www.algherofrontemare.it/fr/lido-113-fronte-mare">
+    <link rel="alternate" hreflang="es" href="https://www.algherofrontemare.it/es/lido-113-fronte-mare">
+    <link rel="alternate" hreflang="x-default" href="https://www.algherofrontemare.it/lido-113-fronte-mare">
     
     <!-- Fonts -->
     
@@ -746,66 +760,119 @@
         .distances-list li:last-child { border-bottom: none; }
         .distances-list strong { color: #2c2c2c; }
         .distances-list span { color: #5a5a5a; }.reviews-section{padding:4rem 1.5rem;background:var(--color-sand)}.reviews-section h2{text-align:center;color:var(--color-sea-deep);margin-bottom:2rem}.reviews-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:1.5rem;max-width:1100px;margin:0 auto}.review-card{background:#fff;padding:1.5rem;border-radius:12px;box-shadow:0 2px 8px rgba(0,0,0,0.06)}.review-card__header{display:flex;align-items:center;gap:12px;margin-bottom:1rem}.review-card__avatar{width:48px;height:48px;border-radius:50%;background:var(--color-sea-light);display:flex;align-items:center;justify-content:center;font-weight:700;color:var(--color-sea-deep)}.review-card__name{font-weight:600}.review-card__location{font-size:0.85rem;color:var(--color-text-light)}.review-card__stars{color:#f5a623;margin-bottom:0.75rem}.review-card__text{color:var(--color-text-light);font-size:0.95rem;line-height:1.6;font-style:italic}</style>
-    <!-- Schema.org JSON-LD -->
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
       "@type": "VacationRental",
-      "name": "Lido 113 Fronte Mare — Appartamento vista mare Alghero",
-      "description": "Appartamento fronte mare ad Alghero, secondo piano con terrazza vista mare. 4 posti letto, 65mq, aria condizionata, Wi-Fi. Spiaggia del Lido a 10 metri. Gestione diretta, risposta in pochi minuti.",
+      "@id": "https://www.algherofrontemare.it/lido-113-fronte-mare#casa",
+      "identifier": "lido-113-fronte-mare",
+      "name": "Lido 113 · Fronte Mare",
+      "description": "Appartamento al secondo piano in prima linea sul mare ad Alghero, in Via Lido 113: 65 m², 2 camere (una matrimoniale e una con letto a castello), 1 bagno, terrazza vista mare, 4 posti letto. Spiaggia del Lido a 10 metri, parcheggio privato gratuito, animali ammessi. Gestito direttamente dal proprietario, Federico.",
       "url": "https://www.algherofrontemare.it/lido-113-fronte-mare",
       "image": [
         "https://www.algherofrontemare.it/images/fronte-mare/hero-terrazza.webp",
         "https://www.algherofrontemare.it/images/fronte-mare/soggiorno-vista-mare.webp",
-        "https://www.algherofrontemare.it/images/fronte-mare/camera-matrimoniale-1.webp"
-      ],
-      "numberOfRooms": 3,
-      "occupancy": {
-        "@type": "QuantitativeValue",
-        "value": 4
-      },
-      "floorSize": {
-        "@type": "QuantitativeValue",
-        "value": 65,
-        "unitCode": "MTK"
-      },
-      "amenityFeature": [
-        {"@type": "LocationFeatureSpecification", "name": "Vista mare prima linea", "value": true},
-        {"@type": "LocationFeatureSpecification", "name": "Terrazza 12mq", "value": true},
-        {"@type": "LocationFeatureSpecification", "name": "Aria condizionata", "value": true},
-        {"@type": "LocationFeatureSpecification", "name": "Wi-Fi gratuito", "value": true},
-        {"@type": "LocationFeatureSpecification", "name": "Cucina attrezzata", "value": true},
-        {"@type": "LocationFeatureSpecification", "name": "Lavatrice", "value": true},
-        {"@type": "LocationFeatureSpecification", "name": "Biancheria inclusa", "value": true},
-        {"@type": "LocationFeatureSpecification", "name": "Teli mare", "value": true}
+        "https://www.algherofrontemare.it/images/fronte-mare/soggiorno-cucina.webp",
+        "https://www.algherofrontemare.it/images/fronte-mare/cucina.webp",
+        "https://www.algherofrontemare.it/images/fronte-mare/camera-matrimoniale-1.webp",
+        "https://www.algherofrontemare.it/images/fronte-mare/camera-matrimoniale-2.webp",
+        "https://www.algherofrontemare.it/images/fronte-mare/cameretta-1.webp",
+        "https://www.algherofrontemare.it/images/fronte-mare/bagno-1.webp",
+        "https://www.algherofrontemare.it/images/fronte-mare/terrazza-mare-1.webp",
+        "https://www.algherofrontemare.it/images/fronte-mare/vista-alghero.webp"
       ],
       "address": {
         "@type": "PostalAddress",
         "streetAddress": "Via Lido 113",
         "addressLocality": "Alghero",
-        "addressRegion": "Sardegna",
+        "addressRegion": "SS",
         "postalCode": "07041",
         "addressCountry": "IT"
       },
       "geo": {
         "@type": "GeoCoordinates",
-        "latitude": 40.5587,
-        "longitude": 8.3190
+        "latitude": 40.57744,
+        "longitude": 8.31382
       },
+      "latitude": 40.57744,
+      "longitude": 8.31382,
+      "telephone": "+393293370792",
+      "email": "algherovistamare@gmail.com",
+      "priceRange": "€100-€500",
       "checkinTime": "15:00",
       "checkoutTime": "10:00",
       "petsAllowed": true,
-      "smokingAllowed": false,
-      "telephone": "+393293370792",
-      "email": "federicomocci12@gmail.com",
-      "tourBookingPage": "https://wa.me/393293370792",
-      "aggregateRating": {
-        "@type": "AggregateRating",
-        "ratingValue": "4.99",
-        "bestRating": "5",
-        "worstRating": "1",
-        "ratingCount": "108"
-      }}
+      "parentOrganization": {
+        "@id": "https://www.algherofrontemare.it/#business"
+      },
+      "containsPlace": {
+        "@type": "Accommodation",
+        "additionalType": "EntirePlace",
+        "occupancy": {
+          "@type": "QuantitativeValue",
+          "value": 4
+        },
+        "numberOfBedrooms": 2,
+        "numberOfBathroomsTotal": 1,
+        "floorLevel": "2",
+        "floorSize": {
+          "@type": "QuantitativeValue",
+          "value": 65,
+          "unitCode": "MTK"
+        },
+        "bed": [
+          {
+            "@type": "BedDetails",
+            "numberOfBeds": 1,
+            "typeOfBed": "Double"
+          },
+          {
+            "@type": "BedDetails",
+            "numberOfBeds": 1,
+            "typeOfBed": "Bunk bed"
+          }
+        ],
+        "amenityFeature": [
+          {
+            "@type": "LocationFeatureSpecification",
+            "name": "Terrazza vista mare",
+            "value": true
+          },
+          {
+            "@type": "LocationFeatureSpecification",
+            "name": "Aria condizionata",
+            "value": true
+          },
+          {
+            "@type": "LocationFeatureSpecification",
+            "name": "Wi-Fi gratuito",
+            "value": true
+          },
+          {
+            "@type": "LocationFeatureSpecification",
+            "name": "Cucina attrezzata",
+            "value": true
+          },
+          {
+            "@type": "LocationFeatureSpecification",
+            "name": "Lavatrice",
+            "value": true
+          },
+          {
+            "@type": "LocationFeatureSpecification",
+            "name": "Biancheria e asciugamani",
+            "value": true
+          },
+          {
+            "@type": "LocationFeatureSpecification",
+            "name": "Parcheggio privato gratuito",
+            "value": true
+          }
+        ],
+        "petsAllowed": true,
+        "smokingAllowed": false
+      }
+    }
     </script>
     <script type="application/ld+json">
     {
@@ -814,26 +881,26 @@
       "mainEntity": [
         {
           "@type": "Question",
-          "name": "A che ora posso fare il check-in?",
+          "name": "A che ora posso fare il check-in e il check-out?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Check-in dalle 15:00. Se arrivi prima, puoi lasciare i bagagli. Check-out entro le 10:00."
+            "text": "Check-in dalle 15:00, check-out entro le 10:00. Se hai esigenze diverse, scrivimi e vediamo di organizzarci."
           }
         },
         {
           "@type": "Question",
-          "name": "Quanto dista la spiaggia?",
+          "name": "C'è il parcheggio?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "La spiaggia del Lido è proprio davanti casa, a 10 metri. Attraversi la strada e sei sulla sabbia."
+            "text": "Sì, hai un posto auto riservato nel parcheggio privato del palazzo. Gratuito e sempre disponibile."
           }
         },
         {
           "@type": "Question",
-          "name": "C è parcheggio?",
+          "name": "L'appartamento ha l'aria condizionata?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Sì, posto auto riservato nel parcheggio privato del palazzo. Gratuito."
+            "text": "Sì, c'è l'aria condizionata in tutti gli ambienti."
           }
         },
         {
@@ -841,23 +908,23 @@
           "name": "Posso portare animali?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Sì, gli animali sono benvenuti. Fammelo sapere al momento della prenotazione."
+            "text": "Sì, gli animali domestici sono benvenuti. Fammelo sapere al momento della prenotazione."
           }
         },
         {
           "@type": "Question",
-          "name": "Come prenoto?",
+          "name": "Quanto dista la spiaggia?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Scrivimi su WhatsApp al +39 329 337 0792 indicando date e numero ospiti. Rispondo in pochi minuti."
+            "text": "La spiaggia è proprio davanti casa, a 10 metri: attraversi la strada sulle strisce pedonali e sei sulla sabbia."
           }
         },
         {
           "@type": "Question",
-          "name": "C è aria condizionata e Wi-Fi?",
+          "name": "C'è il Wi-Fi?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Sì, aria condizionata in tutti gli ambienti e Wi-Fi veloce incluso."
+            "text": "Sì, Wi-Fi veloce e gratuito incluso."
           }
         }
       ]
@@ -868,49 +935,47 @@
       "@context": "https://schema.org",
       "@type": "BreadcrumbList",
       "itemListElement": [
-        {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.algherofrontemare.it/"},
-        {"@type": "ListItem", "position": 2, "name": "Le case", "item": "https://www.algherofrontemare.it/case-vacanze-alghero"},
-        {"@type": "ListItem", "position": 3, "name": "Lido 113 Fronte Mare", "item": "https://www.algherofrontemare.it/lido-113-fronte-mare"}
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://www.algherofrontemare.it/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Le case",
+          "item": "https://www.algherofrontemare.it/case-vacanze-alghero"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Lido 113 · Fronte Mare",
+          "item": "https://www.algherofrontemare.it/lido-113-fronte-mare"
+        }
       ]
     }
     </script>
 
-    <!-- JSON-LD Schema -->
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "VacationRental",
-      "name": "Lido 113 Fronte Mare - Appartamento sul mare Alghero",
-      "description": "Appartamento al secondo piano direttamente sul mare ad Alghero. 4 posti letto, terrazza vista mare, gestione diretta da Federico.",
-      "url": "https://www.algherofrontemare.it/lido-113-fronte-mare",
-      "numberOfRooms": 2,
-      "occupancy": {"@type": "QuantitativeValue", "value": 4},
-      "floorLevel": "2",
-      "amenityFeature": [
-        {"@type": "LocationFeatureSpecification", "name": "Terrazza vista mare"},
-        {"@type": "LocationFeatureSpecification", "name": "Aria condizionata"},
-        {"@type": "LocationFeatureSpecification", "name": "Wi-Fi"},
-        {"@type": "LocationFeatureSpecification", "name": "Lavatrice"},
-        {"@type": "LocationFeatureSpecification", "name": "Cucina attrezzata"}
-      ],
-      "address": {
-        "@type": "PostalAddress",
-        "streetAddress": "Via Lido 113",
-        "addressLocality": "Alghero",
-        "addressRegion": "SS",
-        "postalCode": "07041",
-        "addressCountry": "IT"
-      },
-      "geo": {"@type": "GeoCoordinates", "latitude": "40.5583", "longitude": "8.3138"},
-      "image": [
-        "https://www.algherofrontemare.it/images/fronte-mare/hero-terrazza.webp",
-        "https://www.algherofrontemare.it/images/fronte-mare/soggiorno-vista-mare.webp"
-      ]
-    }
-    </script>
     <link rel="stylesheet" href="/calendario-disponibilita.css">
     <script src="/calendario-disponibilita.js" defer></script>
     <style>.rating-summary{display:inline-flex;flex-direction:column;gap:.15rem;margin:0 0 1.5rem;padding:.75rem 1.25rem;background:#fff;border:1px solid var(--color-sand-dark);border-radius:12px;line-height:1.4}.rating-summary__stars{color:#f5a623;letter-spacing:2px;margin-right:.35rem}.rating-summary__score{color:var(--color-text)}.rating-summary__score strong{font-size:1.35rem;color:var(--color-sea-deep)}.rating-summary__count{font-size:.875rem;color:var(--color-text-light)}.reviews-section .rating-summary{display:flex;width:fit-content;margin:-1rem auto 2rem;align-items:center;text-align:center}</style>
+    <style>
+/* Selettore lingua */
+.lang-dropdown{position:relative}
+.lang-dropdown__toggle{background:none;border:none;cursor:pointer;font-size:1.5rem;line-height:1;padding:4px 8px;border-radius:30px;transition:background .2s}
+.lang-dropdown__toggle:hover,.lang-dropdown__toggle:focus-visible,.lang-dropdown--open .lang-dropdown__toggle{background:#f5f1eb}
+.lang-dropdown__menu{position:absolute;top:100%;right:0;margin-top:4px;min-width:150px;background:#fff;border:1px solid #d9d2c7;border-radius:8px;box-shadow:0 4px 12px rgba(0,0,0,.1);display:none;z-index:1001;overflow:hidden}
+.lang-dropdown--open .lang-dropdown__menu{display:block}
+@media (hover:hover) and (pointer:fine){.lang-dropdown:hover .lang-dropdown__menu{display:block}}
+.lang-dropdown__menu a{display:flex;align-items:center;gap:10px;padding:10px 14px;color:#2c2c2c;font-size:.95rem;text-decoration:none;background:none}
+.lang-dropdown__menu a:hover{background:#f5f1eb}
+.lang-dropdown__menu a.active{background:#E8DCC8;font-weight:600}
+.lang-dropdown__flag{font-size:1.2rem}
+.lang-dropdown--float{position:absolute;top:12px;right:16px;z-index:1001}
+.lang-dropdown--float .lang-dropdown__toggle{background:#fff;border:1px solid #d9d2c7;box-shadow:0 2px 8px rgba(0,0,0,.08)}
+    </style>
+    <script src="/selettore-lingua.js" defer></script>
 </head>
 <body>
     <a href="#main-content" class="skip-link">Vai al contenuto principale</a>
@@ -919,14 +984,14 @@
     <header class="site-header">
         <div class="container site-header__inner" style="display: flex; justify-content: space-between; align-items: center;">
             <a href="/" class="site-logo">Alghero Fronte Mare</a>
-            <div style="position: relative;" onmouseover="this.querySelector('.dropdown').style.display='block'" onmouseout="this.querySelector('.dropdown').style.display='none'">
-                <button style="background: none; border: none; cursor: pointer; font-size: 1.5rem; padding: 4px 8px;" aria-label="Seleziona lingua">🇮🇹</button>
-                <div class="dropdown" style="position: absolute; top: 100%; right: 0; background: #fff; border: 1px solid #d9d2c7; border-radius: 8px; box-shadow: 0 4px 12px rgba(0,0,0,0.1); display: none; min-width: 140px; z-index: 100; overflow: hidden; margin-top: 4px;">
-                    <a href="/" style="display: flex; align-items: center; gap: 10px; padding: 10px 14px; text-decoration: none; color: #2c2c2c; font-size: 0.95rem; background: #E8DCC8; font-weight: 600;"><span>🇮🇹</span> Italiano</a>
-                    <a href="/en/" style="display: flex; align-items: center; gap: 10px; padding: 10px 14px; text-decoration: none; color: #2c2c2c; font-size: 0.95rem;"><span>🇬🇧</span> English</a>
-                    <a href="/de/" style="display: flex; align-items: center; gap: 10px; padding: 10px 14px; text-decoration: none; color: #2c2c2c; font-size: 0.95rem;"><span>🇩🇪</span> Deutsch</a>
-                    <a href="/fr/" style="display: flex; align-items: center; gap: 10px; padding: 10px 14px; text-decoration: none; color: #2c2c2c; font-size: 0.95rem;"><span>🇫🇷</span> Français</a>
-                    <a href="/es/" style="display: flex; align-items: center; gap: 10px; padding: 10px 14px; text-decoration: none; color: #2c2c2c; font-size: 0.95rem;"><span>🇪🇸</span> Español</a>
+            <div class="lang-dropdown">
+                <button type="button" class="lang-dropdown__toggle" aria-label="Seleziona lingua" aria-expanded="false" aria-haspopup="true">🇮🇹</button>
+                <div class="lang-dropdown__menu">
+                    <a href="/lido-113-fronte-mare" hreflang="it" lang="it" class="active" aria-current="page"><span class="lang-dropdown__flag">🇮🇹</span> Italiano</a>
+                    <a href="/en/lido-113-fronte-mare" hreflang="en" lang="en"><span class="lang-dropdown__flag">🇬🇧</span> English</a>
+                    <a href="/de/lido-113-fronte-mare" hreflang="de" lang="de"><span class="lang-dropdown__flag">🇩🇪</span> Deutsch</a>
+                    <a href="/fr/lido-113-fronte-mare" hreflang="fr" lang="fr"><span class="lang-dropdown__flag">🇫🇷</span> Français</a>
+                    <a href="/es/lido-113-fronte-mare" hreflang="es" lang="es"><span class="lang-dropdown__flag">🇪🇸</span> Español</a>
                 </div>
             </div>
         </div>
@@ -950,6 +1015,7 @@
             <div class="container">
                 <ol class="breadcrumb__list">
                     <li class="breadcrumb__item"><a href="/">Home</a></li>
+                    <li class="breadcrumb__item"><a href="/case-vacanze-alghero">Le case</a></li>
                     <li class="breadcrumb__item"><span>Lido 113 Fronte Mare</span></li>
                 </ol>
             </div>
@@ -957,7 +1023,7 @@
 
         <!-- HERO IMAGE -->
         <section class="hero-image">
-            <img src="/images/fronte-mare/hero-terrazza.webp" alt="Terrazza fronte mare con vista sul mare di Alghero" class="hero-image__img" fetchpriority="high" width="1600" height="1067">
+            <img src="/images/fronte-mare/hero-terrazza.webp" srcset="/images/fronte-mare/hero-terrazza-800.webp 800w, /images/fronte-mare/hero-terrazza-1200.webp 1200w, /images/fronte-mare/hero-terrazza.webp 1600w" sizes="100vw" alt="Terrazza fronte mare con vista sul mare di Alghero" class="hero-image__img" fetchpriority="high" width="1600" height="1067">
         </section>
 
         <!-- HERO -->
@@ -1089,15 +1155,12 @@
             <div class="container container--narrow">
                 <h2>La posizione</h2>
                 <p>L'appartamento si trova in Via Lido, sulla prima linea di costa. Il mare lo vedi dalla terrazza, lo senti dalla camera. Non c'è nessun edificio tra te e l'acqua.</p>
-                <p>Il centro storico di Alghero è a 10 minuti a piedi. La spiaggia è proprio sotto casa.</p>
+                <p>Il centro storico di Alghero è a 2 km, circa 25 minuti a piedi sul lungomare. La spiaggia è a 10 metri: attraversi la strada sulle strisce pedonali e sei sulla sabbia.</p>
                 
                 <div class="map-container">
-                    <iframe 
-                        src="https://www.google.com/maps?q=Via+Lido+113,+Alghero,+Sardegna,+Italy&output=embed" 
-                        width="100%" 
-                        height="300" 
-                        style="border:0; border-radius: 8px;" 
-                        allowfullscreen="" 
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d616.3008414266602!2d8.313761798737035!3d40.577331718968864!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x12dcf1ff4f24854f%3A0x31cae38a42c80bf5!2sVia%20Lido%2C%20113%2C%2007041%20Alghero%20SS!5e1!3m2!1sit!2sit!4v1792597163059!5m2!1sit!2sit" width="100%" height="300" style="border:0; border-radius: 8px;" allowfullscreen="" loading="lazy" referrerpolicy="strict-origin-when-cross-origin" title="Mappa Via Lido 113, Alghero"></iframe>
+                    <p class="map-link"><a href="https://www.google.com/maps/search/?api=1&query=Via+Lido+113,+Alghero,+Italy" target="_blank" rel="noopener">Apri in Google Maps →</a></p>
+                </div>
 
                 <div class="distances">
                     <h3>Distanze</h3>
@@ -1111,12 +1174,6 @@
                         <li><strong>Spiaggia La Pelosa</strong><span>45 km</span></li>
                     </ul>
                 </div>
-                        loading="lazy"
-                        referrerpolicy="no-referrer-when-downgrade"
-                        title="Mappa Via Lido 113, Alghero">
-                    </iframe>
-                    <p class="map-link"><a href="https://www.google.com/maps/search/?api=1&query=Via+Lido+113,+Alghero,+Italy" target="_blank" rel="noopener">Apri in Google Maps →</a></p>
-                </div>
             </div>
         </section>
 
@@ -1124,7 +1181,7 @@
         <section class="content-section">
             <div class="container container--narrow">
                 <h2>Prezzi indicativi</h2>
-                <p>I prezzi variano in base al periodo. Scrivimi le date su WhatsApp per un preventivo esatto — spesso posso farti un offerta speciale.</p>
+                <p>I prezzi variano in base al periodo. Scrivimi le date su WhatsApp per un preventivo esatto — spesso posso farti un'offerta speciale.</p>
                 
                 <div class="pricing-table">
                     <div class="pricing-row"><span class="pricing-month">Marzo</span><span class="pricing-price">da €100/notte</span></div>
@@ -1195,7 +1252,7 @@
                     
                     <details class="faq__item">
                         <summary class="faq__question">Quanto dista la spiaggia?</summary>
-                        <p class="faq__answer">La spiaggia è proprio sotto casa, a 10 metri. Scendi e sei sulla sabbia.</p>
+                        <p class="faq__answer">La spiaggia è proprio davanti casa, a 10 metri: attraversi la strada sulle strisce pedonali e sei sulla sabbia.</p>
                     </details>
                     
                     <details class="faq__item">
@@ -1288,8 +1345,8 @@
             <p class="site-footer__text">Alghero Fronte Mare — Case fronte mare gestite da Federico</p>
             <p class="site-footer__text">CIN: IT090003B4000F3434</p>
             <p class="site-footer__text">
-                <a href="mailto:federicomocci12@gmail.com">federicomocci12@gmail.com</a> · 
-                <a href="https://wa.me/393293370792?text=Ciao%20Federico!%20Sono%20interessato%20a%20Lido%20113%20Fronte%20Mare.%20Vorrei%20sapere%20la%20disponibilit%C3%A0.">+39 329 337 0792</a>
+                <a href="mailto:algherovistamare@gmail.com">algherovistamare@gmail.com</a> · 
+                <a href="tel:+393293370792">+39 329 337 0792</a> · <a href="https://wa.me/393293370792?text=Ciao%20Federico!%20Sono%20interessato%20a%20Lido%20113%20Fronte%20Mare.%20Vorrei%20sapere%20la%20disponibilit%C3%A0.">WhatsApp</a>
             </p>
             <p class="site-footer__legal">
                 <a href="/privacy-policy">Privacy Policy</a> · 

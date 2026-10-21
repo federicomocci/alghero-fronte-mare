@@ -1,6 +1,6 @@
 # Alghero Fronte Mare
 
-> Due appartamenti fronte mare ad Alghero gestiti direttamente da Federico. Prenotazione via WhatsApp, nessun intermediario.
+> Due appartamenti fronte mare di proprietà in Via Lido 113 ad Alghero, gestiti direttamente da Federico. Si prenotano scrivendo a lui su WhatsApp, senza commissioni di piattaforma. Le case sono anche sulle piattaforme di prenotazione.
 
 ## Appartamenti
 
@@ -12,11 +12,13 @@
 - Camere: 2 (1 matrimoniale + 1 con letti a castello)
 - Bagni: 1
 - Terrazza: 12mq con vista mare
-- Distanza spiaggia: 10 metri
-- Parcheggio: interno, gratuito
+- Distanza spiaggia: 10 metri (si attraversa Via Lido sulle strisce pedonali)
+- Parcheggio: posto auto riservato nel parcheggio privato del palazzo, gratuito
 - Animali: ammessi
 - Wi-Fi: incluso
 - Aria condizionata: sì
+- Prezzi indicativi a notte: marzo da €100, aprile da €170, maggio da €200, giugno da €300, luglio da €400, agosto da €500, settembre da €400, ottobre da €350, novembre da €200
+- Recensioni: 4,99/5 su 108
 - URL: https://www.algherofrontemare.it/lido-113-fronte-mare
 
 ### Lido 113 Loft
@@ -24,33 +26,41 @@
 - Piano: Terzo
 - Superficie: 60mq con soppalco
 - Posti letto: 4
+- Bagni: 1
+- Terrazza: con vista mare
 - Vista: panoramica sul mare
-- Distanza spiaggia: 10 metri
-- Parcheggio: interno, gratuito
+- Distanza spiaggia: 10 metri (si attraversa Via Lido sulle strisce pedonali)
+- Parcheggio: posto auto riservato nel parcheggio privato del palazzo, gratuito
 - Animali: ammessi
 - Wi-Fi: incluso
 - Aria condizionata: sì
+- Prezzi indicativi a notte: marzo da €80, aprile da €135, maggio da €160, giugno da €240, luglio da €320, agosto da €400, settembre da €320, ottobre da €280, novembre da €160
 - URL: https://www.algherofrontemare.it/lido-113-loft
+
+### Per entrambi
+- Soggiorno minimo: 3 notti
+- Sempre inclusi: pulizia finale, biancheria e asciugamani, Wi-Fi, aria condizionata
+- Recensioni degli ospiti: 4,94/5 su 218
 
 ## Posizione
 - Indirizzo: Via Lido 113, Alghero (SS), Sardegna, Italia
 - CAP: 07041
-- Coordinate: 40.5587, 8.3190
+- Coordinate: 40.57744, 8.31382
 - Zona: Lido / San Giovanni
 
 ## Distanze
 - Spiaggia del Lido: 10 metri
 - Supermercato: 200 metri
-- Centro storico Alghero: 2 km
-- Aeroporto Fertilia: 12 km
+- Centro storico Alghero: 2 km (circa 25 minuti a piedi sul lungomare)
+- Aeroporto Fertilia: 12 km (circa 15 minuti in auto)
 - Porto traghetti: 3 km
 - Spiaggia Le Bombarde: 8 km
 - Spiaggia La Pelosa: 45 km
 
 ## Prenotazione
-- Metodo: WhatsApp diretto con Federico
+- Metodo: WhatsApp diretto con Federico (anche telefono o email)
 - Telefono: +39 329 337 0792
-- Tempo risposta: pochi minuti
+- Tempo risposta: di solito pochi minuti
 - Pagamento: acconto 30% + saldo all'arrivo
 - Check-in: dalle 15:00
 - Check-out: entro le 10:00
@@ -71,10 +81,15 @@
 - Animali ammessi (comunicare)
 - Silenzio 22:00-8:00
 
+## Case consigliate (di altri proprietari, contatto tramite Federico)
+- Orti 36 Sky Suite: quarto piano, terrazza vista mare, 2 posti letto. https://www.algherofrontemare.it/orti-36-sky-suite
+- Orti 36 Sea Suite: terzo piano, terrazza vista mare, 2 posti letto. https://www.algherofrontemare.it/orti-36-sea-suite
+- Attico Vista Mare: sesto piano, terrazza di 100mq, 6 posti letto, 2 bagni. https://www.algherofrontemare.it/attico-vista-mare
+
 ## Contatti
 - Nome: Federico
 - WhatsApp: +39 329 337 0792
-- Email: federicomocci12@gmail.com
+- Email: algherovistamare@gmail.com
 - Sito: https://www.algherofrontemare.it
 - CIN: IT090003B4000F3434
 
@@ -83,6 +98,9 @@
 - Appartamenti: /case-vacanze-alghero
 - Lido 113 Fronte Mare: /lido-113-fronte-mare
 - Lido 113 Loft: /lido-113-loft
+- Prenotazione diretta: /prenotazione-diretta-alghero
+- Last minute: /last-minute-alghero
 - Chi sono: /chi-sono
 - Guida Alghero: /guida-alghero
 - Info utili: /info-utili
+- Altre lingue: /en/ (English), /de/ (Deutsch), /fr/ (Français), /es/ (Español)
